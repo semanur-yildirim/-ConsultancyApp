@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsultancyApp.Entity.Concrete.Identity
+namespace ConsultancyApp.Data.EfCore.Config
 {
-    public class Role
+    internal class PsychologistConfig
     {
-        public string Description { get; set; }
-
     }
 }

@@ -16,4 +16,10 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="7.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Concrete\" />
+    <Folder Include="EfCore\Extensions\" />
+    <Folder Include="EfCore\Contex\" />
+  </ItemGroup>
+
 </Project>
