@@ -1,0 +1,12 @@
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\bin\Debug\net7.0\ConsultancyApp.Entity.deps.json
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\bin\Debug\net7.0\ConsultancyApp.Entity.dll
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\bin\Debug\net7.0\ConsultancyApp.Entity.pdb
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\ConsultancyApp.Entity.csproj.AssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\ConsultancyApp.Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\ConsultancyApp.Entity.AssemblyInfoInputs.cache
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\ConsultancyApp.Entity.AssemblyInfo.cs
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\ConsultancyApp.Entity.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\ConsultancyApp.Entity.dll
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\refint\ConsultancyApp.Entity.dll
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\ConsultancyApp.Entity.pdb
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Entity\obj\Debug\net7.0\ref\ConsultancyApp.Entity.dll

@@ -44,6 +44,23 @@
           }
         }
       },
+      "Microsoft.AspNetCore.Http.Features/5.0.17": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "5.0.1",
+          "System.IO.Pipelines": "5.0.2"
+        },
+        "compile": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore/7.0.4": {
         "type": "package",
         "dependencies": {
@@ -3592,6 +3609,55 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "ConsultancyApp.Business/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ConsultancyApp.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/ConsultancyApp.Business.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConsultancyApp.Business.dll": {}
+        }
+      },
+      "ConsultancyApp.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ConsultancyApp.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConsultancyApp.Core.dll": {}
+        }
+      },
+      "ConsultancyApp.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "ConsultancyApp.Entity": "1.0.0",
+          "Microsoft.AspNetCore.Http.Features": "5.0.17",
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "7.0.4",
+          "Microsoft.EntityFrameworkCore.Sqlite": "7.0.4"
+        },
+        "compile": {
+          "bin/placeholder/ConsultancyApp.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConsultancyApp.Data.dll": {}
+        }
+      },
+      "ConsultancyApp.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ConsultancyApp.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConsultancyApp.Entity.dll": {}
+        }
       }
     }
   },
@@ -3650,6 +3716,25 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
         "microsoft.aspnetcore.cryptography.keyderivation.7.0.4.nupkg.sha512",
         "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Http.Features/5.0.17": {
+      "sha512": "3jG2xS+dx8DDCGV/F+STdPTg89lX3ao3dF/VEPvJaz3wzBIjuadipTtYNEXDIVuOPZwb6jdmhrX9jkzOIBm5cw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.http.features/5.0.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net461/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/net5.0/Microsoft.AspNetCore.Http.Features.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Http.Features.xml",
+        "microsoft.aspnetcore.http.features.5.0.17.nupkg.sha512",
+        "microsoft.aspnetcore.http.features.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore/7.0.4": {
@@ -10242,10 +10327,32 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "ConsultancyApp.Business/1.0.0": {
+      "type": "project",
+      "path": "../ConsultancyApp.Business/ConsultancyApp.Business.csproj",
+      "msbuildProject": "../ConsultancyApp.Business/ConsultancyApp.Business.csproj"
+    },
+    "ConsultancyApp.Core/1.0.0": {
+      "type": "project",
+      "path": "../ConsultancyApp.Core/ConsultancyApp.Core.csproj",
+      "msbuildProject": "../ConsultancyApp.Core/ConsultancyApp.Core.csproj"
+    },
+    "ConsultancyApp.Data/1.0.0": {
+      "type": "project",
+      "path": "../ConsultancyApp.Data/ConsultancyApp.Data.csproj",
+      "msbuildProject": "../ConsultancyApp.Data/ConsultancyApp.Data.csproj"
+    },
+    "ConsultancyApp.Entity/1.0.0": {
+      "type": "project",
+      "path": "../ConsultancyApp.Entity/ConsultancyApp.Entity.csproj",
+      "msbuildProject": "../ConsultancyApp.Entity/ConsultancyApp.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "ConsultancyApp.Business >= 1.0.0",
+      "ConsultancyApp.Core >= 1.0.0",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.4",
@@ -10254,23 +10361,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\seman\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
       "projectName": "ConsultancyApp.MVC",
-      "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
-      "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10284,7 +10391,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj"
+            },
+            "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

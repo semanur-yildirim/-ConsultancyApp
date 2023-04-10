@@ -20,4 +20,9 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ConsultancyApp.Business\ConsultancyApp.Business.csproj" />
+    <ProjectReference Include="..\ConsultancyApp.Core\ConsultancyApp.Core.csproj" />
+  </ItemGroup>
+
 </Project>

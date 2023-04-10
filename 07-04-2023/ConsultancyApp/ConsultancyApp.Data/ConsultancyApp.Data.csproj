@@ -22,4 +22,8 @@
     <Folder Include="EfCore\Contex\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ConsultancyApp.Entity\ConsultancyApp.Entity.csproj" />
+  </ItemGroup>
+
 </Project>

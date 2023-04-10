@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConsultancyApp.Entity.Concrete
 {
-    public class Psychologist : IBaseEntity
+    public class Psychologist : IBaseEntity 
     {
         public int Id { get ; set ; }
         public DateTime CreatedDate { get; set ; }
@@ -17,6 +17,7 @@ namespace ConsultancyApp.Entity.Concrete
         public string Url { get ; set ; }
         public decimal? Price { get; set; }
         public string Gender { get; set; }
+        public string Name { get; set; }
         public List<PsychologistCategory> PsychologistCategory { get; set; }    
         public PsychologistDescription PsychologistDescription { get; set; }
         public List<Customer> Customer { get; set; }

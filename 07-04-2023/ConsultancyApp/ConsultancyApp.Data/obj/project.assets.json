@@ -663,6 +663,16 @@
         "build": {
           "buildTransitive/net6.0/System.Text.Json.targets": {}
         }
+      },
+      "ConsultancyApp.Entity/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/ConsultancyApp.Entity.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ConsultancyApp.Entity.dll": {}
+        }
       }
     }
   },
@@ -1504,10 +1514,16 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "ConsultancyApp.Entity/1.0.0": {
+      "type": "project",
+      "path": "../ConsultancyApp.Entity/ConsultancyApp.Entity.csproj",
+      "msbuildProject": "../ConsultancyApp.Entity/ConsultancyApp.Entity.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "ConsultancyApp.Entity >= 1.0.0",
       "Microsoft.AspNetCore.Http.Features >= 5.0.17",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.4",
@@ -1515,23 +1531,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\seman\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
       "projectName": "ConsultancyApp.Data",
-      "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
-      "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1545,7 +1561,11 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
