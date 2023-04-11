@@ -9,7 +9,6 @@ namespace ConsultancyApp.Entity.Concrete
     public class PsychologistDescription
     {
         public int Id { get; set; }
-        public int PsychologistId { get; set; }
         public Psychologist Psychologist { get; set; }
         public DateTime GraduationYear { get; set; }    
         public string Experience { get; set; }      

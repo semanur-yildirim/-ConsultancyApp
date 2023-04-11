@@ -25,15 +25,15 @@ namespace ConsultancyApp.Data.EfCore.Config
 
                 new PsychologistCategory { PsychologistId = 3, CategoryId = 7 },
                 new PsychologistCategory { PsychologistId = 3, CategoryId = 8 },
-                new PsychologistCategory { PsychologistId = 3, CategoryId = 9 },
+                new PsychologistCategory { PsychologistId = 3, CategoryId = 1 },
 
-                new PsychologistCategory { PsychologistId = 4, CategoryId = 10 },
-                new PsychologistCategory { PsychologistId = 4, CategoryId = 1},
                 new PsychologistCategory { PsychologistId = 4, CategoryId = 2 },
+                new PsychologistCategory { PsychologistId = 4, CategoryId = 3},
+                new PsychologistCategory { PsychologistId = 4, CategoryId = 4 },
 
                 new PsychologistCategory { PsychologistId = 5, CategoryId = 1 },
                 new PsychologistCategory { PsychologistId = 5, CategoryId = 2 },
-                new PsychologistCategory { PsychologistId = 5, CategoryId = 3 },
+                new PsychologistCategory { PsychologistId = 5, CategoryId = 5 },
                 new PsychologistCategory { PsychologistId = 5, CategoryId = 4 },
 
                 new PsychologistCategory { PsychologistId = 6, CategoryId = 5 },
@@ -41,16 +41,16 @@ namespace ConsultancyApp.Data.EfCore.Config
 
                 new PsychologistCategory { PsychologistId = 7, CategoryId = 7 },
                 new PsychologistCategory { PsychologistId = 7, CategoryId = 8 },
-                new PsychologistCategory { PsychologistId = 7, CategoryId = 9 },
+                new PsychologistCategory { PsychologistId = 7, CategoryId = 5 },
 
-                new PsychologistCategory { PsychologistId = 8, CategoryId = 10 },
-                new PsychologistCategory { PsychologistId = 8, CategoryId = 2 },
+                new PsychologistCategory { PsychologistId = 8, CategoryId = 6 },
+                new PsychologistCategory { PsychologistId = 8, CategoryId = 7 },
 
-                new PsychologistCategory { PsychologistId = 9, CategoryId = 1 },
-                new PsychologistCategory { PsychologistId = 9, CategoryId = 2 },
-                new PsychologistCategory { PsychologistId =9, CategoryId = 10 },
+                new PsychologistCategory { PsychologistId = 9, CategoryId = 8 },
+                new PsychologistCategory { PsychologistId = 9, CategoryId = 5 },
+                new PsychologistCategory { PsychologistId =9, CategoryId = 4 },
 
-                new PsychologistCategory { PsychologistId = 10, CategoryId = 3 }
+                new PsychologistCategory { PsychologistId = 10, CategoryId = 6 }
 
           );
         }

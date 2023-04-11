@@ -23,15 +23,14 @@ namespace ConsultancyApp.Data.EfCore.Config
             builder.Property(x => x.Name).IsRequired().HasMaxLength(50);
             builder.HasData(
                 new Category { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Bireysel Terapi", Url = "bireysel-terapi" },
-                new Category { Id = 2, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Çift Terapisi", Url = "cift-terapisi" },
+                new Category { Id = 2, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "İlişki Terapisi", Url = "iliski-terapisi" },
                 new Category { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Aile Terapisi", Url = "aile-terapisi" },
                 new Category { Id = 4, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Çocuk Terapisi", Url = "cocuk-terapisi" },
                 new Category { Id = 5, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Ergen Terapisi", Url = "ergen-terapisi" },
-                new Category { Id = 6, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Bağımlılık Terapisi", Url = "bagimlilik-terapisi" },
-                new Category { Id = 7, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Psikolojik Danışmanlık", Url = "psikolojik-danismanlik" },
-                new Category { Id = 8, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Stres Yönetimi", Url = "stres-yonetimi" },
-                new Category { Id = 9, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Depresyon Terapisi", Url = "depresyon-terapisi" },
-                new Category { Id = 10, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Anksiyete Terapisi", Url = "anksiyete-terapisi" }
+                new Category { Id = 6, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Oyun Terapisi", Url = "oyun-terapisi" },
+                new Category { Id = 7, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Sanat Danışmanlık", Url = "sanat-danismanlik" },
+                new Category { Id = 8, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Cinsel Yönetimi", Url = "cinsel-terapi" }
+               
                  );
 
         }

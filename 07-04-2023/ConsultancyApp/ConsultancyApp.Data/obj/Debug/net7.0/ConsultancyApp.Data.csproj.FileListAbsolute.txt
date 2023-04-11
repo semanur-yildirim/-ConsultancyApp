@@ -3,3 +3,15 @@ C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\Consul
 C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\ConsultancyApp.Data.AssemblyInfoInputs.cache
 C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\ConsultancyApp.Data.AssemblyInfo.cs
 C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\ConsultancyApp.Data.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\bin\Debug\net7.0\ConsultancyApp.Data.deps.json
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\bin\Debug\net7.0\ConsultancyApp.Data.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\bin\Debug\net7.0\ConsultancyApp.Data.dll
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\bin\Debug\net7.0\ConsultancyApp.Data.pdb
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\bin\Debug\net7.0\ConsultancyApp.Entity.dll
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\bin\Debug\net7.0\ConsultancyApp.Entity.pdb
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\ConsultancyApp.Data.csproj.CopyComplete
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\ConsultancyApp.Data.dll
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\refint\ConsultancyApp.Data.dll
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\ConsultancyApp.Data.pdb
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\ConsultancyApp.Data.genruntimeconfig.cache
+C:\Users\Admin\Documents\GitHub\-ConsultancyApp\07-04-2023\ConsultancyApp\ConsultancyApp.Data\obj\Debug\net7.0\ref\ConsultancyApp.Data.dll

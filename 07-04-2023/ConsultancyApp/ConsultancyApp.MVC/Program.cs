@@ -1,7 +1,18 @@
+using ConsultancyApp.Data.EfCore.Context;
+using ConsultancyApp.Entity.Concrete.Identity;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ConsultancyAppContex>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
+
+builder.Services.AddIdentity<User, Role>()
+    .AddEntityFrameworkStores<ConsultancyAppContex>()
+    .AddDefaultTokenProviders();
+
 
 var app = builder.Build();
 

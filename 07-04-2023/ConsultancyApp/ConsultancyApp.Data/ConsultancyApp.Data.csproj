@@ -17,13 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Concrete\" />
-    <Folder Include="EfCore\Extensions\" />
-    <Folder Include="EfCore\Contex\" />
+    <ProjectReference Include="..\ConsultancyApp.Entity\ConsultancyApp.Entity.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsultancyApp.Entity\ConsultancyApp.Entity.csproj" />
+    <Folder Include="Concrete\" />
   </ItemGroup>
 
 </Project>

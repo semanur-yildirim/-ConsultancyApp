@@ -1,6 +1,7 @@
 ﻿using ConsultancyApp.Entity.Abstract;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace ConsultancyApp.Entity.Concrete
         public string Url { get; set; }
         public string  Name { get; set; }   
         public CategoryDescription CategoryDescription { get; set; }
+        [ForeignKey("CategoryDescription")]
+        public int CategoryDescriptionId { get; set; }
         public List<PsychologistCategory> PsychologitstCategry { get; set; }
 
     }
