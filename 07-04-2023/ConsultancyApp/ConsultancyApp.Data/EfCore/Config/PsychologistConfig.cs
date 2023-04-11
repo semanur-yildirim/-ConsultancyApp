@@ -22,9 +22,9 @@ namespace ConsultancyApp.Data.EfCore.Config
             builder.Property(x => x.Gender).IsRequired().HasMaxLength(50);
             builder.Property(x => x.Price).IsRequired();
             builder.Property(x => x.userId).IsRequired();
-            builder.HasData(
-                new Psychologist { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Selvi",  Price = 450, Url = "Selvi-psikolog", Gender="Kadın",userId= "8da007be-c50b-4973-aa45-224b7358hkn15" },
-                );
+            //builder.HasData(
+            //    new Psychologist { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Selvi",  Price = 450, Url = "Selvi-psikolog", Gender="Kadın",userId= "8da007be-c50b-4973-aa45-224b7358hkn15" },
+            //    );
 
 
         }

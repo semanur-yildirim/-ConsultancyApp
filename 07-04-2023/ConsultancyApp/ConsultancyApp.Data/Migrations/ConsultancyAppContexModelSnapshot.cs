@@ -36,22 +36,22 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            UserId = "262b0426-07c6-4271-980e-840fa351cea9"
+                            UserId = "90699b40-fa10-4920-9b87-03be756306e2"
                         },
                         new
                         {
                             Id = 2,
-                            UserId = "6bb1deba-a5ff-4fea-b1e3-22730ae03504"
+                            UserId = "022169b4-75b1-4c4c-a27e-0e6660a656b9"
                         },
                         new
                         {
                             Id = 3,
-                            UserId = "37a7d963-c243-4d2c-9749-a16089483695"
+                            UserId = "f053af86-2a08-44b5-bb35-6516478773ba"
                         },
                         new
                         {
                             Id = 4,
-                            UserId = "e2073237-e290-42fc-98f0-3b3e86ff9de2"
+                            UserId = "7d97d1e4-fce7-445e-9752-91816ceb8c2a"
                         });
                 });
 
@@ -82,6 +82,9 @@ namespace ConsultancyApp.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
+                    b.Property<int>("CategoryDescriptionId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("TEXT");
 
@@ -101,78 +104,89 @@ namespace ConsultancyApp.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoryDescriptionId")
+                        .IsUnique();
+
                     b.ToTable("Categories");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(93),
+                            CategoryDescriptionId = 0,
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7448),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(100),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7519),
                             Name = "Bireysel Terapi",
                             Url = "bireysel-terapi"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(103),
+                            CategoryDescriptionId = 0,
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7523),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(104),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7524),
                             Name = "İlişki Terapisi",
                             Url = "iliski-terapisi"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(105),
+                            CategoryDescriptionId = 0,
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7525),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(106),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7526),
                             Name = "Aile Terapisi",
                             Url = "aile-terapisi"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(108),
+                            CategoryDescriptionId = 0,
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7528),
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(108),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7528),
                             Name = "Çocuk Terapisi",
                             Url = "cocuk-terapisi"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(110),
+                            CategoryDescriptionId = 0,
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7530),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(111),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7530),
                             Name = "Ergen Terapisi",
                             Url = "ergen-terapisi"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(112),
+                            CategoryDescriptionId = 0,
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7532),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(113),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7532),
                             Name = "Oyun Terapisi",
                             Url = "oyun-terapisi"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(114),
+                            CategoryDescriptionId = 0,
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7534),
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(115),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7534),
                             Name = "Sanat Danışmanlık",
                             Url = "sanat-danismanlik"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(117),
+                            CategoryDescriptionId = 0,
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7536),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 130, DateTimeKind.Local).AddTicks(117),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 293, DateTimeKind.Local).AddTicks(7536),
                             Name = "Cinsel Yönetimi",
                             Url = "cinsel-terapi"
                         });
@@ -182,9 +196,6 @@ namespace ConsultancyApp.Data.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("CategoryId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("ForWho")
@@ -213,16 +224,12 @@ namespace ConsultancyApp.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CategoryId")
-                        .IsUnique();
-
                     b.ToTable("CategoryDescription");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            CategoryId = 1,
                             ForWho = "Depreston, Kaygı,Öfke,Bağımlılık,Aile Sorunları,Düşük benlik kaygısı gibi sorunları yaşayan insanlara yardımcı olabilir.",
                             How = "Bilişsel davranışçı terapi (CBT) en yaygın ve etkili terapi türlerinden biridir. Bu yaklaşım, insanların düşünceler, duygular ve davranışlar arasındaki bağlantıya bakmasına yardımcı olur. Bu süreçte insanlar olumsuz düşünme kalıplarını pozitif olanlarla değiştirebilirler. Bilişsel Davranışçı Terapi'nin arkasındaki inanç, sağlıklı düşüncelerin genellikle olumlu duyguları ve üretken eylemleri teşvik ettiği yönündedir.",
                             HowLong = "rapinin süresi ve sıklığı, danışanların ihtiyaçlarına ve hedeflerindeki ilerlemesine bağlı olarak, tek oturum ile birkaç yıla kadar süren bir aralıkta değişkenlik gösterebilir.",
@@ -233,7 +240,6 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CategoryId = 2,
                             ForWho = "Depreston, Kaygı,Öfke,Bağımlılık,Aile Sorunları,Düşük benlik kaygısı gibi sorunları yaşayan insanlara yardımcı olabilir.",
                             How = "Bilişsel davranışçı terapi (CBT) en yaygın ve etkili terapi türlerinden biridir. Bu yaklaşım, insanların düşünceler, duygular ve davranışlar arasındaki bağlantıya bakmasına yardımcı olur. Bu süreçte insanlar olumsuz düşünme kalıplarını pozitif olanlarla değiştirebilirler. Bilişsel Davranışçı Terapi'nin arkasındaki inanç, sağlıklı düşüncelerin genellikle olumlu duyguları ve üretken eylemleri teşvik ettiği yönündedir.",
                             HowLong = "rapinin süresi ve sıklığı, danışanların ihtiyaçlarına ve hedeflerindeki ilerlemesine bağlı olarak, tek oturum ile birkaç yıla kadar süren bir aralıkta değişkenlik gösterebilir.",
@@ -244,7 +250,6 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CategoryId = 3,
                             ForWho = "Depreston, Kaygı,Öfke,Bağımlılık,Aile Sorunları,Düşük benlik kaygısı gibi sorunları yaşayan insanlara yardımcı olabilir.",
                             How = "Bilişsel davranışçı terapi (CBT) en yaygın ve etkili terapi türlerinden biridir. Bu yaklaşım, insanların düşünceler, duygular ve davranışlar arasındaki bağlantıya bakmasına yardımcı olur. Bu süreçte insanlar olumsuz düşünme kalıplarını pozitif olanlarla değiştirebilirler. Bilişsel Davranışçı Terapi'nin arkasındaki inanç, sağlıklı düşüncelerin genellikle olumlu duyguları ve üretken eylemleri teşvik ettiği yönündedir.",
                             HowLong = "rapinin süresi ve sıklığı, danışanların ihtiyaçlarına ve hedeflerindeki ilerlemesine bağlı olarak, tek oturum ile birkaç yıla kadar süren bir aralıkta değişkenlik gösterebilir.",
@@ -255,7 +260,6 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CategoryId = 4,
                             ForWho = "Depreston, Kaygı,Öfke,Bağımlılık,Aile Sorunları,Düşük benlik kaygısı gibi sorunları yaşayan insanlara yardımcı olabilir.",
                             How = "Bilişsel davranışçı terapi (CBT) en yaygın ve etkili terapi türlerinden biridir. Bu yaklaşım, insanların düşünceler, duygular ve davranışlar arasındaki bağlantıya bakmasına yardımcı olur. Bu süreçte insanlar olumsuz düşünme kalıplarını pozitif olanlarla değiştirebilirler. Bilişsel Davranışçı Terapi'nin arkasındaki inanç, sağlıklı düşüncelerin genellikle olumlu duyguları ve üretken eylemleri teşvik ettiği yönündedir.",
                             HowLong = "rapinin süresi ve sıklığı, danışanların ihtiyaçlarına ve hedeflerindeki ilerlemesine bağlı olarak, tek oturum ile birkaç yıla kadar süren bir aralıkta değişkenlik gösterebilir.",
@@ -266,7 +270,6 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CategoryId = 5,
                             ForWho = "Depreston, Kaygı,Öfke,Bağımlılık,Aile Sorunları,Düşük benlik kaygısı gibi sorunları yaşayan insanlara yardımcı olabilir.",
                             How = "Bilişsel davranışçı terapi (CBT) en yaygın ve etkili terapi türlerinden biridir. Bu yaklaşım, insanların düşünceler, duygular ve davranışlar arasındaki bağlantıya bakmasına yardımcı olur. Bu süreçte insanlar olumsuz düşünme kalıplarını pozitif olanlarla değiştirebilirler. Bilişsel Davranışçı Terapi'nin arkasındaki inanç, sağlıklı düşüncelerin genellikle olumlu duyguları ve üretken eylemleri teşvik ettiği yönündedir.",
                             HowLong = "rapinin süresi ve sıklığı, danışanların ihtiyaçlarına ve hedeflerindeki ilerlemesine bağlı olarak, tek oturum ile birkaç yıla kadar süren bir aralıkta değişkenlik gösterebilir.",
@@ -277,7 +280,6 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 6,
-                            CategoryId = 6,
                             ForWho = "Depreston, Kaygı,Öfke,Bağımlılık,Aile Sorunları,Düşük benlik kaygısı gibi sorunları yaşayan insanlara yardımcı olabilir.",
                             How = "Bilişsel davranışçı terapi (CBT) en yaygın ve etkili terapi türlerinden biridir. Bu yaklaşım, insanların düşünceler, duygular ve davranışlar arasındaki bağlantıya bakmasına yardımcı olur. Bu süreçte insanlar olumsuz düşünme kalıplarını pozitif olanlarla değiştirebilirler. Bilişsel Davranışçı Terapi'nin arkasındaki inanç, sağlıklı düşüncelerin genellikle olumlu duyguları ve üretken eylemleri teşvik ettiği yönündedir.",
                             HowLong = "rapinin süresi ve sıklığı, danışanların ihtiyaçlarına ve hedeflerindeki ilerlemesine bağlı olarak, tek oturum ile birkaç yıla kadar süren bir aralıkta değişkenlik gösterebilir.",
@@ -288,7 +290,6 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 7,
-                            CategoryId = 7,
                             ForWho = "Depreston, Kaygı,Öfke,Bağımlılık,Aile Sorunları,Düşük benlik kaygısı gibi sorunları yaşayan insanlara yardımcı olabilir.",
                             How = "Bilişsel davranışçı terapi (CBT) en yaygın ve etkili terapi türlerinden biridir. Bu yaklaşım, insanların düşünceler, duygular ve davranışlar arasındaki bağlantıya bakmasına yardımcı olur. Bu süreçte insanlar olumsuz düşünme kalıplarını pozitif olanlarla değiştirebilirler. Bilişsel Davranışçı Terapi'nin arkasındaki inanç, sağlıklı düşüncelerin genellikle olumlu duyguları ve üretken eylemleri teşvik ettiği yönündedir.",
                             HowLong = "rapinin süresi ve sıklığı, danışanların ihtiyaçlarına ve hedeflerindeki ilerlemesine bağlı olarak, tek oturum ile birkaç yıla kadar süren bir aralıkta değişkenlik gösterebilir.",
@@ -299,7 +300,6 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CategoryId = 8,
                             ForWho = "Depreston, Kaygı,Öfke,Bağımlılık,Aile Sorunları,Düşük benlik kaygısı gibi sorunları yaşayan insanlara yardımcı olabilir.",
                             How = "Bilişsel davranışçı terapi (CBT) en yaygın ve etkili terapi türlerinden biridir. Bu yaklaşım, insanların düşünceler, duygular ve davranışlar arasındaki bağlantıya bakmasına yardımcı olur. Bu süreçte insanlar olumsuz düşünme kalıplarını pozitif olanlarla değiştirebilirler. Bilişsel Davranışçı Terapi'nin arkasındaki inanç, sağlıklı düşüncelerin genellikle olumlu duyguları ve üretken eylemleri teşvik ettiği yönündedir.",
                             HowLong = "rapinin süresi ve sıklığı, danışanların ihtiyaçlarına ve hedeflerindeki ilerlemesine bağlı olarak, tek oturum ile birkaç yıla kadar süren bir aralıkta değişkenlik gösterebilir.",
@@ -383,21 +383,21 @@ namespace ConsultancyApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "271c120b-7886-4467-8e9f-3d38d14ba664",
+                            Id = "2d75e05d-f650-453c-a1fb-305396ede74f",
                             Description = "Yöneticiler",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "1cb13e68-1608-4d9c-9146-09b742d1cab2",
+                            Id = "f69957c7-6805-4d84-aa1c-a4f7956eb8e4",
                             Description = "Kullanıcılar",
-                            Name = "User",
-                            NormalizedName = "USER"
+                            Name = "Customer",
+                            NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "0a9147a1-114c-43ac-9d4e-552c2b42ce29",
+                            Id = "2b7b70ec-d6cf-42bc-bfd8-336a35616140",
                             Description = "Psikologlar",
                             Name = "Psychologist",
                             NormalizedName = "PSYCHOLOGIST"
@@ -491,9 +491,9 @@ namespace ConsultancyApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "262b0426-07c6-4271-980e-840fa351cea9",
+                            Id = "90699b40-fa10-4920-9b87-03be756306e2",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ae6fe5a4-022b-4abd-b51a-20c3fbf38ac3",
+                            ConcurrencyStamp = "9b3dc27e-3107-47a1-9c2f-c7817f66e729",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "selvi@gmail.com",
@@ -505,18 +505,18 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "SELVI@GMAIL.COM",
                             NormalizedName = "SELVIKARTAL",
                             NormalizedUserName = "SELVI",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHyJkb9fl2DKucjYCuzlkf+hhIQ0gW2Rit3PxFAzGeT8Qa7ybbEd6K4Cn6e5JGxPRw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAODhRy0JaxsTiKS2J5rrjFE2ivBFcfmB8rW5rUKOHQqgekcwB1J4J4fqVDpHo+Svg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e1bb1ff3-135d-49ba-b463-8a8efbe51043",
+                            SecurityStamp = "2cdc16a6-c9e5-450b-87f2-ffd369923549",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "selvi"
                         },
                         new
                         {
-                            Id = "6bb1deba-a5ff-4fea-b1e3-22730ae03504",
+                            Id = "022169b4-75b1-4c4c-a27e-0e6660a656b9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "5907bd68-ce8f-4efe-8599-d3605415e535",
+                            ConcurrencyStamp = "b017a109-5aa1-4497-8c87-f4880b9d8478",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "emma@gmail.com",
@@ -528,18 +528,18 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "EMMA@GMAIL.COM",
                             NormalizedName = "EMMADENIZ",
                             NormalizedUserName = "EMMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAELGjmyQFxagM5gby2U9QluhYGI5XHcEngGjX8XinE4s1WpjPs94sLXBY0IqXhG/btw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEM4JeWtEsENFuQlWK2cuZkB01Y4TbNsfKCuC1yUV2Z7hnstcSFyn3ZWvkA6sr9d2OQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "40bc0093-c069-4656-8fb1-3f01b0938017",
+                            SecurityStamp = "d88285b1-fcaa-4113-8551-b1ecadf3d7dd",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "emma"
                         },
                         new
                         {
-                            Id = "37a7d963-c243-4d2c-9749-a16089483695",
+                            Id = "f053af86-2a08-44b5-bb35-6516478773ba",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7d95ac2c-b7a7-4cb8-87a2-eb191ea19f53",
+                            ConcurrencyStamp = "fc73c33e-cb07-4b85-951f-945561088aaf",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "sema@gmail.com",
@@ -551,18 +551,18 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "SEMA@GMAIL.COM",
                             NormalizedName = "SEMAYILDIRIM",
                             NormalizedUserName = "SEMA",
-                            PasswordHash = "AQAAAAIAAYagAAAAECUrLexpm5VsHZcYFv3KKt2atApoNWx1kq9aFsYH6nrzD0YIKocgWqh0JD4LDdxgcw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPFDWCgU7bHG3IS7XFxdFOlhR5ECA5/4Su8t06NHRVaOf6LBufUNXUAc3oxin65LgA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "b6ecca2f-59b5-4098-9af1-01f691f29039",
+                            SecurityStamp = "492d920f-ff27-4f23-8103-cf9e21e25fc6",
                             TwoFactorEnabled = false,
                             Type = 0,
                             UserName = "sema"
                         },
                         new
                         {
-                            Id = "e2073237-e290-42fc-98f0-3b3e86ff9de2",
+                            Id = "7d97d1e4-fce7-445e-9752-91816ceb8c2a",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "eb066093-3ef2-4379-9266-8115dfb7a47c",
+                            ConcurrencyStamp = "b0869929-523b-4778-9f84-ff0ecdf73b4d",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "selin@gmail.com",
@@ -575,7 +575,7 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedName = "SELINKARA",
                             NormalizedUserName = "SELIN",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "664dea20-6012-4bed-a455-4d32a175e9ae",
+                            SecurityStamp = "228f22f4-63f8-4b45-b57a-97625e8a86ae",
                             TwoFactorEnabled = false,
                             Type = 2,
                             UserName = "selin"
@@ -616,90 +616,90 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4565),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(745),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4570),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(756),
                             PsychologistId = 1,
                             Url = "k-1.jpg"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4573),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(760),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4574),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(760),
                             PsychologistId = 2,
                             Url = "e-1.jpg"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4576),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(762),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4577),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(762),
                             PsychologistId = 3,
                             Url = "k-2.jpg"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4579),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(764),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4579),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(765),
                             PsychologistId = 4,
                             Url = "e-2.jpg"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4581),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(766),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4582),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(767),
                             PsychologistId = 5,
                             Url = "k-3.jpg"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4583),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(768),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4584),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(769),
                             PsychologistId = 6,
                             Url = "e-3.jpg"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4586),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(770),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4586),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(775),
                             PsychologistId = 7,
                             Url = "k-4.jpg"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4588),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(786),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4588),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(787),
                             PsychologistId = 8,
                             Url = "e-4.jpg"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4590),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(788),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4591),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(789),
                             PsychologistId = 9,
                             Url = "k-5.jpg"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4593),
+                            CreatedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(790),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 131, DateTimeKind.Local).AddTicks(4593),
+                            ModifiedDate = new DateTime(2023, 4, 12, 0, 15, 30, 295, DateTimeKind.Local).AddTicks(791),
                             PsychologistId = 10,
                             Url = "e-5.jpg"
                         });
@@ -795,6 +795,9 @@ namespace ConsultancyApp.Data.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("PsychologistDescriptionId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Url")
                         .HasColumnType("TEXT");
 
@@ -804,131 +807,12 @@ namespace ConsultancyApp.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("PsychologistDescriptionId")
+                        .IsUnique();
+
                     b.HasIndex("userId");
 
                     b.ToTable("Psychologist");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9900),
-                            Gender = "Kadın",
-                            IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9907),
-                            Name = "Selvi",
-                            Price = 450m,
-                            Url = "Selvi-psikolog",
-                            userId = "blablabla"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9916),
-                            Gender = "Erkek",
-                            IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9917),
-                            Name = "Maxwell",
-                            Price = 500m,
-                            Url = "Maxwell-psikolog",
-                            userId = "abcde1234"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9921),
-                            Gender = "Kadın",
-                            IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9921),
-                            Name = "Sophie",
-                            Price = 400m,
-                            Url = "Sophie-psikolog",
-                            userId = "qwerty5678"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9924),
-                            Gender = "Erkek",
-                            IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9925),
-                            Name = "Miles",
-                            Price = 550m,
-                            Url = "Miles-psikolog",
-                            userId = "xoxoxo2468"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9927),
-                            Gender = "Kadın",
-                            IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9928),
-                            Name = "Lena",
-                            Price = 350m,
-                            Url = "Lena-psikolog",
-                            userId = "1234567890"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9931),
-                            Gender = "Erkek",
-                            IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9932),
-                            Name = "Ethan",
-                            Price = 600m,
-                            Url = "Ethan-psikolog",
-                            userId = "asdfgh1234"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9934),
-                            Gender = "Kadın",
-                            IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9935),
-                            Name = "Grace",
-                            Price = 425m,
-                            Url = "Grace-psikolog",
-                            userId = "zxcvbn5678"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9938),
-                            Gender = "Erkek",
-                            IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9938),
-                            Name = "Oliver",
-                            Price = 575m,
-                            Url = "Oliver-psikolog",
-                            userId = "qweasd2468"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9941),
-                            Gender = "Kadın",
-                            IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9942),
-                            Name = "Emma",
-                            Price = 375m,
-                            Url = "Emma-psikolog",
-                            userId = "zxcasd1234"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9944),
-                            Gender = "Erkek",
-                            IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 4, 11, 15, 22, 27, 132, DateTimeKind.Local).AddTicks(9945),
-                            Name = "Jacob",
-                            Price = 525m,
-                            Url = "Jacob-psikolog",
-                            userId = "qwezxc5678"
-                        });
                 });
 
             modelBuilder.Entity("ConsultancyApp.Entity.Concrete.PsychologistCategory", b =>
@@ -1110,13 +994,7 @@ namespace ConsultancyApp.Data.Migrations
                     b.Property<DateTime>("GraduationYear")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("PsychologistId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("PsychologistId")
-                        .IsUnique();
 
                     b.ToTable("PsychologistDescription");
 
@@ -1128,8 +1006,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "İzmir Üniversitesi Psikoloji",
                             Experience = "Online ve Yüz yüze Terapi",
-                            GraduationYear = new DateTime(2000, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2000, 12, 5, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1138,8 +1015,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1980, 3, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "Hacettepe Üniversitesi Psikoloji",
                             Experience = "Bireysel ve Grup Terapisi",
-                            GraduationYear = new DateTime(2005, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2005, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1148,8 +1024,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1985, 9, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "Boğaziçi Üniversitesi Psikoloji",
                             Experience = "Depresyon ve Anksiyete Terapisi",
-                            GraduationYear = new DateTime(2007, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2007, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1158,8 +1033,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1979, 2, 8, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "Ankara Üniversitesi Psikoloji",
                             Experience = "Çocuk ve Aile Terapisi",
-                            GraduationYear = new DateTime(2010, 8, 11, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2010, 8, 11, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1168,8 +1042,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1976, 7, 23, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "İstanbul Üniversitesi Psikoloji",
                             Experience = "Stres ve Öfke Yönetimi",
-                            GraduationYear = new DateTime(2002, 11, 29, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2002, 11, 29, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1178,8 +1051,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1985, 3, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "Ankara Üniversitesi Psikoloji",
                             Experience = "Aile Terapisi, Çift Terapisi",
-                            GraduationYear = new DateTime(2008, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2008, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1188,8 +1060,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1982, 12, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "Boğaziçi Üniversitesi Psikoloji",
                             Experience = "Ergen Terapisi, Bağımlılık Terapisi",
-                            GraduationYear = new DateTime(2005, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2005, 9, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1198,8 +1069,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1989, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "Hacettepe Üniversitesi Psikoloji",
                             Experience = "Stres Yönetimi, Depresyon Terapisi",
-                            GraduationYear = new DateTime(2012, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2012, 6, 25, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1208,8 +1078,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1980, 6, 12, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "İstanbul Üniversitesi Psikoloji",
                             Experience = "Bireysel Terapi, Çift Terapisi, Aile Terapisi",
-                            GraduationYear = new DateTime(2003, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2003, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
@@ -1218,8 +1087,7 @@ namespace ConsultancyApp.Data.Migrations
                             BirthDate = new DateTime(1985, 2, 18, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Education = "Hacettepe Üniversitesi Psikoloji",
                             Experience = "Çocuk ve Aile Terapisi",
-                            GraduationYear = new DateTime(2008, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PsychologistId = 0
+                            GraduationYear = new DateTime(2008, 7, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 
@@ -1308,23 +1176,23 @@ namespace ConsultancyApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = "262b0426-07c6-4271-980e-840fa351cea9",
-                            RoleId = "0a9147a1-114c-43ac-9d4e-552c2b42ce29"
+                            UserId = "90699b40-fa10-4920-9b87-03be756306e2",
+                            RoleId = "2b7b70ec-d6cf-42bc-bfd8-336a35616140"
                         },
                         new
                         {
-                            UserId = "6bb1deba-a5ff-4fea-b1e3-22730ae03504",
-                            RoleId = "0a9147a1-114c-43ac-9d4e-552c2b42ce29"
+                            UserId = "022169b4-75b1-4c4c-a27e-0e6660a656b9",
+                            RoleId = "2b7b70ec-d6cf-42bc-bfd8-336a35616140"
                         },
                         new
                         {
-                            UserId = "37a7d963-c243-4d2c-9749-a16089483695",
-                            RoleId = "271c120b-7886-4467-8e9f-3d38d14ba664"
+                            UserId = "f053af86-2a08-44b5-bb35-6516478773ba",
+                            RoleId = "2d75e05d-f650-453c-a1fb-305396ede74f"
                         },
                         new
                         {
-                            UserId = "e2073237-e290-42fc-98f0-3b3e86ff9de2",
-                            RoleId = "1cb13e68-1608-4d9c-9146-09b742d1cab2"
+                            UserId = "7d97d1e4-fce7-445e-9752-91816ceb8c2a",
+                            RoleId = "f69957c7-6805-4d84-aa1c-a4f7956eb8e4"
                         });
                 });
 
@@ -1375,15 +1243,15 @@ namespace ConsultancyApp.Data.Migrations
                     b.Navigation("Psychologist");
                 });
 
-            modelBuilder.Entity("ConsultancyApp.Entity.Concrete.CategoryDescription", b =>
+            modelBuilder.Entity("ConsultancyApp.Entity.Concrete.Category", b =>
                 {
-                    b.HasOne("ConsultancyApp.Entity.Concrete.Category", "Category")
-                        .WithOne("CategoryDescription")
-                        .HasForeignKey("ConsultancyApp.Entity.Concrete.CategoryDescription", "CategoryId")
+                    b.HasOne("ConsultancyApp.Entity.Concrete.CategoryDescription", "CategoryDescription")
+                        .WithOne("Category")
+                        .HasForeignKey("ConsultancyApp.Entity.Concrete.Category", "CategoryDescriptionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Category");
+                    b.Navigation("CategoryDescription");
                 });
 
             modelBuilder.Entity("ConsultancyApp.Entity.Concrete.Customer", b =>
@@ -1446,11 +1314,19 @@ namespace ConsultancyApp.Data.Migrations
 
             modelBuilder.Entity("ConsultancyApp.Entity.Concrete.Psychologist", b =>
                 {
+                    b.HasOne("ConsultancyApp.Entity.Concrete.PsychologistDescription", "PsychologistDescription")
+                        .WithOne("Psychologist")
+                        .HasForeignKey("ConsultancyApp.Entity.Concrete.Psychologist", "PsychologistDescriptionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("ConsultancyApp.Entity.Concrete.Identity.User", "user")
                         .WithMany()
                         .HasForeignKey("userId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("PsychologistDescription");
 
                     b.Navigation("user");
                 });
@@ -1470,17 +1346,6 @@ namespace ConsultancyApp.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("Category");
-
-                    b.Navigation("Psychologist");
-                });
-
-            modelBuilder.Entity("ConsultancyApp.Entity.Concrete.PsychologistDescription", b =>
-                {
-                    b.HasOne("ConsultancyApp.Entity.Concrete.Psychologist", "Psychologist")
-                        .WithOne("PsychologistDescription")
-                        .HasForeignKey("ConsultancyApp.Entity.Concrete.PsychologistDescription", "PsychologistId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
 
                     b.Navigation("Psychologist");
                 });
@@ -1543,9 +1408,12 @@ namespace ConsultancyApp.Data.Migrations
 
             modelBuilder.Entity("ConsultancyApp.Entity.Concrete.Category", b =>
                 {
-                    b.Navigation("CategoryDescription");
-
                     b.Navigation("PsychologitstCategry");
+                });
+
+            modelBuilder.Entity("ConsultancyApp.Entity.Concrete.CategoryDescription", b =>
+                {
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("ConsultancyApp.Entity.Concrete.Order", b =>
@@ -1560,8 +1428,11 @@ namespace ConsultancyApp.Data.Migrations
                     b.Navigation("Image");
 
                     b.Navigation("PsychologistCategory");
+                });
 
-                    b.Navigation("PsychologistDescription");
+            modelBuilder.Entity("ConsultancyApp.Entity.Concrete.PsychologistDescription", b =>
+                {
+                    b.Navigation("Psychologist");
                 });
 #pragma warning restore 612, 618
         }

@@ -23,6 +23,6 @@ namespace ConsultancyApp.Entity.Concrete.Identity
     {
         Admin = 0,
         Psychologist = 1,
-        User = 2
+        Customer = 2
     }
 }

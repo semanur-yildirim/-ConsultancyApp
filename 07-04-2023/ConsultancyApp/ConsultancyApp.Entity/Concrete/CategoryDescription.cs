@@ -16,6 +16,5 @@ namespace ConsultancyApp.Entity.Concrete
         public string ForWho { get; set; }
         public string Purpose { get; set;}
         public string PositiveEffect { get; set; }
-
     }
 }

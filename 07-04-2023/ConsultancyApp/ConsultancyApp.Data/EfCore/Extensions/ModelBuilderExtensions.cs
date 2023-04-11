@@ -18,7 +18,7 @@ namespace ConsultancyApp.Data.EfCore.Extensions
             List<Role> roles = new List<Role>
             {
                 new Role{Name="Admin", Description="Yöneticiler", NormalizedName="ADMIN"},
-                new Role{Name="User", Description="Kullanıcılar", NormalizedName="USER"},
+                new Role{Name="Customer", Description="Kullanıcılar", NormalizedName="Customer"},
                 new Role{Name="Psychologist", Description="Psikologlar", NormalizedName="PSYCHOLOGIST"},
             };
             modelBuilder.Entity<Role>().HasData(roles);
@@ -45,6 +45,22 @@ namespace ConsultancyApp.Data.EfCore.Extensions
                 new Customer { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Mehmet", Url = "mehmet-hasta", userId = "8da007be-c50b-4973-aa45-224b7368d185", Address = "Karşıyaka mahallesi Yalı Caddesi no:27 Daire:5", PsychologistId = 3 }
             };
             #endregion
+            #region Psychologist
+            List<Psychologist> psychologists = new List<Psychologist>
+            {
+                 new Psychologist { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Selvi",  Price = 450, Url = "Selvi-psikolog", Gender="Kadın",userId= "8da007be-c50b-4973-aa45-224b7358hkn15" },
+
+                 new Psychologist { Id = 2, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Zeynep", Price = 350, Url = "zeynep-psikolog", Gender="Kadın",userId= "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62" },
+                new Psychologist { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Merve", Price = 400, Url = "merve-psikolog", Gender="Kadın",userId= "6d091b6c-6b61-4b37-9d9d-9df0566sbv42" },
+                new Psychologist { Id = 4, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Aslı", Price = 450, Url = "asli-psikolog", Gender="Kadın",userId= "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34" },
+                new Psychologist { Id = 5, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Ali", Price = 500, Url = "ali-psikolog", Gender="Erkek",userId= "b342e19c-42af-4f25-b820-7a07dc9mbf13" },
+                new Psychologist { Id = 6, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Aylin", Price = 350, Url = "aylin-psikolog", Gender="Kadın",userId= "2b1db9c9-cd8e-476e-a289-886fd84azh24" },
+                new Psychologist { Id = 7, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Cem", Price = 400, Url = "cem-psikolog", Gender="Erkek",userId= "b35f20c1-836f-49c1-b46f-2399e12pvc85" },
+                new Psychologist { Id = 8, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Burcu", Price = 350, Url = "burcu-psikolog", Gender="Kadın",userId= "9e8f345d-141f-4ef2-99c7-8a9476llh93" },
+                 new Psychologist { Id = 9, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Nazlı", Price = 350, Url = "nazli-psikolog", Gender="Kadın",userId= "1ab0e5e7-6f81-4d8e-a4e4-9de4c31b92ba" },
+                 new Psychologist { Id = 10, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Ebru", Price = 350, Url = "ebru-psikolog", Gender="Kadın",userId= "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21" }
+            };
+            #endregion
             #region Parola İşlemleri
 
             var passwordHasher =new PasswordHasher<User>();
@@ -60,7 +76,7 @@ namespace ConsultancyApp.Data.EfCore.Extensions
                 new IdentityUserRole<string>{ UserId=users[0].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Psychologist").Id},
                 new IdentityUserRole<string>{ UserId=users[1].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Psychologist").Id},
                 new IdentityUserRole<string>{ UserId=users[2].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Admin").Id},
-                new IdentityUserRole<string>{ UserId=users[3].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="User").Id}
+                new IdentityUserRole<string>{ UserId=users[3].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Customer").Id}
 
             };
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(userRoles);
