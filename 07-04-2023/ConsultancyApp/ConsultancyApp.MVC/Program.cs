@@ -1,4 +1,4 @@
-using ConsultancyApp.Data.EfCore.Context;
+using ConsultancyApp.Data.Concrete.EfCore.Context;
 using ConsultancyApp.Entity.Concrete.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;

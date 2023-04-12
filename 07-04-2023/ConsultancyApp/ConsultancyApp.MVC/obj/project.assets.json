@@ -10364,23 +10364,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\seman\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
       "projectName": "ConsultancyApp.MVC",
-      "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
-      "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\obj\\",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10395,11 +10395,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
-              "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj"
+            "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj"
             },
-            "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj": {
-              "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj"
+            "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj": {
+              "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj"
             }
           }
         }

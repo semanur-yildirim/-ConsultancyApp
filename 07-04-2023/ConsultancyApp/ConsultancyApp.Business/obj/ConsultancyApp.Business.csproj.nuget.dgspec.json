@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {}
+    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
+    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj",
         "projectName": "ConsultancyApp.Business",
-        "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj",
-        "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj": {
-                "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj"
+              "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj"
               }
             }
           }
@@ -67,20 +67,20 @@
         }
       }
     },
-    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj": {
+    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
         "projectName": "ConsultancyApp.Data",
-        "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
-        "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -95,8 +95,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
-                "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj"
+              "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj"
               }
             }
           }
@@ -150,20 +150,20 @@
         }
       }
     },
-    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
+    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj",
         "projectName": "ConsultancyApp.Entity",
-        "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj",
-        "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\07-04-2023\\ConsultancyApp\\ConsultancyApp.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

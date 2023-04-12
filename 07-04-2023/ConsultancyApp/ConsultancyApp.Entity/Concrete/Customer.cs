@@ -19,7 +19,7 @@ namespace ConsultancyApp.Entity.Concrete
         public string Url { get; set; }
         public string userId { get; set; }
         public User user { get; set; }
-        public Psychologist Psychologist { get; set; }
+        public List<PsychologistCustomer> PsychologistCustomer { get; set; }
         public int PsychologistId { get; set; }
     }
 }

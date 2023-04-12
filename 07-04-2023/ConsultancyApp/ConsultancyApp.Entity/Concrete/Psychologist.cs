@@ -21,8 +21,9 @@ namespace ConsultancyApp.Entity.Concrete
         public string Name { get; set; }
         public List<PsychologistCategory> PsychologistCategory { get; set; }    
         public PsychologistDescription PsychologistDescription { get; set; }
-        public List<Customer> Customer { get; set; }
+        public List<PsychologistCustomer> PsychologistCustomer { get; set; }
         public Image Image { get; set; }
+
         public string userId { get; set; }
         public User user { get; set; }
 

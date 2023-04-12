@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace ConsultancyApp.Data.Abstract
 {
-    internal interface IGenericRepository<TEntity>
+    public interface IGenericRepository<TEntity>
     {
         Task CreateAsync(TEntity entity);
         Task<TEntity> GetByIdAsync(int id);
-        Task<TEntity> GetAllAsync();
-        Task UpdateAsync(TEntity entity);
-        Task DeleteAsync(TEntity entity);
+        Task<List<TEntity>> GetAllAsync();
+        void Update(TEntity entity);
+        void Delete(TEntity entity);
 
     }
 }
