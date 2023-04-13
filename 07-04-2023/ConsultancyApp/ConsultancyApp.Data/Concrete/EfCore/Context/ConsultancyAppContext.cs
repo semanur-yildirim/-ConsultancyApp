@@ -12,12 +12,12 @@ using System.Threading.Tasks;
 
 namespace ConsultancyApp.Data.Concrete.EfCore.Context
 {
-    public class ConsultancyAppContex : IdentityDbContext<User, Role, string>
+    public class ConsultancyAppContext : IdentityDbContext<User, Role, string>
     {
-        public ConsultancyAppContex(DbContextOptions options) : base(options)
+        public ConsultancyAppContext(DbContextOptions options) : base(options)
         {
 
-        }
+        }   
         public DbSet<Category> Categories { get; set; }
         public DbSet<Customer> Customer { get; set; }
         public DbSet<CategoryDescription> CategoryDescription { get; set; }

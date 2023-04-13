@@ -32,18 +32,17 @@ namespace ConsultancyApp.Data.Concrete.EfCore
         public async Task<List<TEntity>> GetAllAsync()
         {
             return await _dbContext.Set<TEntity>().ToListAsync();
-
-
         }
 
-        public Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+           return await _dbContext.Set<TEntity>().FindAsync(id);
         }
 
         public void Update(TEntity entity)
         {
-            throw new NotImplementedException();
+            _dbContext.Update(entity);
+            _dbContext.SaveChanges();
         }
     }
 }
