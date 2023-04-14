@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ConsultancyApp.Data.Abstract
 {
-    public interface OrderRepository :IGenericRepository<Order>
+    public interface IOrderRepository :IGenericRepository<Order>
     {
         Task<List<Order>> GetAllOrdersAsync(string userId=null);
     }

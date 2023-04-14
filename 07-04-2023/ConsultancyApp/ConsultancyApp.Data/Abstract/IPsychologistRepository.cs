@@ -15,7 +15,7 @@ namespace ConsultancyApp.Data.Abstract
         Task<List<Psychologist>> GetPsychologistsByCustomerAsync(int customerId);
         Task CreatePsychologist(Psychologist psychologist, int[] SelectedCategories, Image image,PsychologistDescription psychologistDescription
             );
-        Task UpdatePsychologist(Psychologist psychologist, int[] SelectedCategories, PsychologistDescription psychologistDescription);
+        Task UpdatePsychologist(Psychologist psychologist, int[] SelectedCategories, PsychologistDescription psychologistDescription,int[] psychologistCustomers);
     }
 }
 

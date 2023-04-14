@@ -14,5 +14,7 @@ namespace ConsultancyApp.Entity.Concrete
         public Psychologist Psychologist { get; set; }
         public int PsychologistId { get; set; }
         public decimal? Price { get; set; }
+        public int Quantity { get; set; }
+
     }
 }
