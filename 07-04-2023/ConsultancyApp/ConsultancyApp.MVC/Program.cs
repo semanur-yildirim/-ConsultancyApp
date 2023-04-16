@@ -1,3 +1,6 @@
+using ConsultancyApp.Business.Abstract;
+using ConsultancyApp.Data.Abstract;
+using ConsultancyApp.Data.Concrete.EfCore;
 using ConsultancyApp.Data.Concrete.EfCore.Context;
 using ConsultancyApp.Entity.Concrete.Identity;
 using Microsoft.AspNetCore.Identity;
@@ -13,6 +16,19 @@ builder.Services.AddIdentity<User, Role>()
     .AddEntityFrameworkStores<ConsultancyAppContext>()
     .AddDefaultTokenProviders();
 
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<ICategoryDescriptionService, CategoryDescriptionManager>();
+builder.Services.AddScoped<ICustomerService, CustomerManager>();
+//builder.Services.AddScoped<IPsychologistDescriptionService, PsychologistDescriptionManager>();
+builder.Services.AddScoped<IPsychologistService, PsychologistManager>();
+
+
+
+builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
+builder.Services.AddScoped<ICategoryDescriptionRepository, EfCoreCategoryDescriptionRepository>();
+builder.Services.AddScoped<ICustomerRepository, EfCoreCustomerRepository>();
+builder.Services.AddScoped<IPsychologistRepository, EfCorePsychologistRepository>();
+//builder.Services.AddScoped<IPsychologistDescriptionService, EfCorePsychologistDescriptionRepository>();
 
 var app = builder.Build();
 
