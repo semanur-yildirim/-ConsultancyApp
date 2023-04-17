@@ -9,6 +9,12 @@ namespace ConsultancyApp.Business.Abstract
 {
     public interface ICategoryDescriptionService
     {
-        Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(int categoryId);
+        Task CreateAsync(CategoryDescription categoryDescription);
+        Task<CategoryDescription> GetByIdAsync(int id);
+        Task<List<CategoryDescription>> GetAllAsync();
+        void Update(CategoryDescription categoryDescription);
+        void Delete(CategoryDescription categoryDescription);
+
+        Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(int categoryDescriptionId);
     }
 }

@@ -39,7 +39,7 @@ namespace ConsultancyApp.Business.Concrete
             return await _categoryRepository.GetByIdAsync(id);
         }
 
-        public async Task<List<Category>> GetCategoriesAsync(bool ApprpvedStatus)
+        public async Task<List<Category>> GetAllCategoriesAsync(bool ApprpvedStatus)
         {
             return await _categoryRepository.GetCategoriesAsync(ApprpvedStatus);
         }

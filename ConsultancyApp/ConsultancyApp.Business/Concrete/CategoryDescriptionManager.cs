@@ -18,9 +18,34 @@ namespace ConsultancyApp.Business.Concrete
             _categoryDescriptionRepository = categoryDescriptionRepository;
         }
 
+        public async Task CreateAsync(CategoryDescription categoryDescription)
+        {
+            await _categoryDescriptionRepository.CreateAsync(categoryDescription);
+        }
+
+        public void Delete(CategoryDescription categoryDescription)
+        {
+            _categoryDescriptionRepository.Delete(categoryDescription);
+        }
+
+        public  async Task<List<CategoryDescription>> GetAllAsync()
+        {
+            return await _categoryDescriptionRepository.GetAllAsync();
+        }
+
+        public async Task<CategoryDescription> GetByIdAsync(int id)
+        {
+            return await _categoryDescriptionRepository.GetByIdAsync(id);
+        }
+
         public async Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(int categoryId)
         {
             return await _categoryDescriptionRepository.GetCategoryDescriptionByCategoryAsync(categoryId);
+        }
+
+        public void Update(CategoryDescription categoryDescription)
+        {
+            _categoryDescriptionRepository.Update(categoryDescription);
         }
     }
 }

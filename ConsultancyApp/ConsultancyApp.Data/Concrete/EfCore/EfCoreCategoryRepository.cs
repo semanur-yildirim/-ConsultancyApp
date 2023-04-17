@@ -12,7 +12,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore
 {
     public class EfCoreCategoryRepository : EfCoreGenericRepository<Category>, ICategoryRepository
     {
-        public EfCoreCategoryRepository(DbContext _appContext) : base(_appContext)
+        public EfCoreCategoryRepository(ConsultancyAppContext _appContext) : base(_appContext)
         {
         }
         ConsultancyAppContext AppContext

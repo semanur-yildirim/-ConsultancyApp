@@ -18,9 +18,34 @@ namespace ConsultancyApp.Business.Concrete
             _psychologistDescriptionRepository = psychologistDescriptionRepository;
         }
 
+        public async Task CreateAsync(PsychologistDescription psychologistDescription)
+        {
+            await _psychologistDescriptionRepository.CreateAsync(psychologistDescription);
+        }
+
+        public void Delete(PsychologistDescription psychologistDescription)
+        {
+           _psychologistDescriptionRepository.Delete(psychologistDescription);
+        }
+
+        public async Task<List<PsychologistDescription>> GetAllAsync()
+        {
+            return await _psychologistDescriptionRepository.GetAllAsync();
+        }
+
+        public async Task<PsychologistDescription> GetByIdAsync(int id)
+        {
+           return  await _psychologistDescriptionRepository.GetByIdAsync(id);
+        }
+
         public async Task<PsychologistDescription> GetPsychologistDescriptionByPsychologistAsync(int psychologistId)
         {
             return await _psychologistDescriptionRepository.GetPsychologistDescriptionByPsychologistAsync(psychologistId);
+        }
+
+        public void Update(PsychologistDescription psychologistDescription)
+        {
+            _psychologistDescriptionRepository.Update(psychologistDescription);
         }
     }
 }

@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddDbContext<ConsultancyAppContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("SqliteConnection")));
 
 builder.Services.AddIdentity<User, Role>()
@@ -18,19 +19,19 @@ builder.Services.AddIdentity<User, Role>()
     .AddDefaultTokenProviders();
 
 
-//builder.Services.AddScoped<ICategoryService, CategoryManager>();
-//builder.Services.AddScoped<ICategoryDescriptionService, CategoryDescriptionManager>();
-//builder.Services.AddScoped<ICustomerService, CustomerManager>();
-//builder.Services.AddScoped<IPsychologistDescriptionService, PsychologistDescriptionManager>();
-//builder.Services.AddScoped<IPsychologistService, PsychologistManager>();
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<ICategoryDescriptionService, CategoryDescriptionManager>();
+builder.Services.AddScoped<ICustomerService, CustomerManager>();
+builder.Services.AddScoped<IPsychologistDescriptionService, PsychologistDescriptionManager>();
+builder.Services.AddScoped<IPsychologistService, PsychologistManager>();
 
 
 
-//builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
-//builder.Services.AddScoped<ICategoryDescriptionRepository, EfCoreCategoryDescriptionRepository>();
-//builder.Services.AddScoped<ICustomerRepository, EfCoreCustomerRepository>();
-//builder.Services.AddScoped<IPsychologistRepository, EfCorePsychologistRepository>();
-//builder.Services.AddScoped<IPsychologistDescriptionService, EfCorePsychologistDescriptionRepository>();
+builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
+builder.Services.AddScoped<ICategoryDescriptionRepository, EfCoreCategoryDescriptionRepository>();
+builder.Services.AddScoped<ICustomerRepository, EfCoreCustomerRepository>();
+builder.Services.AddScoped<IPsychologistRepository, EfCorePsychologistRepository>();
+builder.Services.AddScoped<IPsychologistDescriptionRepository, EfCorePsychologistDescriptionRepository>();
 
 var app = builder.Build();
 

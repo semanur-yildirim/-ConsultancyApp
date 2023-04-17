@@ -13,7 +13,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore
 {
     public class EfCoreCustomerRepository : EfCoreGenericRepository<Customer>, ICustomerRepository
     {
-        public EfCoreCustomerRepository(DbContext _appContext) : base(_appContext)
+        public EfCoreCustomerRepository(ConsultancyAppContext _appContext) : base(_appContext)
         {
         }
         ConsultancyAppContext AppContext

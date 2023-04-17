@@ -12,9 +12,10 @@ namespace ConsultancyApp.Data.Concrete.EfCore
 {
     public class EfCorePsychologistDescriptionRepository : EfCoreGenericRepository<PsychologistDescription>, IPsychologistDescriptionRepository
     {
-        public EfCorePsychologistDescriptionRepository(DbContext _appContext) : base(_appContext)
+        public EfCorePsychologistDescriptionRepository(ConsultancyAppContext _appContext) : base(_appContext)
         {
         }
+
         ConsultancyAppContext AppContext
         {
             get { return _dbContext as ConsultancyAppContext; }
