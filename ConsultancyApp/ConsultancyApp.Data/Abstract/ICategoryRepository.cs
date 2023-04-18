@@ -11,5 +11,6 @@ namespace ConsultancyApp.Data.Abstract
     {
         Task<List<Category>> GetAllCategoriesAsync(bool ApprpvedStatus=false);
         Task<List<Category>> GetCategoriesByPsyhologist(int id);
-    }
+        Task<Category> GetCategoryDetailsByUrlAsync(string url);
+    }   
 }

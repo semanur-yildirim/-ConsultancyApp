@@ -9,6 +9,6 @@ namespace ConsultancyApp.Data.Abstract
 {
     public interface ICategoryDescriptionRepository:IGenericRepository<CategoryDescription>
     {
-        Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(int categoryId);
+        Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(string categoryurl);
     }
 }

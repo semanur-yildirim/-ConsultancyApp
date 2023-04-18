@@ -38,9 +38,9 @@ namespace ConsultancyApp.Business.Concrete
             return await _categoryDescriptionRepository.GetByIdAsync(id);
         }
 
-        public async Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(int categoryId)
+        public async Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(string categoryurl)
         {
-            return await _categoryDescriptionRepository.GetCategoryDescriptionByCategoryAsync(categoryId);
+            return await _categoryDescriptionRepository.GetCategoryDescriptionByCategoryAsync(categoryurl);
         }
 
         public void Update(CategoryDescription categoryDescription)

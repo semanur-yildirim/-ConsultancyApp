@@ -53,5 +53,10 @@ namespace ConsultancyApp.Business.Concrete
         {
             _categoryRepository.Update(category);
         }
+
+        public async Task<Category> GetCategoryDetailsByUrlAsync(string url)
+        {
+            return await _categoryRepository.GetCategoryDetailsByUrlAsync(url);
+        }
     }
 }

@@ -11,6 +11,6 @@ namespace ConsultancyApp.MVC.Models.ViewModels
         public string Url { get; set; }
         public string Name { get; set; }
         public CategoryDescription CategoryDescription { get; set; }
-        public List<PsychologistCategory> PsychologitstCategry { get; set; }
+        public List<Psychologist> Psychologist { get; set; }
     }
 }

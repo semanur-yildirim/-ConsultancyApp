@@ -47,7 +47,8 @@ namespace ConsultancyApp.MVC.Controllers
                 CreatedDate=c.CreatedDate,
                 ModifiedDate=c.ModifiedDate,
                 CategoryDescription=c.CategoryDescription,
-                Name=c.Name
+                Name=c.Name,
+                Url=c.Url
             }).ToList();
             CategoryPsychologistModel categoryPsychologistModel = new CategoryPsychologistModel();
             categoryPsychologistModel.Categories = categoriesModelList;

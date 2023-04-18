@@ -39,5 +39,13 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             .ThenInclude(pc => pc.Psychologist).Where(p => p.PsychologitstCategry.Any(x => x.PsychologistId == id)).ToListAsync();
             return psychologists;
         }
+
+        public async Task<Category> GetCategoryDetailsByUrlAsync(string url)
+        {
+            var resultCategory =  AppContext.Categories
+                .Where(c=>c.Url==url)
+                .Include(c => c.CategoryDescription).FirstOrDefault();
+            return   resultCategory;
+        }
     }
 }

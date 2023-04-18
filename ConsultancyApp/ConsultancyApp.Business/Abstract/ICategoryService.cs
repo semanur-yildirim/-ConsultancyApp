@@ -14,6 +14,8 @@ namespace ConsultancyApp.Business.Abstract
         Task<List<Category>> GetAllAsync();
         void Update(Category category);
         void Delete(Category category);
+        Task<Category> GetCategoryDetailsByUrlAsync(string url);
+
         Task<List<Category>> GetAllCategoriesAsync(bool ApprpvedStatus=false);
         Task<List<Category>> GetCategoriesByPsyhologist(int id);
     }

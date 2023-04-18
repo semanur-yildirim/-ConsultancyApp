@@ -51,6 +51,11 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllerRoute(
+    name: "categorydetails",
+    pattern:"category/{categoryurl}",
+    defaults: new { controller = "Category", action = "CategoryDetails" }
+    );
+app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 

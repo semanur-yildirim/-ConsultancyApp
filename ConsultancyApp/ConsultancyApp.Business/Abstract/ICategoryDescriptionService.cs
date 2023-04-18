@@ -15,6 +15,6 @@ namespace ConsultancyApp.Business.Abstract
         void Update(CategoryDescription categoryDescription);
         void Delete(CategoryDescription categoryDescription);
 
-        Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(int categoryDescriptionId);
+        Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(string categoryDescription);
     }
 }

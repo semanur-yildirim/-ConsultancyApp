@@ -47,7 +47,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             List<Psychologist> psychologists = await AppContext
                 .Psychologist
                 .Include(p=>p.PsychologistDescription).Include(i=>i.Image)
-                .Include(p => p.PsychologistCategory).ThenInclude(pc => pc.Category).Where(ci => ci.Id == categoryId).ToListAsync();
+                .Include(p => p.PsychologistCategory).ThenInclude(pc => pc.Category).Where(ci => ci.PsychologistCategory.Any(x=>x.CategoryId == categoryId)).ToListAsync();
             return psychologists;
         }
 

@@ -19,9 +19,9 @@ namespace ConsultancyApp.Data.Concrete.EfCore
         {
             get { return _dbContext as ConsultancyAppContext; }
         }
-        public async Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(int categoryId)
+        public async Task<CategoryDescription> GetCategoryDescriptionByCategoryAsync(string categoryurl)
         {
-            return await AppContext.CategoryDescription.Where(cd => cd.CategoryId == categoryId).FirstOrDefaultAsync();
+            return await AppContext.CategoryDescription.Where(cd => cd.Category.Url == categoryurl).FirstOrDefaultAsync();
         }
     }
 }
