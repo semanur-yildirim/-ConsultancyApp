@@ -11,6 +11,7 @@ namespace ConsultancyApp.Entity.Concrete
         public int Id { get; set; }
         public Category Category { get; set; }
         public int CategoryId { get; set; }
+        public string Summary { get; set; }
         public string What { get; set; }
         public string How { get; set; }
         public string HowLong { get; set; }

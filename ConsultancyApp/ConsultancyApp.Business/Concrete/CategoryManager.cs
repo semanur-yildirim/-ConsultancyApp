@@ -39,9 +39,9 @@ namespace ConsultancyApp.Business.Concrete
             return await _categoryRepository.GetByIdAsync(id);
         }
 
-        public async Task<List<Category>> GetAllCategoriesAsync(bool ApprpvedStatus)
+        public async Task<List<Category>> GetAllCategoriesAsync(bool ApprpvedStatus = false)
         {
-            return await _categoryRepository.GetCategoriesAsync(ApprpvedStatus);
+            return await _categoryRepository.GetAllCategoriesAsync(ApprpvedStatus);
         }
 
         public async Task<List<Category>> GetCategoriesByPsyhologist(int id)

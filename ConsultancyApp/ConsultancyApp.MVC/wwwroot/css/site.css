@@ -535,6 +535,7 @@ section {
 .hero {
     overflow-x: hidden;
     padding: 0;
+    margin-top:100px;
 }
 
     .hero .carousel {
@@ -725,11 +726,79 @@ section {
     .constructions button[type=submit]:hover {
         background: rgba(254, 185, 0, 0.8);
     }
-
-
 /*--------------------------------------------------------------
-# Footer
+# Services Section
 --------------------------------------------------------------*/
+.services .service-item {
+    padding: 40px;
+    background: #fff;
+    height: 100%;
+    
+}
+    .services .service-item .icon {
+        width: 48px;
+        height: 48px;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+        .services .service-item .icon i {
+            color: var(--color-secondary);
+            font-size: 40px;
+            transition: ease-in-out 0.3s;
+            z-index: 2;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .services .service-item .icon:before {
+            position: absolute;
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: #f0f1f2;
+            border-radius: 50px;
+            z-index: 1;
+            top: 10px;
+            right: -15px;
+            transition: 0.3s;
+        }
+
+    .services .service-item h3 {
+        color: var(--color-default);
+        font-weight: 700;
+        margin: 0 0 20px 0;
+        padding-bottom: 8px;
+        font-size: 22px;
+        position: relative;
+        display: inline-block;
+        border-bottom: 4px solid #ebebed;
+        transition: 0.3s;
+    }
+
+    .services .service-item p {
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+
+    .services .service-item .readmore {
+        margin-top: 15px;
+        display: inline-block;
+        color: var(--color-primary);
+    }
+
+    .services .service-item:hover .icon:before {
+        background: var(--color-primary);
+    }
+
+    .services .service-item:hover h3 {
+        border-color: var(--color-primary);
+    }
+
+
+
+
 /*.footer {
     color: #fff;
     background: url("../img/footer-bg.jpg") top center no-repeat;
@@ -742,11 +811,11 @@ section {
     .footer:before {
         content: "";
         background: rgba(0, 0, 0, 0.8);
-        position: absolute;
+       position: absolute;
         inset: 0;
-    }*/
+    }
 
-/*    .footer .footer-content .footer-info {
+    .footer .footer-content .footer-info {
         margin-bottom: 30px;
     }
 

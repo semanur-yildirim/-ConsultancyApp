@@ -1,18 +1,22 @@
-﻿@model PsychologistModel
+﻿
+@model PsychologistModel
 
 <div class="card-item">
     <div class="row">
-        <div class="col-xl-5">
+        <div class="col-xl-5 col">
             <img src="~/image/psychologist/@Model.Image.Url" class="b-image" />
         </div>
-        <div class="col-xl-7 d-flex align-items-center">
+        <div class="col-xl-7 col d-flex align-items-center">
             <div class="card-body">
                 <h4 class="card-title">@Model.Name</h4>
                 @for (int i = 0; i < Model.categories.Count; i++)
                 {
                     <span class="card-text text-danger fs-6">@Model.categories[i].Name <span class="text-dark"> @(i == Model.categories.Count - 1 ? "" : "|")</span></span>
                 }
-                <div><button type="submit">Randevu Al</button></div>
+                <div class="d-flex justify-content-between align-items-center mt-2" >
+                    <p class="text-success fs-6">@($"{Model.Price:C0}") <span>/</span> Seans</p>
+                    <div class="ms-2"><button type="submit">Randevu Al</button></div>
+                </div>
             </div>
         </div>
     </div>

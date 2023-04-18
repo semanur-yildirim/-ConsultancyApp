@@ -15,7 +15,7 @@ namespace ConsultancyApp.Business.Abstract
         void Update(Psychologist psychologist);
         void Delete(Psychologist psychologist);
 
-        Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus);
+        Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus=false);
         Task<Psychologist> GetPsychologistFullDataAsync(int id);
         Task<List<Psychologist>> GetPsychologistsByCategoriesAsync(int categoryId);
         Task<List<Psychologist>> GetPsychologistsByCustomerAsync(int customerId);

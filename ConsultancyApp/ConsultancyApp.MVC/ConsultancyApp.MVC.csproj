@@ -25,4 +25,8 @@
     <ProjectReference Include="..\ConsultancyApp.Core\ConsultancyApp.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Views\Category\" />
+  </ItemGroup>
+
 </Project>

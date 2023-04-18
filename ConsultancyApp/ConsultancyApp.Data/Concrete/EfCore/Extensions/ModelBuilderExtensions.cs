@@ -79,18 +79,18 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             #region Psychologist
             List<Psychologist> psychologists = new List<Psychologist>
             {
-                 new Psychologist { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Selvi",  Price = 450, Url = "Selvi-psikolog", Gender="Kadın",userId= users[0].Id },
+                 new Psychologist { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Selvi",  Price = 450, Url = "Selvi-psikolog", Gender="Kadın",userId= users[0].Id },
 
-                 new Psychologist { Id = 2, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Zeynep", Price = 350, Url = "zeynep-psikolog", Gender="Kadın",userId= users[1].Id },
+                 new Psychologist { Id = 2, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Zeynep", Price = 350, Url = "zeynep-psikolog", Gender="Kadın",userId= users[1].Id },
 
-                new Psychologist { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Merve", Price = 400, Url = "merve-psikolog", Gender="Kadın",userId=users[2].Id },
+                new Psychologist { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Merve", Price = 400, Url = "merve-psikolog", Gender="Kadın",userId=users[2].Id },
 
-                new Psychologist { Id = 4, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Aslı", Price = 450, Url = "asli-psikolog", Gender="Kadın",userId= users[3].Id },
+                new Psychologist { Id = 4, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Aslı", Price = 450, Url = "asli-psikolog", Gender="Kadın",userId= users[3].Id },
 
-                new Psychologist { Id = 5, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Aylin", Price = 350, Url = "aylin-psikolog", Gender="Kadın",userId= users[4].Id },
+                new Psychologist { Id = 5, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Aylin", Price = 350, Url = "aylin-psikolog", Gender="Kadın",userId= users[4].Id },
 
 
-                new Psychologist { Id = 6, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Ali", Price = 500, Url = "ali-psikolog", Gender="Erkek",userId= users[5].Id},
+                new Psychologist { Id = 6, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Ali", Price = 500, Url = "ali-psikolog", Gender="Erkek",userId= users[5].Id},
                 new Psychologist { Id = 7, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Cem", Price = 400, Url = "cem-psikolog", Gender="Erkek",userId= users[6].Id },
                 new Psychologist { Id = 8, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Ahmet", Price = 350, Url = "ahmet-psikolog", Gender="Erkek",userId= users[7].Id },
                  new Psychologist { Id = 9, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Emre", Price = 350, Url = "emre-psikolog", Gender="Erkek",userId= users[8].Id },

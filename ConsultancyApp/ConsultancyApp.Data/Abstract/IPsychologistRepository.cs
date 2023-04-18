@@ -9,7 +9,7 @@ namespace ConsultancyApp.Data.Abstract
 {
     public interface IPsychologistRepository:IGenericRepository<Psychologist>
     {
-        Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus);
+        Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus=false);
         Task<Psychologist> GetPsychologistFullDataAsync(int id);
         Task<List<Psychologist>> GetPsychologistsByCategoriesAsync(int categoryId);
         Task<List<Psychologist>> GetPsychologistsByCustomerAsync(int customerId);

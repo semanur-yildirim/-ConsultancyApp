@@ -39,7 +39,22 @@ namespace ConsultancyApp.MVC.Controllers
                 Image=p.Image,
                 categories=p.PsychologistCategory.Select(pc=>pc.Category).ToList(),
             }).ToList();
-            return View(psychologistModelList);
+            List<CategoriesModel> categoriesModelList = new List<CategoriesModel>();
+            categoriesModelList = categories.Select(c => new CategoriesModel
+            {
+                Id= c.Id,
+                IsApproved=c.IsApproved,
+                CreatedDate=c.CreatedDate,
+                ModifiedDate=c.ModifiedDate,
+                CategoryDescription=c.CategoryDescription,
+                Name=c.Name
+            }).ToList();
+            CategoryPsychologistModel categoryPsychologistModel = new CategoryPsychologistModel();
+            categoryPsychologistModel.Categories = categoriesModelList;
+            categoryPsychologistModel.Psychologist = psychologistModelList;
+
+
+            return View(categoryPsychologistModel);
         }
     }
 }

@@ -20,9 +20,16 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             get { return _dbContext as ConsultancyAppContext; }
         }
 
-        public async Task<List<Category>> GetCategoriesAsync(bool ApprpvedStatus)
+        public async Task<List<Category>> GetAllCategoriesAsync(bool ApprovedStatus=false)
         {
-           return await AppContext.Categories.Where(c=>c.IsApproved).ToListAsync();
+            var categories = AppContext.Categories
+                 .Include(cd => cd.CategoryDescription).AsQueryable();
+            if (ApprovedStatus)
+            {
+                categories=categories.Where(p => p.IsApproved == ApprovedStatus);
+            }
+            return await categories.ToListAsync();
+         
         }
         public async Task<List<Category>> GetCategoriesByPsyhologist(int id)
         {

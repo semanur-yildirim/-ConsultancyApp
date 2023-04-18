@@ -40,7 +40,7 @@ namespace ConsultancyApp.Business.Concrete
 
         }
 
-        public async Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus)
+        public async Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus = false)
         {
             return await _psychologistRepository.GetAllPsychologistDataAsync(ApprovedStatus);
         }

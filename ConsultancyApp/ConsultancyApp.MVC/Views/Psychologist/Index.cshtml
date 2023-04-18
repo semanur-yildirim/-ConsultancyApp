@@ -1,0 +1,33 @@
+﻿@model List<PsychologistModel>
+@{
+    ViewData["Title"] = "Psikologlar";
+}
+
+<!-- ======= Constructions Section ======= -->
+<section id="constructions" class="constructions">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header mt-5">
+            <h2>Danışmanlarımız</h2>
+            <p>
+                um. Debitis deserunt quidem delectus expedita ducimus dolor. Aut iusto ipsa. Eos ipsum nobis
+                ipsa soluta itaque perspiciatis fuga ipsum perspiciatis. Eum amet fugiat totam nisi possimus ut delectus
+                dicta.
+            </p>
+        </div>
+        @if (Model.Count() > 0)
+        {
+            <div class="row gy-4">
+                @foreach (var psychologist in Model)
+                {
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        @await Html.PartialAsync("_PsychologistPartial",psychologist)
+                    </div>
+                }
+            </div>
+
+            <!-- End Card Item -->
+        }
+
+    </div>
+</section><!-- End Constructions Section -->

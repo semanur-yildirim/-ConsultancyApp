@@ -20,13 +20,17 @@ namespace ConsultancyApp.Data.Concrete.EfCore
         {
             get { return _dbContext as ConsultancyAppContext; }
         }
-        public async Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus)
+        public async Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus=false)
         {
-            var psychologist = await AppContext
-                .Psychologist.Where(p => p.IsApproved == ApprovedStatus)
-                .Include(p => p.PsychologistCategory).ThenInclude(pc => pc.Category)
-                .Include(p => p.Image).ToListAsync();
-            return psychologist;
+            var psychologist =  AppContext
+                .Psychologist.Include(p => p.PsychologistCategory).ThenInclude(pc => pc.Category)
+                .Include(p => p.Image).AsQueryable();
+            if(ApprovedStatus)
+            {
+                psychologist = psychologist.
+                Where(p => p.IsApproved == ApprovedStatus);
+            }
+            return await psychologist.ToListAsync(); 
         }
         public async Task<Psychologist> GetPsychologistFullDataAsync(int id)
         {
@@ -38,7 +42,6 @@ namespace ConsultancyApp.Data.Concrete.EfCore
                 .Include(pi=>pi.Image).FirstOrDefaultAsync();
             return psychologist;
         }
-
         public async Task<List<Psychologist>> GetPsychologistsByCategoriesAsync(int categoryId)
         {
             List<Psychologist> psychologists = await AppContext
