@@ -52,7 +52,6 @@ namespace ConsultancyApp.Business.Concrete
         {
             return await _customerRepository.GetCustomerFullDataAsync(id);
         }
-
         public void Update(Customer customer)
         {
             _customerRepository.Update(customer);

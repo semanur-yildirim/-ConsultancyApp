@@ -11,6 +11,7 @@ namespace ConsultancyApp.Data.Abstract
     {
         Task<List<Psychologist>> GetAllPsychologistDataAsync(bool ApprovedStatus=false);
         Task<Psychologist> GetPsychologistFullDataAsync(int id);
+        Task<Psychologist> GetPsychologistFullDataByUserId(string userId);
         Task<List<Psychologist>> GetPsychologistsByCategoriesAsync(int categoryId);
         Task<List<Psychologist>> GetPsychologistsByCustomerAsync(int customerId);
         Task CreatePsychologist(Psychologist psychologist, int[] SelectedCategories, Image image,PsychologistDescription psychologistDescription

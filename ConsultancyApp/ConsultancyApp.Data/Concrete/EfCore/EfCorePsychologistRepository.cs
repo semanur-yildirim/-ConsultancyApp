@@ -72,7 +72,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             updatePsychologist.Price = psychologist.Price;
             updatePsychologist.Url = psychologist.Url;
             updatePsychologist.Gender = psychologist.Gender;
-            updatePsychologist.Name = psychologist.Gender;
+            updatePsychologist.Name = psychologist.Name;
             updatePsychologist.Image = psychologist.Image;
             #endregion
             #region PsychologistDescription atamaları
@@ -118,6 +118,15 @@ namespace ConsultancyApp.Data.Concrete.EfCore
 
             await AppContext.PsychologistDescription.AddAsync(psychologistDescription);
             await AppContext.SaveChangesAsync();
+        }
+
+        public async Task<Psychologist> GetPsychologistFullDataByUserId(string userId)
+        {
+            var psychologist=await AppContext.Psychologist.Where(p=>p.userId==userId).Include(p => p.PsychologistDescription)
+                .Include(p => p.PsychologistCategory).ThenInclude(pc => pc.Category)
+                .Include(p => p.PsychologistCustomer).ThenInclude(pc => pc.Customer)
+                .Include(pi => pi.Image).FirstOrDefaultAsync();
+            return psychologist;
         }
     }
 }

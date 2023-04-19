@@ -63,7 +63,6 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             };
             modelBuilder.Entity<User>().HasData(users);
             #endregion
-
             #region Customer
             List<Customer> customers = new List<Customer>
             {
@@ -79,28 +78,26 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             #region Psychologist
             List<Psychologist> psychologists = new List<Psychologist>
             {
-                 new Psychologist { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Selvi",  Price = 450, Url = "Selvi-psikolog", Gender="Kadın",userId= users[0].Id },
+                 new Psychologist { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Selvi",  Price = 450, Url = "Selvi-psikolog",Gender="Kadın",userId= users[0].Id },
 
-                 new Psychologist { Id = 2, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Zeynep", Price = 350, Url = "zeynep-psikolog", Gender="Kadın",userId= users[1].Id },
+                 new Psychologist { Id = 2, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Zeynep", Price = 350, Url = "zeynep-psikolog",Gender="Kadın",userId= users[1].Id },
 
-                new Psychologist { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Merve", Price = 400, Url = "merve-psikolog", Gender="Kadın",userId=users[2].Id },
+                new Psychologist { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Merve", Price = 400, Url = "merve-psikolog",Gender="Kadın",userId=users[2].Id },
 
-                new Psychologist { Id = 4, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Aslı", Price = 450, Url = "asli-psikolog", Gender="Kadın",userId= users[3].Id },
+                new Psychologist { Id = 4, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Aslı", Price = 450, Url = "asli-psikolog",Gender="Kadın",userId= users[3].Id },
 
-                new Psychologist { Id = 5, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Aylin", Price = 350, Url = "aylin-psikolog", Gender="Kadın",userId= users[4].Id },
+                new Psychologist { Id = 5, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Aylin", Price = 350, Url = "aylin-psikolog",Gender="Kadın",userId= users[4].Id },
 
 
-                new Psychologist { Id = 6, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Ali", Price = 500, Url = "ali-psikolog", Gender="Erkek",userId= users[5].Id},
+                new Psychologist { Id = 6, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = false, Name = "Ali", Price = 500, Url = "ali-psikolog",Gender="Erkek",userId= users[5].Id},
                 new Psychologist { Id = 7, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Cem", Price = 400, Url = "cem-psikolog", Gender="Erkek",userId= users[6].Id },
-                new Psychologist { Id = 8, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Ahmet", Price = 350, Url = "ahmet-psikolog", Gender="Erkek",userId= users[7].Id },
-                 new Psychologist { Id = 9, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Emre", Price = 350, Url = "emre-psikolog", Gender="Erkek",userId= users[8].Id },
-                 new Psychologist { Id = 10, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Barış", Price = 350, Url = "barıs-psikolog", Gender="Erkek",userId= users[9].Id }
+                new Psychologist { Id = 8, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Ahmet", Price = 350, Url = "ahmet-psikolog",Gender="Erkek",userId= users[7].Id },
+                 new Psychologist { Id = 9, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Emre", Price = 350, Url = "emre-psikolog",Gender="Erkek",userId= users[8].Id },
+                 new Psychologist { Id = 10, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Barış", Price = 350, Url = "barıs-psikolog",Gender="Erkek",userId= users[9].Id }
 
             };
             modelBuilder.Entity<Psychologist>().HasData(psychologists);
-
             #endregion
-
             #region Parola İşlemleri
             var passwordHasher = new PasswordHasher<User>();
             users[0].PasswordHash = passwordHasher.HashPassword(users[0], "Qwe123.");
@@ -118,7 +115,6 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             users[12].PasswordHash = passwordHasher.HashPassword(users[0], "Qwe123.");
             users[13].PasswordHash = passwordHasher.HashPassword(users[0], "Qwe123.");
             #endregion
-
             #region Rol Atama İşlemleri
             List<IdentityUserRole<string>> userRoles = new List<IdentityUserRole<string>>
             {
@@ -141,7 +137,6 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             };
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(userRoles);
             #endregion
-
             #region Alışveriş Sepeti İşlemleri
             List<Cart> carts = new List<Cart>
             {
@@ -162,7 +157,6 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             };
             modelBuilder.Entity<Cart>().HasData(carts);
             #endregion
-
         }
     }
 }

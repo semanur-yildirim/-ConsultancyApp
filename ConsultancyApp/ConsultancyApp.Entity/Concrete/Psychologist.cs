@@ -17,15 +17,13 @@ namespace ConsultancyApp.Entity.Concrete
         public bool IsApproved { get; set ; }
         public string Url { get ; set ; }
         public decimal? Price { get; set; }
-        public string Gender { get; set; }
         public string Name { get; set; }
+        public string Gender { get; set; }
         public List<PsychologistCategory> PsychologistCategory { get; set; }    
         public PsychologistDescription PsychologistDescription { get; set; }
         public List<PsychologistCustomer> PsychologistCustomer { get; set; }
         public Image Image { get; set; }
         public string userId { get; set; }
         public User user { get; set; }
-
-
     }
 }

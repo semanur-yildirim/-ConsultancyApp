@@ -12,13 +12,13 @@
     <hr />
     <p class="mb-3 mt-4 fw-medium fs-4">@Model.CategoryName Nasıl Kimin İçin Uygulanır?</p>
     <div>@Model.ForWho</div>
-    <hr/>
+    <hr />
     <p class="mb-3 mt-4 fw-medium fs-4">@Model.CategoryName Ne Kadar Sürer?</p>
     <div>@Model.HowLong</div>
     <hr />
     <p class="mb-3 mt-4 fw-medium fs-4">@Model.CategoryName Etkili Midir?</p>
     <div>@Model.PositiveEffect</div>
-    <hr/>
+    <hr />
 </div>
 
 <!-- ======= Testimonials Section ======= -->
@@ -28,57 +28,37 @@
         <div class="section-header">
             <p class="fw-bold text-warning fs-3">Bu Alanda Hizmet Veren Danışmanlarımız</p>
         </div>
-
-        <div class="slides-2 swiper">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide">
-                    <div class="testimonial-wrap">
-                        <div class="row">
-                            <div class="col-3">
-                                @if (Model.Psychologist.Count() > 0)
-                                {
-                                    <div class="row gy-4">
-                                        @foreach (var psychologist in Model.Psychologist)
-                                        {
-                                            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-                                                <div class="card-item">
-                                                    <div class="row">
-                                                        <div class="col-xl-5 col">
-                                                            <img src="~/image/psychologist/@psychologist.Image.Url" class="b-image" />
-                                                        </div>
-                                                        <div class="col-xl-7 col d-flex align-items-center">
-                                                            <div class="card-body">
-                                                                <h4 class="card-title">@psychologist.Name</h4>
-                                                             @*   @for (int i = 0; i < Model.categories.Count; i++)
-                                                                {
-                                                                    <span class="card-text text-danger fs-6">@Model.categories[i].Name <span class="text-dark"> @(i == Model.categories.Count - 1 ? "" : "|")</span></span>
-                                                                }*@
-                                                                <div class="d-flex justify-content-between align-items-center mt-2">
-                                                                    <p class="text-success fs-6">@($"{psychologist.Price:C0}") <span>/</span> Seans</p>
-                                                                    <div class="ms-2"><button type="submit">Randevu Al</button></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        }
-                                    </div>
-
-                                    <!-- End Card Item -->
-                                }
-                            </div>
-                               
-                           
-                            </div>
-
+        @if (Model.Psychologist.Count() > 0)
+        {
+            <div class="row gy-4">
+                @foreach (var psychologist in Model.Psychologist)
+                {
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-item">
+                            <div class="row">
+                                <div class="col-xl-5 col">
+                        <img src="~/image/psychologist/@psychologist.Image.Url" class="b-image" />
                         </div>
-                         
-                      
-                </div><!-- End testimonial item -->
+                        <div class="col-xl-7 col d-flex align-items-center">
+                        <div class="card-body">
+                        <h4 class="card-title">@psychologist.Name</h4>
+                          @*         @for (int i = 0; i < Model.categories.Count; i++)
+                                {
+                                <span class="card-text text-danger fs-6">@Model.categories[i].Name <span class="text-dark"> @(i == Model.categories.Count - 1 ? "" : "|")</span></span>
+                                }*@
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                        <p class="text-success fs-6">@($"{psychologist.Price:C0}") <span>/</span> Seans</p>
+                        <div class="ms-2"><button type="submit">Randevu Al</button></div>
+                        </div>
+                            </div>
+                        </div>
+                    </div>
+                         </div>
             </div>
-            <div class="swiper-pagination"></div>
-        </div>
+                }
+            </div>
+
+            <!-- End Card Item -->
+        }
     </div>
 </section><!-- End Testimonials Section -->

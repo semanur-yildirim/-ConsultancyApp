@@ -1,15 +1,15 @@
 ﻿@model CategoriesModel
 
 
-        <div class="service-item  position-relative">
-            <div class="icon">
-                <i class="fa-solid fa-mountain-city"></i>
-            </div>
-            <h3> @Model.Name</h3>
-            <p>@Model.CategoryDescription.Summary</p>
-            <a asp-area="" asp-controller="Category" asp-action="CategoryDetails" asp-route-categoryurl="@Model.Url" class="readmore stretched-link">
-                Learn more <i class="bi bi-arrow-right"></i>
+<div class="service-item  position-relative">
+    <div class="icon">
+        <i class="fa-solid fa-mountain-city"></i>
+    </div>
+    <h3> @Model.Name</h3>
+    <p>@Model.CategoryDescription.Summary</p>
+    <a asp-area="" asp-controller="Category" asp-action="CategoryDetails" asp-route-categoryurl="@Model.Url" class="readmore stretched-link">
+        Learn more <i class="bi bi-arrow-right"></i>
 
-            </a>
-        </div>
+    </a>
+</div>
 

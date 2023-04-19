@@ -56,6 +56,11 @@ namespace ConsultancyApp.Business.Concrete
 
         }
 
+        public async Task<Psychologist> GetPsychologistFullDataByUserId(string userId)
+        {
+            return await _psychologistRepository.GetPsychologistFullDataByUserId(userId);
+        }
+
         public async Task<List<Psychologist>> GetPsychologistsByCategoriesAsync(int categoryId)
         {
             return await _psychologistRepository.GetPsychologistsByCategoriesAsync(categoryId);

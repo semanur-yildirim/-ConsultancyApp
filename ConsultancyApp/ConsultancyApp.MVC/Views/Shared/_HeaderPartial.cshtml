@@ -20,15 +20,19 @@
                     asp-controller="Psychologist"
                     asp-action="Index"
                 >Psikologlarımız</a></li>
-                <li><a href="">Blog</a></li>
-               
                 <li><a href="contact.html">İletişim</a></li>
-                <li><a href="">Kayıt Ol</a></li>
-                <li><a href="">Giriş Yap</a></li>
-
+                @if(User.Identity.IsAuthenticated)
+                {
+                    <li><a asp-area="" asp-controller="Account" asp-action="Manage" asp-route-username="@User.Identity.Name">Profilim</a></li>
+                    <li><a asp-area="" asp-controller="Account" asp-action="Logout">Çıkış Yap</a></li>
+                }
+                else
+                {
+                    <li><a href="">Kayıt Ol</a></li>
+                    <li><a asp-area="" asp-controller="Account" asp-action="Login">Giriş Yap</a></li>
+                } 
             </ul>
         </nav><!-- .navbar -->
-
     </div>
 </header><!-- End Header -->
 <!-- ======= Hero Section ======= -->

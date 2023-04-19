@@ -17,8 +17,8 @@ namespace ConsultancyApp.Entity.Concrete
         public DateTime ModifiedDate { get; set; }
         public bool IsApproved { get; set; }
         public string Url { get; set; }
+        public User User { get; set; }
         public string userId { get; set; }
-        public User user { get; set; }
         public List<PsychologistCustomer> PsychologistCustomer { get; set; }
         public int PsychologistId { get; set; }
     }
