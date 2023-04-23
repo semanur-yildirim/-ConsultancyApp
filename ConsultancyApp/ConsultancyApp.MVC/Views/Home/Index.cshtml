@@ -2,7 +2,7 @@
 @{
     ViewData["Title"] = "Ana Sayfa";
 }
- <div class="container-fluid">
+ <div class="container-fluid ">
      @await Html.PartialAsync("_SliderPartial")
  </div>
 <!-- ======= Constructions Section ======= -->
@@ -50,6 +50,12 @@
                 }
             </div>
         }
-        <a asp-area=""asp-controller="Category" asp-action="Index">Tüm Kategoriler</a>
+        <div class="text-center section-header mt-4 ">
+            <h2 >
+                <a asp-area="" asp-controller="Category" asp-action="Index" class="text-white fw-normal bg-success ps-4 pe-4 py-2 fs-4">Tüm Kategoriler</a>
+            </h2>
+           
+        </div>
+      
     </div>
 </section><!-- End Services Section -->

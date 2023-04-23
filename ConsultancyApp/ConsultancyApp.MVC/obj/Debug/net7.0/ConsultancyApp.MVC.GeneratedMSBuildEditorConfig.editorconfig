@@ -9,65 +9,65 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ConsultancyApp.MVC
 build_property.RootNamespace = ConsultancyApp.MVC
-build_property.ProjectDir = C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MVC\
+build_property.ProjectDir = C:\Users\seman\OneDrive\Masaüstü\-ConsultancyApp\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MVC\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MVC
+build_property.MSBuildProjectDirectory = C:\Users\seman\OneDrive\Masaüstü\-ConsultancyApp\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MVC
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Account/Login.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Account/Manage.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Account/Manage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNYW5hZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Category/CategoryDetails.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Category/CategoryDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ2F0ZWdvcnlEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Home/Index.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Psychologist/Index.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Psychologist/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHN5Y2hvbG9naXN0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_CategoryPartial.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_CategoryPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9DYXRlZ29yeVBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_FooterPartial.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_FooterPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_HeaderPartial.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_HeaderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_PsychologistPartial.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_PsychologistPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qc3ljaG9sb2dpc3RQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_SliderPartial.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_SliderPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TbGlkZXJQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/_ViewImports.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/_ViewStart.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_Layout.cshtml]
+[C:/Users/seman/OneDrive/Masaüstü/-ConsultancyApp/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-d3u6a722m5

@@ -677,6 +677,9 @@ section {
     .hero .carousel-control-next:hover {
         opacity: 0.9;
     }
+    .slider{
+        margin-top:100px;
+    }
 /*--------------------------------------------------------------
 # Constructions Section
 --------------------------------------------------------------*/
@@ -756,7 +759,7 @@ section {
             content: "";
             height: 100%;
             width: 100%;
-            background: #f0f1f2;
+            background: #ffc732;
             border-radius: 50px;
             z-index: 1;
             top: 10px;
@@ -789,11 +792,11 @@ section {
     }
 
     .services .service-item:hover .icon:before {
-        background: var(--color-primary);
+        background: var(--color-secondary);
     }
 
     .services .service-item:hover h3 {
-        border-color: var(--color-primary);
+        border-color: var(--color-default);
     }
 
 /*.footer {
