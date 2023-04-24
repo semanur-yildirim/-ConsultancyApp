@@ -23,6 +23,10 @@
                 <li><a href="contact.html">İletişim</a></li>
                 @if(User.Identity.IsAuthenticated)
                 {
+                    if(User.IsInRole("Admin"))
+                    {
+                        <li><a asp-area="Admin" asp-controller="Home" asp-action="Index"> Admin Paneli</a></li>
+                    }
                     <li><a asp-area="" asp-controller="Account" asp-action="Manage" asp-route-username="@User.Identity.Name">Profilim</a></li>
                     <li><a asp-area="" asp-controller="Account" asp-action="Logout">Çıkış Yap</a></li>
                 }

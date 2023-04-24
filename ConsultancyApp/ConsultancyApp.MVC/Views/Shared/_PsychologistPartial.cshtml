@@ -15,7 +15,7 @@
                 }
                 <div class="d-flex justify-content-between align-items-center mt-2" >
                     <p class="text-success fs-6">@($"{Model.Price:C0}") <span>/</span> Seans</p>
-                    <div class="ms-2"><button type="submit">Randevu Al</button></div>
+                    <div class="ms-2"><a asp-area=""asp-controller="Psychologist" asp-action="PsychologistProfile" asp-route-id="@Model.Id" class="btn btn-success">Randevu Al</a></div>
                 </div>
             </div>
         </div>

@@ -1,0 +1,42 @@
+﻿@model PsychologistModel
+<div class="margintop ms-5 ">
+    <div class="row">
+        @*Sol Taraf*@
+        <div class="col-3">
+            <div class="row">
+                <div class="col-12">
+                    <img src="~/image/psychologist/@Model.Image.Url" style="width: 15rem;" />
+
+                </div>
+                <label class="col-12">
+                    @Model.Name
+                </label>
+            </div>
+        </div>
+        @*Sağ Taraf*@
+        <div class="col-7">
+            <div class="row g-4 ">
+                <div>
+                    <h4>Hakkında</h4>
+                    <label>@Model.PsychologistDescription.About</label>
+                </div>
+                 <div>
+                    <h4>Eğitim Bilgileri</h4>
+                    <label>@Model.PsychologistDescription.Education</label>
+                </div>
+                <div>
+                    <h4>Deneyim</h4>
+                    <label>@Model.PsychologistDescription.Experience</label>
+                </div>
+                 <div>
+                    <h4>Danışmanlık Verdiği Alanlar</h4>
+                    @foreach (var categories in Model.categories)
+                    {
+                    <label>@categories.Name</label>
+                    }              
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

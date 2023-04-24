@@ -106,7 +106,7 @@ namespace ConsultancyApp.MVC.Controllers
                     Value = "Erkek",
                     Selected = p.Gender == "Erkek" ? true : false
                 });
-                userManageViewModel.GenderSelectList = genderList;
+                psychologistModelList.GenderSelectList = genderList;
                 userManageViewModel.PsychologistModel = psychologistModelList;
             }
             return View(userManageViewModel);

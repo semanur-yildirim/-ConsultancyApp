@@ -1,25 +1,25 @@
 ﻿@model LoginModel
-<h1 class="display-6">Giriş Yap</h1>
-<hr />
 
-<form asp-area="" asp-controller="Account" asp-action="Login" method="post">
-    <input type="hidden" asp-for="ReturnUrl" />
-    <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="row w-25">
-        <div class="col-12 mb-3">
-            <label class="form-label" asp-for="UserName"></label>
-            <input class="form-control" asp-for="UserName">
-            <span class="text-danger" asp-validation-for="UserName"></span>
-        </div>
-        <div class="col-12 mb-3">
-            <label class="form-label" asp-for="Password"></label>
-            <input class="form-control" asp-for="Password">
-            <span class="text-danger" asp-validation-for="Password"></span>
-        </div>
+    <div class="margintop d-flex flex-column justify-content-center align-items-center">
+        <h1 class="display-6">Giriş Yap</h1>
+        <form asp-area="" asp-controller="Account" asp-action="Login" method="post">
+            <input type="hidden" asp-for="ReturnUrl" />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="row w-100 ">
+                <div class="col-12 mb-3">
+                    <label class="form-label" asp-for="UserName"></label>
+                    <input class="form-control" asp-for="UserName">
+                    <span class="text-danger" asp-validation-for="UserName"></span>
+                </div>
+                <div class="col-12 mb-3">
+                    <label class="form-label" asp-for="Password"></label>
+                    <input class="form-control" asp-for="Password">
+                    <span class="text-danger" asp-validation-for="Password"></span>
+                </div>
+                <div class=" d-flex justify-content-center mt-2">
+                <button type="submit" class="btn btn-success col-6 ">Giriş Yap</button>
+                <a asp-area="" asp-controller="Account" asp-action="ForgotPassword" class="btn btn-link ms-2">Şifremi Unuttum</a>
+                </div>
+            </div>       
+        </form>
     </div>
-
-
-
-    <button type="submit" class="btn btn-primary">Giriş Yap</button>
-    <a asp-area="" asp-controller="Account" asp-action="ForgotPassword" class="btn btn-link">Şifremi Unuttum</a>
-</form>

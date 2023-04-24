@@ -2,6 +2,7 @@
 using ConsultancyApp.Entity.Concrete;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ConsultancyApp.MVC.Models.ViewModels
 {
@@ -21,6 +22,7 @@ namespace ConsultancyApp.MVC.Models.ViewModels
         public string Name { get; set; }
         public List<Category> categories { get; set; }
         public PsychologistDescription PsychologistDescription { get; set; }
-        public Image Image { get; set; } 
+        public Image Image { get; set; }
+        public List<SelectListItem> GenderSelectList { get; set; }
     }
 }

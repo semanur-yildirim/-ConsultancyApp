@@ -1,7 +1,9 @@
 ﻿using ConsultancyApp.Business.Abstract;
 using ConsultancyApp.Entity.Concrete;
+using ConsultancyApp.Entity.Concrete.Identity;
 using ConsultancyApp.MVC.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ConsultancyApp.MVC.Controllers
 {
@@ -35,6 +37,33 @@ namespace ConsultancyApp.MVC.Controllers
                 Image = p.Image,
                 categories = p.PsychologistCategory.Select(pc => pc.Category).ToList(),
             }).ToList();
+            return View(psychologistModelList);
+        }
+        public async Task<IActionResult> PsychologistProfile(int id)
+        {
+            Psychologist p = await _psychologistService.GetPsychologistFullDataAsync(id);
+            PsychologistModel psychologistModelList = new PsychologistModel();
+            psychologistModelList.Name = p.Name;
+            psychologistModelList.Price = p.Price;
+            psychologistModelList.Gender = p.Gender;
+            psychologistModelList.Image = p.Image;
+            psychologistModelList.PsychologistDescription = p.PsychologistDescription;
+            psychologistModelList.categories = p.PsychologistCategory.Select(pc => pc.Category).ToList();
+            psychologistModelList.Url = p.Url;
+            List<SelectListItem> genderList = new List<SelectListItem>();
+            genderList.Add(new SelectListItem
+            {
+                Text = "Kadın",
+                Value = "Kadın",
+                Selected = p.Gender == "Kadın" ? true : false
+            });
+            genderList.Add(new SelectListItem
+            {
+                Text = "Erkek",
+                Value = "Erkek",
+                Selected = p.Gender == "Erkek" ? true : false
+            });
+            psychologistModelList.GenderSelectList = genderList;
             return View(psychologistModelList);
         }
     }
