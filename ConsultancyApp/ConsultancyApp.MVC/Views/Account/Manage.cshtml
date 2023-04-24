@@ -1,35 +1,82 @@
 ﻿@model UserManageModel
 
+<form asp-area=""
+      asp-controller="Account"
+      asp-action="Manage"
+      method="post">
+    <input type="hidden" name="Id" value="@Model.Id" />
+    <div class="container margintop" data-aos="fade-up">
+        <div class="text-center  text-danger">
+            <h3 class="fw-bold fs-2">Profilim</h3>
+        </div>
+        <div class="row gy-4">
+            <div asp-validation-summary="All" class="text-danger"></div>
 
+            <div class="col-4">
+                <img src="~/image/psychologist/@Model.PsychologistModel.Image.Url" style="width: 18rem;" />
+            </div>
+            <div class="col-8">
+                <div class="row">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    <div class="col-5 mb-3">
+                        <label class="form-label" asp-for="FirstName"></label>
+                        <input class="form-control" asp-for="FirstName" />
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" asp-for="LastName"></label>
+                        <input class="form-control" asp-for="LastName" />
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" asp-for="Gender"></label>
+                        <select asp-for="Gender" asp-items="@Model.GenderSelectList" class="form-select">
+                        </select>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" asp-for="DateOfBirth"></label>
+                        @{
+                            DateTime today = DateTime.Now;
+                            int year = today.Year;
+                            int yearPart = year - 18;
+                            int monthPart = today.Month;
+                            int dayPart = today.Day;
+                            DateTime minimumDateOfBirth = new DateTime(yearPart, monthPart, dayPart);
+                        }
+                        <input class="form-control"
+                               asp-for="DateOfBirth"
+                               value="@(Model.DateOfBirth==null ? minimumDateOfBirth.ToString("yyyy-MM-dd") : ((DateTime)Model.DateOfBirth).ToString("yyyy-MM-dd"))"
+                               min="1990-01-01"
+                               max="@minimumDateOfBirth.ToString("yyyy-MM-dd")" />
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" asp-for="Email"></label>
+                        <input class="form-control" asp-for="Email" />
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" asp-for="UserName"></label>
+                        <input class="form-control" asp-for="UserName" />
+                    </div>
+                    <div class="col-10 mb-3">
+                        <label class="form-label" asp-for="PsychologistModel.PsychologistDescription.About"></label>
+                        <textarea class="form-control" asp-for="@Model.PsychologistModel.PsychologistDescription.About" style="height:100px">  </textarea>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" asp-for="PsychologistModel.PsychologistDescription.Education"></label>
+                        <input class="form-control" asp-for="@Model.PsychologistModel.PsychologistDescription.Education"/>
+                    </div>
+                    <div class="col-5 mb-3">
+                        <label class="form-label" asp-for="PsychologistModel.PsychologistDescription.GraduationYear"></label>
+                        <input class="form-control" asp-for="@Model.PsychologistModel.PsychologistDescription.GraduationYear"/>
+                    </div>
+                    <div class="col-10 mb-3">
+                        <label class="form-label" asp-for="PsychologistModel.PsychologistDescription.Experience"></label>
+                        <textarea class="form-control" asp-for="@Model.PsychologistModel.PsychologistDescription.Experience" style="height:100px;"></textarea>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Değişiklikleri Kaydet</button>
+        </div>
+    </div>
+</form>
 
 
 

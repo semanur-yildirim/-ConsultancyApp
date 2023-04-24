@@ -1,4 +1,5 @@
 ﻿using ConsultancyApp.Entity.Concrete.Identity;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -17,6 +18,7 @@ namespace ConsultancyApp.MVC.Models.ViewModels
         public string LastName { get; set; }
 
         //[DisplayName("Cinsiyet")]
+
         //public EnumType Type { get; set; }
 
         [DisplayName("Doğum Tarihi")]
@@ -30,7 +32,9 @@ namespace ConsultancyApp.MVC.Models.ViewModels
         [DisplayName("Eposta")]
         [Required(ErrorMessage = "Eposta adresi boş bırakılamaz")]
         [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }   
+        public string Email { get; set; }
+        public string Gender { get; set; }
         public PsychologistModel PsychologistModel { get; set; }
+        public List<SelectListItem> GenderSelectList { get; set; }
     }   
 }

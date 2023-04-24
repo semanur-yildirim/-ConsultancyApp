@@ -17,6 +17,7 @@ namespace ConsultancyApp.MVC.Controllers
             _categoryService = categoryService;
             _psychologistService = psychologistService;
         }
+
         public async Task<IActionResult> CategoryDetails(string categoryurl)
         {
            Category categories = await _categoryService.GetCategoryDetailsByUrlAsync(categoryurl);
@@ -32,7 +33,6 @@ namespace ConsultancyApp.MVC.Controllers
             categoryDescriptionModel.CategoryName = categories.Name;
             categoryDescriptionModel.Psychologist= psychologist;
             return View(categoryDescriptionModel);
-
         }
 
     }

@@ -4,6 +4,7 @@ using ConsultancyApp.Entity.Concrete.Identity;
 using ConsultancyApp.MVC.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Xml.Linq;
 
 namespace ConsultancyApp.MVC.Controllers
@@ -81,19 +82,31 @@ namespace ConsultancyApp.MVC.Controllers
             };
             if (user.Type==EnumType.Psychologist)
             {
+
                 Psychologist p = await _psychologistService.GetPsychologistFullDataByUserId(user.Id);
                 PsychologistModel psychologistModelList = new PsychologistModel();
-                psychologistModelList.IsApproved = p.IsApproved;
                 psychologistModelList.Id = p.Id;
                 psychologistModelList.Name = p.Name;
-                psychologistModelList.CreatedDate = p.CreatedDate;
-                psychologistModelList.ModifiedDate = p.ModifiedDate;
                 psychologistModelList.Price = p.Price;
                 psychologistModelList.Gender = p.Gender;
                 psychologistModelList.Image = p.Image;
                 psychologistModelList.PsychologistDescription = p.PsychologistDescription;
                 psychologistModelList.categories = p.PsychologistCategory.Select(pc=>pc.Category).ToList();
                 psychologistModelList.Url = p.Url;
+                List<SelectListItem> genderList = new List<SelectListItem>();
+                genderList.Add(new SelectListItem
+                {
+                    Text = "Kadın",
+                    Value = "Kadın",
+                    Selected = p.Gender == "Kadın" ? true : false
+                });
+                genderList.Add(new SelectListItem
+                {
+                    Text = "Erkek",
+                    Value = "Erkek",
+                    Selected = p.Gender == "Erkek" ? true : false
+                });
+                userManageViewModel.GenderSelectList = genderList;
                 userManageViewModel.PsychologistModel = psychologistModelList;
             }
             return View(userManageViewModel);
