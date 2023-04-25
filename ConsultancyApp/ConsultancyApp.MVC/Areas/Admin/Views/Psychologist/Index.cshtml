@@ -1,5 +1,72 @@
 ﻿@model List<PsychologistViewModel>
-@foreach(var item in Model)
-{
-    <label>@item.Name</label>
-}
+
+<div class="mt-5 ms-5 me-5">
+    <h4>Psikolog Listesi</h4>
+    <table id="myDataTable" class="table table-bordered table-sm">
+        <thead class="bg-label-success">
+            <tr>
+                <th width="50">Id</th>
+                <th>Psikolog Adı</th>
+                <th width="130">Kategorileri</th>
+                <th width="130">Danışanlar</th>
+                <th width="130">Onaylı?</th>
+                <th width="250">İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var psychologist in Model)
+            {
+                <tr>
+                    <td class="align-middle">@psychologist.Id</td>
+                    <td class="align-middle">@psychologist.Name</td>
+                    <td>
+                        <a asp-area="Admin" asp-controller="Category" asp-action="GetCategoryByPsychologist">
+                            @psychologist.Categories.Count()
+                        </a>
+                    </td>
+                    <td>
+                        <a asp-area="Admin" asp-controller="customer" asp-action="GetCustomerByPsychologist">
+                            Customer
+                        </a>
+                    </td>
+                    <td>
+                        <form id="form-is-home_@psychologist.Id"
+                        asp-area="Admin"
+                        asp-controller="Psychologist"
+                        asp-action="UpdateIsHome"
+                        asp-route-id="@psychologist.Id"
+                        >
+                        <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" asp-for=@psychologist.IsApproved onchange="document.getElementById('form-is-home_@psychologist.Id').submit();">
+                        </div>
+                        </form>
+                    </td>
+                    <td class="d-flex justify-content-around">
+                        <a class="btn-warning py-1 pe-3 ps-3"
+                            asp-area="Admin" 
+                        asp-controller="Psychologist"
+                        asp-action="Edit"
+                        asp-route-id="@psychologist.Id">
+                            Düzenle
+                        </a>
+                        <a
+                            class="btn-danger py-1 pe-3 ps-3"
+                            asp-area="Admin" 
+                        asp-controller="Psychologist"
+                        asp-action="Delete"
+                        asp-route-id="@psychologist.Id">
+                            Sil
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>
+  @*  @section Styles{
+        @await Html.PartialAsync("_DataTablesStylesPartialView")
+    }
+    @section Scripts{
+        @await Html.PartialAsync("_DataTablesScriptsPartialView")
+    }
+*@

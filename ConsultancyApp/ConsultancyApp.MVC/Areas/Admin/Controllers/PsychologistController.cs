@@ -26,6 +26,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 {
                     Id=p.Id,
                     Name=p.Name,
+                    IsApproved=p.IsApproved,
                     Categories=p.PsychologistCategory.Select(c=> new CategoryViewModel{
                         Id=c.CategoryId,
                         Name=c.Category.Name,
@@ -35,6 +36,36 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 });
             }
             return View(psychologist);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Delete(int id)
+        {
+            Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(id);
+            PsychologistViewModel psychologistViewModel = new PsychologistViewModel
+            {
+                Id = psychologist.Id,
+                Name = psychologist.Name,
+                Url = psychologist.Url,
+                IsApproved = psychologist.IsApproved,
+                Categories = psychologist.PsychologistCategory.Select(c => new CategoryViewModel
+                {
+                    Id = c.CategoryId,
+                    Name = c.Category.Name,
+                }).ToList()
+
+            };
+            return View(psychologistViewModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Delete(PsychologistViewModel psychologistViewModel)
+        {
+            Psychologist psychologist=await _psychologistService.GetByIdAsync(psychologistViewModel.Id);
+            if(psychologist!=null)
+            {
+                _psychologistService.Delete(psychologist);
+            }
+            return RedirectToAction("Index");
         }
     }
 }
