@@ -11,7 +11,6 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
         public bool IsApproved { get; set; }
         public string Url { get; set; }
         public string Name { get; set; }  
-        public Image Image { get; set; }
         public List<CategoryViewModel> Categories { get; set; }
     }
 }
