@@ -1,0 +1,51 @@
+﻿@model List<UserViewModel>
+
+<div class="mt-5 ms-5 me-5">
+    <h4>Kullanıcı Listesi</h4>
+    <table id="myDataTable" class="table table-bordered table-sm">
+        <thead class="bg-label-success">
+            <tr>
+
+                <th>Kullanıcı Adı</th>
+                <th >Rol</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="text-center">
+
+                    <td class="align-middle">@item.FirstName  @item.LastName</td>
+
+                    <td>
+                       @item.Type
+                    </td>
+
+                    <td class="d-flex justify-content-around">
+                        <a class="btn-warning py-1 pe-3 ps-3"
+                       asp-area="Admin"
+                       asp-controller="User"
+                       asp-action="Edit"
+                       asp-route-id="@item.Id">
+                            Düzenle
+                        </a>
+                        <a class="btn-danger py-1 pe-3 ps-3"
+                       asp-area="Admin"
+                       asp-controller="User"
+                       asp-action="Delete"
+                       asp-route-id="@item.Id">
+                            Sil
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@section Styles{
+    @await Html.PartialAsync("_DataTablesStylesPartialView")
+    }
+@section Scripts{
+    @await Html.PartialAsync("_DataTablesScriptsPartialView")
+    }

@@ -16,11 +16,13 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         private readonly IPsychologistService _psychologistService;
         private readonly UserManager<User> _userManager;
         private readonly ICategoryService _categoryService;
-        public PsychologistController(IPsychologistService psychologistService, UserManager<User> userManager, ICategoryService categoryService)
+        private readonly RoleManager<Role> _roleManager;
+        public PsychologistController(IPsychologistService psychologistService, UserManager<User> userManager, ICategoryService categoryService, RoleManager<Role> roleManager)
         {
             _psychologistService = psychologistService;
             _userManager = userManager;
             _categoryService = categoryService;
+            _roleManager = roleManager;
         }
 
         public async Task<IActionResult> Index()
@@ -49,8 +51,10 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         public async Task<IActionResult> Edit(int id)
         {
             Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(id);
+
             User user = await _userManager.FindByIdAsync(psychologist.userId);
             UserViewModel userViewModel = new UserViewModel();
+
             userViewModel.FirstName=user.FirstName;
             userViewModel.LastName=user.LastName;
             userViewModel.Email=user.Email;
@@ -110,6 +114,10 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 user.EmailConfirmed = psychologistUpdateViewModel.User.EmailConfirmed;
                 user.Type = psychologistUpdateViewModel.User.Type;
                 user.UserName = psychologistUpdateViewModel.User.UserName;
+                var result = await _userManager.UpdateAsync(user);
+                if (!result.Succeeded) { return NotFound(); }
+                var userRoles = await _userManager.GetRolesAsync(user);
+
 
                 Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(psychologistUpdateViewModel.Id);
                 psychologist.PsychologistDescription.About = psychologistUpdateViewModel.About;
@@ -120,8 +128,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 psychologist.Gender = psychologistUpdateViewModel.Gender;
                 psychologist.Price = psychologistUpdateViewModel.Price;
                 psychologist.ModifiedDate = DateTime.Now;
-                psychologist.Name = psychologistUpdateViewModel.Name;
-                await _psychologistService.UpdatePsychologist(psychologist, psychologistUpdateViewModel.SelectedCategories);
+                psychologist.Name = psychologistUpdateViewModel.Name;              
                 return RedirectToAction("Index");
 
             }

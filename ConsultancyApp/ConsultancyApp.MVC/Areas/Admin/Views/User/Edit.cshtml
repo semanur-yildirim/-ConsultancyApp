@@ -1,0 +1,12 @@
+﻿@model UserViewModel
+@{
+    if(Model.Type==EnumType.Psychologist)
+    {
+        @await Html.PartialAsync("_PsychologistUpdatePartial",Model.Psychlogist);
+    }
+    else if(Model.Type==EnumType.Customer)
+    {
+        await Html.PartialAsync("_CustomerUpdatePartial");
+    }
+}
+

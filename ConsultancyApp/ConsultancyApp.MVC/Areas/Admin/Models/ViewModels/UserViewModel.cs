@@ -30,5 +30,6 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
 
         [DisplayName("Roller")]
         public EnumType Type { get; set; }
+        public PsychologistUpdateViewModel Psychlogist { get; set; }
     }
 }

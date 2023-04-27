@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JLMCLh23EznYXnVkyUTB47tXN8bSCJ5zyuvn5UM+nRo=",
+  "Hash": "jGTTYCMgqgON8JDzu6iVhObC2oELbLUzwGPqwC/ivcg=",
   "Source": "ConsultancyApp.MVC",
   "BasePath": "_content/ConsultancyApp.MVC",
   "Mode": "Default",
@@ -612,23 +612,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\icons\\unicons\\cc-warning.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\img\\icons\\unicons\\chart.png",
-      "SourceId": "ConsultancyApp.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
-      "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "assets/img/icons/unicons/chart.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\icons\\unicons\\chart.png"
-    },
-    {
       "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\img\\icons\\unicons\\chart-success.png",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
@@ -644,6 +627,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\icons\\unicons\\chart-success.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\img\\icons\\unicons\\chart.png",
+      "SourceId": "ConsultancyApp.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
+      "BasePath": "_content/ConsultancyApp.MVC",
+      "RelativePath": "assets/img/icons/unicons/chart.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\icons\\unicons\\chart.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\img\\icons\\unicons\\paypal.png",
@@ -663,23 +663,6 @@
       "OriginalItemSpec": "wwwroot\\assets\\img\\icons\\unicons\\paypal.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\img\\icons\\unicons\\wallet.png",
-      "SourceId": "ConsultancyApp.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
-      "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "assets/img/icons/unicons/wallet.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\icons\\unicons\\wallet.png"
-    },
-    {
       "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\img\\icons\\unicons\\wallet-info.png",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
@@ -695,6 +678,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\img\\icons\\unicons\\wallet-info.png"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\img\\icons\\unicons\\wallet.png",
+      "SourceId": "ConsultancyApp.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
+      "BasePath": "_content/ConsultancyApp.MVC",
+      "RelativePath": "assets/img/icons/unicons/wallet.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\icons\\unicons\\wallet.png"
     },
     {
       "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\img\\illustrations\\girl-doing-yoga-light.png",
@@ -1258,6 +1258,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\vendor\\libs\\apex-charts\\apexcharts.js"
     },
     {
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\vendor\\libs\\highlight\\highlight-github.css",
+      "SourceId": "ConsultancyApp.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
+      "BasePath": "_content/ConsultancyApp.MVC",
+      "RelativePath": "assets/vendor/libs/highlight/highlight-github.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\vendor\\libs\\highlight\\highlight-github.css"
+    },
+    {
       "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\vendor\\libs\\highlight\\highlight.css",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
@@ -1290,23 +1307,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\vendor\\libs\\highlight\\highlight.js"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\vendor\\libs\\highlight\\highlight-github.css",
-      "SourceId": "ConsultancyApp.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
-      "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "assets/vendor/libs/highlight/highlight-github.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\vendor\\libs\\highlight\\highlight-github.css"
     },
     {
       "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\assets\\vendor\\libs\\jquery\\jquery.js",
@@ -1630,57 +1630,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "SourceId": "ConsultancyApp.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
-      "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "SourceId": "ConsultancyApp.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
-      "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
-    },
-    {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "SourceId": "ConsultancyApp.MVC",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
-      "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/bootstrap/LICENSE",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
       "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\bootstrap-select\\css\\bootstrap-select.css",
@@ -3842,12 +3791,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap-select\\js\\i18n\\defaults-zh_TW.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
       "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/jquery/dist/jquery.js",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3856,15 +3805,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
       "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/jquery/dist/jquery.min.js",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3873,15 +3822,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
       "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/jquery/dist/jquery.min.map",
+      "RelativePath": "lib/bootstrap/LICENSE",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3890,15 +3839,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
+      "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
       "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/jquery/LICENSE.txt",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3907,7 +3856,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "ConsultancyApp.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
+      "BasePath": "_content/ConsultancyApp.MVC",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "ConsultancyApp.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
+      "BasePath": "_content/ConsultancyApp.MVC",
+      "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
       "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
@@ -3995,12 +3978,12 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
       "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "RelativePath": "lib/jquery/dist/jquery.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4009,15 +3992,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
       "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "RelativePath": "lib/jquery/dist/jquery.min.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4026,15 +4009,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "ConsultancyApp.MVC",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
       "BasePath": "_content/ConsultancyApp.MVC",
-      "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "RelativePath": "lib/jquery/dist/jquery.min.map",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -4043,7 +4026,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Identity": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "ConsultancyApp.MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\wwwroot\\",
+      "BasePath": "_content/ConsultancyApp.MVC",
+      "RelativePath": "lib/jquery/LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     }
   ]
 }
