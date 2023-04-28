@@ -137,6 +137,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             };
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(userRoles);
             #endregion
+
             #region Alışveriş Sepeti İşlemleri
             List<Cart> carts = new List<Cart>
             {

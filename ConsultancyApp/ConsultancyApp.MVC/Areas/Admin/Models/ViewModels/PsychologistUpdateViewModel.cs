@@ -46,6 +46,8 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
         [Required(ErrorMessage = "Hakkında alanı boş bırakılamaz")]
         public string About { get; set; }
         #endregion
+
+
         [Required(ErrorMessage = "En az bir kategori seçilmelidir")]
         public int[] SelectedCategories { get; set; }
         [DisplayName(" Kategoriler ")]

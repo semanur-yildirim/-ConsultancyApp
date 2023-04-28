@@ -20,6 +20,14 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Areas/Admin/Views/Psychologist/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHN5Y2hvbG9naXN0XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Areas/Admin/Views/Psychologist/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHN5Y2hvbG9naXN0XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Admin/Documents/GitHub/-ConsultancyApp/ConsultancyApp/ConsultancyApp.MVC/Areas/Admin/Views/Psychologist/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHN5Y2hvbG9naXN0XEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

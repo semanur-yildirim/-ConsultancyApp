@@ -1,7 +1,10 @@
 ﻿@model List<PsychologistViewModel>
 
 <div class="mt-5 ms-5 me-5">
+    <div class="d-flex justify-content-between">
     <h4>Psikolog Listesi</h4>
+    <a class="btn btn-success"  asp-area="Admin" asp-controller="Psychologist" asp-action="Create">Yeni Kayıt</a>
+    </div>
     <table id="myDataTable" class="table table-bordered table-sm">
         <thead class="bg-label-success">
             <tr>
@@ -49,14 +52,41 @@
                         asp-route-id="@psychologist.Id">
                             Düzenle
                         </a>
-                        <a
-                            class="btn-danger py-1 pe-3 ps-3"
-                            asp-area="Admin" 
-                        asp-controller="Psychologist"
-                        asp-action="Delete"
-                        asp-route-id="@psychologist.Id">
-                            Sil
-                        </a>
+                        
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                           Sil  
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                       <div class="row">
+
+                                           <div class="col-4">
+                                               <span>@psychologist.Name</span>
+                                                    
+                                           </div>
+                                       </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                        <a class="btn-danger py-1 pe-3 ps-3"
+                                       asp-area="Admin"
+                                       asp-controller="Psychologist"
+                                       asp-action="Delete"
+                                       asp-route-id="@psychologist.Id">
+                                            Sil
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </td>
                 </tr>
             }
