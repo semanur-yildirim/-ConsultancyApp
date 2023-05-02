@@ -18,5 +18,10 @@ namespace ConsultancyApp.Business.Abstract
 
         Task<List<Category>> GetAllCategoriesAsync(bool ApprpvedStatus=false);
         Task<List<Category>> GetCategoriesByPsyhologist(int id);
+        Task CreateCategory(Category category, CategoryDescription categoryDescription);
+        Task UpdateCategory(Category category, CategoryDescription categoryDescription);
+
+        Task<Category> GetCategoryFullDataAsync(int id);
+
     }
 }

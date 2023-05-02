@@ -3,7 +3,7 @@
 <div class="mt-5 ms-5 me-5">
     <div class="d-flex justify-content-between">
     <h4>Psikolog Listesi</h4>
-    <a class="btn btn-success"  asp-area="Admin" asp-controller="Psychologist" asp-action="Create">Yeni Kayıt</a>
+    <a class="btn btn-success mb-2"  asp-area="Admin" asp-controller="Psychologist" asp-action="Create">Yeni Kayıt</a>
     </div>
     <table id="myDataTable" class="table table-bordered table-sm">
         <thead class="bg-label-success">
@@ -29,7 +29,7 @@
                     </td>
                     <td>
                         <a asp-area="Admin" asp-controller="customer" asp-action="GetCustomerByPsychologist">
-                            Customer
+                           @psychologist.Customers.Count()
                         </a>
                     </td>
                     <td >

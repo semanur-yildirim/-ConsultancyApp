@@ -20,10 +20,15 @@ namespace ConsultancyApp.Data.Concrete.EfCore
         {
             get { return _dbContext as ConsultancyAppContext; }
         }
-        public async Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus)
+        public async Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus = false)
         {
-            var customer =await AppContext.Customer.Where(c => c.IsApproved == IsApprovedStatus).ToListAsync();
-            return customer;
+            var customer =  AppContext.Customer.Include(p => p.PsychologistCustomer).ThenInclude(p => p.Psychologist).AsQueryable();
+            if (IsApprovedStatus)
+            {
+                customer=customer.Where(p => p.IsApproved == IsApprovedStatus);
+            }
+               
+            return await customer.ToListAsync();
         }
 
         public async Task<List<Customer>> GetCustomerByPsychologist(int psychologistId)

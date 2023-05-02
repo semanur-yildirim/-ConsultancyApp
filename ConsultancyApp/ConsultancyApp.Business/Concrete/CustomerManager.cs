@@ -33,7 +33,7 @@ namespace ConsultancyApp.Business.Concrete
             return await _customerRepository.GetAllAsync();
         }
 
-        public async Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus)
+        public async Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus=false)
         {
             return await _customerRepository.GetAllCustomerFullDataAsycn(IsApprovedStatus);
         }

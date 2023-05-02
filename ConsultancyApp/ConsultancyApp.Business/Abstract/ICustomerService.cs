@@ -14,7 +14,7 @@ namespace ConsultancyApp.Business.Abstract
         Task<List<Customer>> GetAllAsync();
         void Update(Customer customer);
         void Delete(Customer customer);
-        Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus);
+        Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus=false);
         Task<Customer> GetCustomerFullDataAsync(int id);
         Task UpdateCustomer(Customer customer);
         Task<List<Customer>> GetCustomerByPsychologist(int psychologistId);

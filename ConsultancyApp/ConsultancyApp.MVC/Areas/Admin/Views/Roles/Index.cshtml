@@ -1,0 +1,78 @@
+﻿@model List<RoleViewModel>
+
+<div class="mt-5 ms-5 me-5">
+    <div class="d-flex justify-content-between">
+        <h4>Danışan Listesi</h4>
+        <a class="btn btn-success mb-2" asp-area="Admin" asp-controller="Roles" asp-action="Create">Yeni Kayıt</a>
+    </div>
+    <table id="myDataTable" class="table table-bordered table-sm">
+        <thead class="bg-label-success">
+            <tr>
+
+                <th width="150">Ad</th>
+                <th >Açıklama</th>
+                <th width="200">İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var role in Model)
+            {
+                <tr class="text-center">
+
+                    <td class="align-middle">@role.Name</td>
+                    <td class="align-middle">@role.Description</td>
+                    <td class="d-flex justify-content-around">
+                        <a class="btn-warning py-1 pe-3 ps-3"
+                       asp-area="Admin"
+                       asp-controller="Roles"
+                       asp-action="Edit"
+                       asp-route-id="@role.Id">
+                            Düzenle
+                        </a>
+
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            Sil
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+
+                                            <div class="col-4">
+                                                <span>@role.Name</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                        <a class="btn-danger py-1 pe-3 ps-3"
+                                       asp-area="Admin"
+                                       asp-controller="Roles"
+                                       asp-action="Delete"
+                                       asp-route-id="@role.Id">
+                                            Sil
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+@section Styles{
+    @await Html.PartialAsync("_DataTablesStylesPartialView")
+    }
+@section Scripts{
+    @await Html.PartialAsync("_DataTablesScriptsPartialView")
+    }

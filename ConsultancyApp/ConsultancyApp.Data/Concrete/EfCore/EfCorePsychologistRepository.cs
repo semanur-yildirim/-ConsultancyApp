@@ -24,7 +24,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore
         {
             var psychologist =  AppContext
                 .Psychologist.Include(p => p.PsychologistCategory).ThenInclude(pc => pc.Category)
-                .Include(p => p.Image).AsQueryable();
+                .Include(p => p.Image).Include(p=>p.PsychologistCustomer).ThenInclude(c=>c.Customer).AsQueryable();
             if(ApprovedStatus)
             {
                 psychologist = psychologist.
@@ -82,6 +82,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             updatePsychologist.PsychologistDescription.Experience = psychologistDescription.Experience;
             updatePsychologist.PsychologistDescription.About = psychologistDescription.About;
             #endregion
+
             #region Seçilen Kategory Ataması
             updatePsychologist.PsychologistCategory = SelectedCategories.Select(bc => new PsychologistCategory
             {
@@ -111,9 +112,9 @@ namespace ConsultancyApp.Data.Concrete.EfCore
                 });
                 AppContext.PsychologistCategory.AddRange(psychologistCategories);
             }
+
             image.PsychologistId = psychologist.Id;
             await AppContext.Images.AddAsync(image);
-
             psychologistDescription.PsychologistId=psychologist.Id;
 
             await AppContext.PsychologistDescription.AddAsync(psychologistDescription);

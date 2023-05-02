@@ -11,7 +11,6 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
         public int Id { get; set; }
         public DateTime ModifiedDate { get; set; }
         public bool IsApproved { get; set; }
-        public string Url { get; set; }
         [DisplayName(" Ücret Alanı")]
         [Required(ErrorMessage = "Ücret alanı boş bırakılamaz")]
         public decimal? Price { get; set; }
@@ -45,9 +44,9 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
         public string About { get; set; }
         #endregion
         [Required(ErrorMessage = "En az bir kategori seçilmelidir")]
-        public int[] SelectedCategories { get; set; }
         [DisplayName(" Kategoriler ")]
-        [Required(ErrorMessage = "En az bir kategori seçilmelidir.")]
+        public int[] SelectedCategories { get; set; }
+
         public List<Category> Categories { get; set; }
         public UserViewModel User { get; set; }
     }

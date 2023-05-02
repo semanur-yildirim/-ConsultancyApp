@@ -1,0 +1,101 @@
+﻿@model CategoryUpdateViewModel
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-area="Admin"
+                      asp-controller="Category"
+                      asp-action="Edit"
+                      method="post"
+                      enctype="multipart/form-data">
+                      <input type="hidden" asp-for="@Model.Url"/>
+                    <div class="card mb-4">
+                        <h5 class="card-header">Kategori Güncelleme</h5>
+                        <!-- Account -->
+                        <div class="card-body">
+                            <div class="row men-2">
+                                <div class="mb-3">
+                                    <label class="form-label" asp-for="Name"></label>
+                                    <input type="text" class="form-control" asp-for="Name">
+                                    <span class="text-danger" asp-validation-for="Name"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="Summary"></label>
+                                    <textarea class="form-control" asp-for="Summary" id="editor2"></textarea>
+                                    <span class="text-danger" asp-validation-for="Summary"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="What"></label>
+                                    <textarea class="form-control" asp-for="What" id="editor2"></textarea>
+                                    <span class="text-danger" asp-validation-for="What"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="How"></label>
+                                    <textarea class="form-control" asp-for="How" id="editor2"></textarea>
+                                    <span class="text-danger" asp-validation-for="How"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="HowLong"></label>
+                                    <textarea class="form-control" asp-for="HowLong" id="editor2"></textarea>
+                                    <span class="text-danger" asp-validation-for="HowLong"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="ForWho"></label>
+                                    <textarea class="form-control" asp-for="ForWho" id="editor2"></textarea>
+                                    <span class="text-danger" asp-validation-for="ForWho"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="Purpose"></label>
+                                    <textarea class="form-control" asp-for="Purpose" id="editor2"></textarea>
+                                    <span class="text-danger" asp-validation-for="Purpose"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="PositiveEffect"></label>
+                                    <textarea class="form-control" asp-for="PositiveEffect" id="editor2"></textarea>
+                                    <span class="text-danger" asp-validation-for="PositiveEffect"></span>
+                                </div>
+                                <div class="mb-3 form-check ms-3">
+                                    <input type="checkbox" class="form-check-input" asp-for="IsApproved">
+                                    <label class="form-check-label" asp-for="IsApproved"></label>
+                                </div>
+                                <div class="mb-3 ">
+                                    <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Vazgeç</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+                <!-- /Account -->
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- / Content -->
+<!-- Content wrapper -->
+@section Styles{
+    <script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+}
+@section Scripts{
+    <script>
+        CKEDITOR.replace('editor', {
+            toolbar: [
+                { name: 'colors', items: ['TextColor', 'BGColor'] },
+                { name: 'styles', items: ['Format', 'Font', 'FontSize'] },
+                { name: 'paraghraph', items: ['NumberedList', 'BulletedList'] }
+            ]
+        });
+        CKEDITOR.replace('editor2', {
+            toolbar: [
+                { name: 'colors', items: ['TextColor', 'BGColor'] },
+                { name: 'styles', items: ['Format', 'Font', 'FontSize'] },
+                { name: 'paraghraph', items: ['NumberedList', 'BulletedList'] }
+            ]
+        });
+    </script>
+}

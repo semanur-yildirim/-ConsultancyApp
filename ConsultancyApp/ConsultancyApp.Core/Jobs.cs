@@ -78,8 +78,7 @@ namespace ConsultancyApp.Core
         {
             var extension = Path.GetExtension(image.FileName);
             var randomName = $"{Guid.NewGuid()}{extension}";
-            //Şimdi de resmi sunucuya yüklüyoruz
-            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/images/psychologist", randomName);
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/image", randomName);
             using (var stream = new FileStream(path, FileMode.Create))
             {
                 image.CopyTo(stream);

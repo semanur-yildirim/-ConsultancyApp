@@ -13,13 +13,15 @@ namespace ConsultancyApp.MVC.Controllers
         private ICategoryService _categoryService;
         private IPsychologistDescriptionService _psychologistDescriptionService;
         private ICategoryDescriptionService _categoryDescriptionService;
+        private ICustomerService _customerService;
 
-        public PsychologistController(IPsychologistService psychologistService, ICategoryService categoryService, IPsychologistDescriptionService psychologistDescriptionService, ICategoryDescriptionService categoryDescriptionService)
+        public PsychologistController(IPsychologistService psychologistService, ICategoryService categoryService, IPsychologistDescriptionService psychologistDescriptionService, ICategoryDescriptionService categoryDescriptionService, ICustomerService customerService)
         {
             _psychologistService = psychologistService;
             _categoryService = categoryService;
             _psychologistDescriptionService = psychologistDescriptionService;
             _categoryDescriptionService = categoryDescriptionService;
+            _customerService = customerService;
         }
 
         public async Task<IActionResult> Index()

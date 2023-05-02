@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ConsultancyApp.Data.Concrete.EfCore
 {
@@ -20,9 +21,20 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             get { return _dbContext as ConsultancyAppContext; }
         }
 
+        public async Task CreateCategory(Category category, CategoryDescription categoryDescription)
+        {
+            await AppContext.Categories.AddAsync(category);
+            await AppContext.SaveChangesAsync();
+
+            categoryDescription.CategoryId = category.Id;
+
+            await AppContext.CategoryDescription.AddAsync(categoryDescription);
+            await AppContext.SaveChangesAsync();
+        }
+
         public async Task<List<Category>> GetAllCategoriesAsync(bool ApprovedStatus=false)
         {
-            var categories = AppContext.Categories
+            var categories = AppContext.Categories.Include(pc=>pc.PsychologitstCategry).ThenInclude(p=>p.Psychologist)
                  .Include(cd => cd.CategoryDescription).AsQueryable();
             if (ApprovedStatus)
             {
@@ -45,7 +57,32 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             var resultCategory =  AppContext.Categories
                 .Where(c=>c.Url==url)
                 .Include(c => c.CategoryDescription).FirstOrDefault();
-            return   resultCategory;
+            return  resultCategory;
+        }
+
+        public async Task<Category> GetCategoryFullDataAsync(int id)
+        {
+            return await AppContext.Categories.Where(c => c.Id == id).Include(c => c.CategoryDescription).Include(c => c.PsychologitstCategry).ThenInclude(c => c.Psychologist).FirstOrDefaultAsync();
+        }
+
+        public async Task UpdateCategory(Category category, CategoryDescription categoryDescription)
+        {
+          
+           var updateCategory=await AppContext.Categories.Include(c=>categoryDescription).FirstOrDefaultAsync(p=>p.Id==category.Id);
+
+            updateCategory.Name = category.Name;
+            updateCategory.IsApproved = category.IsApproved;
+            updateCategory.Url = category.Url;
+            updateCategory.ModifiedDate = category.ModifiedDate;
+            updateCategory.CategoryDescription = categoryDescription;
+            //updateCategory.CategoryDescription.CategoryId = categoryDescription.CategoryId;
+            //updateCategory.CategoryDescription.Summary = categoryDescription.Summary;
+            //updateCategory.CategoryDescription.What = categoryDescription.What;
+            //updateCategory.CategoryDescription.How = categoryDescription.How;
+            //updateCategory.CategoryDescription.ForWho = categoryDescription.ForWho;
+            //updateCategory.CategoryDescription.HowLong = categoryDescription.HowLong;
+            AppContext.Update(updateCategory);
+            await AppContext.SaveChangesAsync();
         }
     }
 }

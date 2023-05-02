@@ -13,6 +13,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
         public string Name { get; set; }
         public Image Image { get; set; }
         public List<Category> Categories { get; set; }
+        public List<CustomerViewModel> Customers { get; set; }
         public UserViewModel User { get; set; }
 
     }

@@ -9,7 +9,7 @@ namespace ConsultancyApp.Data.Abstract
 {
     public interface ICustomerRepository:IGenericRepository<Customer>
     {
-        Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus);
+        Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus = false);
         Task<Customer> GetCustomerFullDataAsync(int id);
         Task UpdateCustomer(Customer customer);
         Task<List<Customer>> GetCustomerByPsychologist(int psychologistId);
