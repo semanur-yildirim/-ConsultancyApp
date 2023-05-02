@@ -20,6 +20,5 @@ namespace ConsultancyApp.Entity.Concrete
         public User User { get; set; }
         public string userId { get; set; }
         public List<PsychologistCustomer> PsychologistCustomer { get; set; }
-        public int PsychologistId { get; set; }
     }
 }

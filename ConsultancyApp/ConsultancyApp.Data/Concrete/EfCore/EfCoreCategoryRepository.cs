@@ -62,25 +62,26 @@ namespace ConsultancyApp.Data.Concrete.EfCore
 
         public async Task<Category> GetCategoryFullDataAsync(int id)
         {
-            return await AppContext.Categories.Where(c => c.Id == id).Include(c => c.CategoryDescription).Include(c => c.PsychologitstCategry).ThenInclude(c => c.Psychologist).FirstOrDefaultAsync();
+            return await AppContext.Categories.Where(c => c.Id == id).Include(c => c.CategoryDescription).FirstOrDefaultAsync();
         }
 
         public async Task UpdateCategory(Category category, CategoryDescription categoryDescription)
         {
           
-           var updateCategory=await AppContext.Categories.Include(c=>categoryDescription).FirstOrDefaultAsync(p=>p.Id==category.Id);
+           var updateCategory=await AppContext.Categories.Include(c=>c.CategoryDescription).FirstOrDefaultAsync(p=>p.Id==category.Id);
 
             updateCategory.Name = category.Name;
             updateCategory.IsApproved = category.IsApproved;
             updateCategory.Url = category.Url;
             updateCategory.ModifiedDate = category.ModifiedDate;
-            updateCategory.CategoryDescription = categoryDescription;
-            //updateCategory.CategoryDescription.CategoryId = categoryDescription.CategoryId;
-            //updateCategory.CategoryDescription.Summary = categoryDescription.Summary;
-            //updateCategory.CategoryDescription.What = categoryDescription.What;
-            //updateCategory.CategoryDescription.How = categoryDescription.How;
-            //updateCategory.CategoryDescription.ForWho = categoryDescription.ForWho;
-            //updateCategory.CategoryDescription.HowLong = categoryDescription.HowLong;
+           // updateCategory.CategoryDescription = categoryDescription;
+
+            updateCategory.CategoryDescription.CategoryId = categoryDescription.CategoryId;
+            updateCategory.CategoryDescription.Summary = categoryDescription.Summary;
+            updateCategory.CategoryDescription.What = categoryDescription.What;
+            updateCategory.CategoryDescription.How = categoryDescription.How;
+            updateCategory.CategoryDescription.ForWho = categoryDescription.ForWho;
+            updateCategory.CategoryDescription.HowLong = categoryDescription.HowLong;
             AppContext.Update(updateCategory);
             await AppContext.SaveChangesAsync();
         }

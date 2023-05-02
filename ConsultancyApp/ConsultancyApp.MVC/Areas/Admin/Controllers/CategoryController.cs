@@ -135,5 +135,16 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             return View(categoryUpdateViewModel);
         }
         #endregion
+        #region Delete
+        public async Task<IActionResult> Delete(int id)
+        {
+            Category category = await _categoryService.GetCategoryFullDataAsync(id);
+            if(category!=null)
+            {
+                _categoryService.Delete(category);
+            }
+            return RedirectToAction("Index");
+        }
+        #endregion
     }
 }

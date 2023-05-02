@@ -20,6 +20,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Config
             builder.Property(x => x.ModifiedDate).IsRequired();
 
             builder.Property(x => x.Url).IsRequired().HasMaxLength(500);
+            builder.HasOne(p=>p.Psychologist).WithOne(p=>p.Image).HasForeignKey<Image>(t=>t.PsychologistId).OnDelete(DeleteBehavior.Cascade);
             builder.HasData(
 
                 new Image { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Url = "k-1.jpg", PsychologistId = 1 },

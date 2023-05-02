@@ -90,7 +90,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     LastName = psychologistAddViewModel.User.LastName,
                     UserName = psychologistAddViewModel.User.UserName,
                     Email = psychologistAddViewModel.User.Email,
-
+                    Type = psychologistAddViewModel.Type
                 };
                 Image image = new Image();
                 image.CreatedDate = DateTime.Now;
@@ -109,12 +109,14 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     Gender = psychologistAddViewModel.Gender,
                     Name = psychologistAddViewModel.User.FirstName + psychologistAddViewModel.User.LastName,
                 };
+
                 var result = await _userManager.CreateAsync(user, psychologistAddViewModel.User.Password);
+                psychologist.User = user;
+
                 if (result.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(user, EnumType.Psychologist.ToString());
+                    await _userManager.AddToRoleAsync(user, "Psychologist");
                 }
-                psychologist.user = user;
 
                 await _psychologistService.CreatePsychologist(psychologist, psychologistAddViewModel.SelectedCategories, image, psychologistDescription);
                 return RedirectToAction("Index");
@@ -129,7 +131,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         {
             Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(id);
 
-            User user = await _userManager.FindByIdAsync(psychologist.userId);
+            User user = await _userManager.FindByIdAsync(psychologist.UserId);
             UserViewModel userViewModel = new UserViewModel();
 
             userViewModel.FirstName = user.FirstName;
@@ -214,44 +216,17 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
 
         #endregion
         #region Delete
-        //[HttpGet]
-        //public async Task<IActionResult> Delete(int id)
-        //{
-        //    Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(id);
-        //    User user = await _userManager.FindByIdAsync(psychologist.userId);
-        //    UserViewModel userViewModel = new UserViewModel();
+        public async Task<IActionResult> Delete(int id)
+        {
+            Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(id);
+            User user = await _userManager.FindByIdAsync(psychologist.UserId);
 
-        //    userViewModel.FirstName = user.FirstName;
-        //    userViewModel.LastName = user.LastName;
-        //    userViewModel.Email = user.Email;
-        //    userViewModel.UserName = user.UserName;
-        //    userViewModel.Type = user.Type;
-        //    PsychologistViewModel psychologistViewModel = new PsychologistViewModel
-        //    {
-        //        Id = psychologist.Id,
-        //        Name = psychologist.Name,
-        //        Url = psychologist.Url,
-        //        IsApproved = psychologist.IsApproved,
-        //        Categories = psychologist.PsychologistCategory.Select(c => new Category
-        //        {
-        //            Id = c.CategoryId,
-        //            Name = c.Category.Name,
-        //        }).ToList(),
-        //        User = userViewModel
-        //    };
-        //    return View(psychologistViewModel);
-        //}
-        //[HttpPost]
-        //public async Task<IActionResult> Delete(PsychologistViewModel psychologistViewModel)
-        //{
-        //    Psychologist psychologist=await _psychologistService.GetByIdAsync(psychologistViewModel.Id);
-        //    User user = await _userManager.FindByIdAsync(psychologist.userId);
-        //    if(user!=null)
-        //    {
-        //       await _userManager.DeleteAsync(user);
-        //    }
-        //    return RedirectToAction("Index");
-        //}
+            if(user != null)
+            {
+                await _userManager.DeleteAsync(user);
+            }
+            return RedirectToAction("Index");
+        }
         #endregion
     }
 }

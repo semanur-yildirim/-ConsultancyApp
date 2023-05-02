@@ -20,6 +20,8 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Config
             builder.Property(x => x.Education).IsRequired().HasMaxLength(250);
             builder.Property(x => x.Experience).IsRequired().HasMaxLength(250);
             builder.Property(x => x.GraduationYear).IsRequired();
+            builder.HasOne(p=>p.Psychologist).WithOne(p=>p.PsychologistDescription).HasForeignKey<PsychologistDescription>(p=>p.PsychologistId).OnDelete(DeleteBehavior.Cascade);
+
             builder.HasData(
                  new PsychologistDescription { Id = 1, PsychologistId = 1, GraduationYear = new DateTime(2000, 12, 5), Education = "İzmir Üniversitesi Psikoloji", Experience = "Online ve Yüz yüze Terapi", About = "Sosyal Terapist, Bağımlılık Terapisti, Psikodrama Yöneticisi, Organizasyon Geliştirici İzmir Üniversitesi bölümünü tamamlayıp, ardından Almanya’da Sağlık Managment Yüksek Lisans Master egitimini  Magdeburg-Stendal Yüksekokulunda tamamlamıştır. Almanya’da psikososyal alanda 1982 yılından itibaren mesleki calışmasına paralel, 2013 tarihine kadar Sosyalterapi, Bagimlilik terapisti, Psikodrama Grup Yöneticisi, Organizasyon Geliştirici ve Choac  eğitimlerini aldı." },
                  new PsychologistDescription { Id = 2, PsychologistId = 2, GraduationYear = new DateTime(2005, 7, 15), Education = "Hacettepe Üniversitesi Psikoloji", Experience = "Bireysel ve Grup Terapisi", About = "Bireysel terapi, grup terapisi, cinsel sağlık, madde bağımlılığı, anksiyete ve depresyon konularında uzmanım. Terapi sürecinde öncelikle güvenli bir ilişki kurmayı hedeflerim. İletişim becerileri, bilişsel davranışçı terapi, psikodinamik yaklaşım gibi farklı terapi yöntemleri kullanırım." },

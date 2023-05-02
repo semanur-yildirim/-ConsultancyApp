@@ -123,7 +123,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore
 
         public async Task<Psychologist> GetPsychologistFullDataByUserId(string userId)
         {
-            var psychologist=await AppContext.Psychologist.Where(p=>p.userId==userId).Include(p => p.PsychologistDescription)
+            var psychologist=await AppContext.Psychologist.Where(p=>p.UserId==userId).Include(p => p.PsychologistDescription)
                 .Include(p => p.PsychologistCategory).ThenInclude(pc => pc.Category)
                 .Include(p => p.PsychologistCustomer).ThenInclude(pc => pc.Customer)
                 .Include(pi => pi.Image).FirstOrDefaultAsync();

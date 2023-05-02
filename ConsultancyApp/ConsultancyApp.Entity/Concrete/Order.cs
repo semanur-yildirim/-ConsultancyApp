@@ -20,8 +20,6 @@ namespace ConsultancyApp.Entity.Concrete
         public string Email { get; set; }
         public EnumOrderState OrderState { get; set; }
         public List<OrderItem> OrderItems { get; set; }
-
-
     }
     public enum EnumOrderState
     {

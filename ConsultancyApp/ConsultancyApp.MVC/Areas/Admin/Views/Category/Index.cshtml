@@ -16,21 +16,21 @@
             </tr>
         </thead>
         <tbody>
-            @foreach (var psychologist in Model)
+            @foreach (var c in Model)
             {
                 <tr class="text-center">
-                    <td class="align-middle">@psychologist.Id</td>
-                    <td class="align-middle">@psychologist.Name</td>
-                    <td class="align-middle">@psychologist.Psychologists.Count()</td>
+                    <td class="align-middle">@c.Id</td>
+                    <td class="align-middle">@c.Name</td>
+                    <td class="align-middle">@c.Psychologists.Count()</td>
 
                     <td>
-                        <form id="form-is-home_@psychologist.Id"
+                        <form id="form-is-home_@c.Id"
                           asp-area="Admin"
                           asp-controller="Category"
                           asp-action="UpdateIsHome"
-                          asp-route-id="@psychologist.Id">
+                          asp-route-id="@c.Id">
                             <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" asp-for=@psychologist.IsApproved onchange="document.getElementById('form-is-home_@psychologist.Id').submit();">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" asp-for=@c.IsApproved onchange="document.getElementById('form-is-home_@c.Id').submit();">
                             </div>
                         </form>
                     </td>
@@ -39,16 +39,16 @@
                        asp-area="Admin"
                        asp-controller="Category"
                        asp-action="Edit"
-                       asp-route-id="@psychologist.Id">
+                       asp-route-id="@c.Id">
                             Düzenle
                         </a>
 
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal_@c.Id">
                             Sil
                         </button>
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal_@c.Id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -59,8 +59,7 @@
                                         <div class="row">
 
                                             <div class="col-4">
-                                                <span>@psychologist.Name</span>
-
+                                                <span>@c.Name</span>
                                             </div>
                                         </div>
                                     </div>
@@ -70,7 +69,7 @@
                                        asp-area="Admin"
                                        asp-controller="Category"
                                        asp-action="Delete"
-                                       asp-route-id="@psychologist.Id">
+                                       asp-route-id="@c.Id">
                                             Sil
                                         </a>
                                     </div>

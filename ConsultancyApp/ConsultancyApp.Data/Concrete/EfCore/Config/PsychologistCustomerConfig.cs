@@ -15,6 +15,9 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Config
         public void Configure(EntityTypeBuilder<PsychologistCustomer> builder)
         {
             builder.HasKey(pc => new { pc.PsychologistId, pc.CustomerId });
+            builder.HasOne(x=>x.Psychologist).WithMany(x=>x.PsychologistCustomer).HasForeignKey(x=>x.PsychologistId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(x=>x.Customer).WithMany(x=>x.PsychologistCustomer).HasForeignKey(x=>x.CustomerId).OnDelete(DeleteBehavior.Cascade);
+
             builder.HasData(
                 new PsychologistCustomer { PsychologistId = 1, CustomerId = 1 },
                 new PsychologistCustomer { PsychologistId = 2, CustomerId = 2 },

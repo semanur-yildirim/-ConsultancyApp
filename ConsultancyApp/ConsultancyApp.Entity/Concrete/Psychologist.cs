@@ -23,7 +23,7 @@ namespace ConsultancyApp.Entity.Concrete
         public PsychologistDescription PsychologistDescription { get; set; }
         public List<PsychologistCustomer> PsychologistCustomer { get; set; }
         public Image Image { get; set; }
-        public string userId { get; set; }
-        public User user { get; set; }
+        public string UserId { get; set; }
+        public User User { get; set; }
     }
 }

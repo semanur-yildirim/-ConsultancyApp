@@ -22,7 +22,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Config
             builder.Property(x => x.Name).IsRequired().HasMaxLength(100);
             builder.Property(x => x.Gender).IsRequired().HasMaxLength(50);
             builder.Property(x => x.Price).IsRequired();
-            builder.Property(x => x.userId).IsRequired();
+            builder.HasOne(p => p.User).WithOne(p => p.Psychologist).HasForeignKey<Psychologist>(p => p.UserId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

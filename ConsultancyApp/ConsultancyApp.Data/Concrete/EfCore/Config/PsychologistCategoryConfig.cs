@@ -14,6 +14,9 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Config
         public void Configure(EntityTypeBuilder<PsychologistCategory> builder)
         {
             builder.HasKey(pc => new { pc.PsychologistId, pc.CategoryId });
+            builder.HasOne(x=>x.Psychologist).WithMany(x=>x.PsychologistCategory).HasForeignKey(x=>x.PsychologistId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(x => x.Category).WithMany(x => x.PsychologitstCategry).HasForeignKey(x => x.CategoryId).OnDelete(DeleteBehavior.Cascade);
+
             builder.HasData(
                 new PsychologistCategory { PsychologistId = 1, CategoryId = 1 },
                 new PsychologistCategory { PsychologistId = 1, CategoryId = 2 },

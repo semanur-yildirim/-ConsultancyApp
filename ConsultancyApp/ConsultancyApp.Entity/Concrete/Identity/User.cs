@@ -18,6 +18,10 @@ namespace ConsultancyApp.Entity.Concrete.Identity
         public string NormalizedName { get; set; }
         public DateTime? DateOfBirth { get; set; }
         public EnumType Type { get; set; }
+        public Psychologist? Psychologist { get; set; }
+        public Customer? Customer { get; set; }
+        public Cart Cart { get; set; }
+        public Order? Order { get; set; }
     }
     public enum EnumType
     {

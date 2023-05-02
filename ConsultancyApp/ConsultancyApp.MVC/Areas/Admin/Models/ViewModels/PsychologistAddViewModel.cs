@@ -49,5 +49,6 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
 
         public List<Category> Categories { get; set; }
         public UserViewModel User { get; set; }
+        public EnumType Type { get; set; } = EnumType.Psychologist;
     }
 }
