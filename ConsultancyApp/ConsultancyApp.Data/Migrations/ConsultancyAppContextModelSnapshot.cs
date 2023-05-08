@@ -158,72 +158,72 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8626),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5079),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8632),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5084),
                             Name = "Bireysel Terapi",
                             Url = "bireysel-terapi"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8635),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5087),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8636),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5087),
                             Name = "İlişki Terapisi",
                             Url = "iliski-terapisi"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8638),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5089),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8638),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5089),
                             Name = "Aile Terapisi",
                             Url = "aile-terapisi"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8640),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5094),
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8641),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5094),
                             Name = "Çocuk Terapisi",
                             Url = "cocuk-terapisi"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8642),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5096),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8643),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5096),
                             Name = "Ergen Terapisi",
                             Url = "ergen-terapisi"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8644),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5098),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8645),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5098),
                             Name = "Oyun Terapisi",
                             Url = "oyun-terapisi"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8646),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5100),
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8647),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5100),
                             Name = "Sanat Danışmanlık",
                             Url = "sanat-danismanlik"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8648),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5102),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 947, DateTimeKind.Local).AddTicks(8649),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5102),
                             Name = "Cinsel Yönetimi",
                             Url = "cinsel-terapi"
                         });
@@ -414,9 +414,9 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = 1,
                             Address = "Armağan evler mahallesi 23 Nisan Caddesi no:37 Daire:4",
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7665),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7684),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(12),
                             Name = "Canan Umaç",
                             Url = "ahmet-umac",
                             userId = "eabb7e42-6e53-4696-b350-da56Or2c79fa"
@@ -425,9 +425,9 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = 2,
                             Address = "Güzelbahçe mahallesi Kumsal sokak no:13",
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7711),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(22),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7713),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(22),
                             Name = "Ömer Akyüz",
                             Url = "omer-akyuz",
                             userId = "eabb7e42-6e53-4696-b350-da64de2c79fa"
@@ -436,9 +436,9 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = 3,
                             Address = "Karşıyaka mahallesi Yalı Caddesi no:27 Daire:5",
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7729),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(31),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7730),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(32),
                             Name = "Mehmet Tatlı",
                             Url = "mehmet-tatli",
                             userId = "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f"
@@ -476,21 +476,21 @@ namespace ConsultancyApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "bbaf0bcf-05d6-4de3-9d3b-2e71669977aa",
+                            Id = "53960165-702f-4eac-bcd3-dfd858391c88",
                             Description = "Yöneticiler",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "b4995b4c-f6e4-40e0-8b6f-1a41b1545501",
+                            Id = "7a356e53-4ea9-4e6b-960b-7063d9da3a0d",
                             Description = "Kullanıcılar",
                             Name = "Customer",
-                            NormalizedName = "CUSTOMER"
+                            NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0",
+                            Id = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60",
                             Description = "Psikologlar",
                             Name = "Psychologist",
                             NormalizedName = "PSYCHOLOGIST"
@@ -586,7 +586,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "8da007be-c50b-4973-aa45-224b7358hkn15",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "3e1e0b93-b73b-4438-8ec8-d37ce7cae150",
+                            ConcurrencyStamp = "d32ce5d5-d429-4161-9bcf-476725b4dc86",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "selvi@gmail.com",
@@ -598,9 +598,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "SELVI@GMAIL.COM",
                             NormalizedName = "SELVIKARTAL",
                             NormalizedUserName = "SELVI",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGiHAcyCGpaq109oIk7Wo6H3UKR0c+AFAEnIH0GfnYqnASarnypmCMhARnWe/gylZA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEN2va83u/KiXOSOta0k2bgENelXunNMjk3hXSumH++1HpSs78FcC6sDDckvXaglGmg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "fa054432-5678-46d0-8aa7-8f629ed4bd0f",
+                            SecurityStamp = "f269dae7-3027-49b0-b5dc-8341ec277862",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "selvi"
@@ -609,7 +609,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8e79d782-e6e8-42b4-accd-98c2e6e45051",
+                            ConcurrencyStamp = "cf17288f-9399-4891-8015-d98b3fdb086c",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "zeynep@gmail.com",
@@ -621,9 +621,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "ZEYNEP@GMAIL.COM",
                             NormalizedName = "ZEYNEPOZTURK",
                             NormalizedUserName = "ZEYNEP",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJ+9J1NC1bCK6y0DtiE12wMOuyi20TEQnKO4IZM70yhjGZb9sSlAOVhyhvNZTwkbXg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOzbUNKXIh3wO89lvMg2MjXytoSIrwB2WiD6ubigM+S73DjMe3Ze4CZrY715Oj5UCA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "21a790bd-b189-44fb-917f-a50cf3d9e193",
+                            SecurityStamp = "939fd004-f6b0-438d-98f0-d884f93717cb",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "zeynep"
@@ -632,7 +632,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1d9ac8b7-ad5b-43c8-b910-b5d6a087b15d",
+                            ConcurrencyStamp = "dabd7288-509f-4fc1-bd83-4655e7a40963",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "merve@gmail.com",
@@ -644,9 +644,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "MERVE@GMAIL.COM",
                             NormalizedName = "MERVEKARA",
                             NormalizedUserName = "MERVE",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIm6p2b6DOrRLUjgYSvCrasbVDKwsNAVLxhZzyZ741cJ4vl+PHPuZ/syKsvOVyHHCA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGkBudNajF1cgmAwSwY628tF+fTSzkqTiGPPpLMN2XpOO3CBlN3hMMhW5uNUxOGUjg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7785d825-4fee-41f2-8745-9ac53d23fe9f",
+                            SecurityStamp = "a58a40b1-f8a3-419a-add2-c9da266966f7",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "merve"
@@ -655,7 +655,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "s8e3a9e7-5K05-4487-9945-43d2ff1kgd34",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "6b242741-bd91-4466-beb7-92e7f65f1b63",
+                            ConcurrencyStamp = "a79ea6e5-5bcd-41c2-b954-c2fd0fa67860",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "aslı@gmail.com",
@@ -667,9 +667,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "ASLI@GMAIL.COM",
                             NormalizedName = "ASLIYAMAN",
                             NormalizedUserName = "ASLI",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHqp+eN0qSEI+GBl1riQ79BhleVapRMNyg96kmlrL5+o0tIzqfp64jh4F5dfERTSpA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAh6o7qv4zHlmwYsHYm+5GPQ6XRKbr3BvgQg0OF9NSXVCn40+Q8ZjhoyXa4rco2jDw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7d78bec0-f7bf-4532-ac65-644305333605",
+                            SecurityStamp = "c355f190-b935-4c8e-a2d2-3fe02eb198c2",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "aslı"
@@ -678,7 +678,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "n6R1a9e5-5d05-4487-9945-43d2ff1L5gd34",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "be8eed78-835f-42c3-a15d-dab93d30719a",
+                            ConcurrencyStamp = "48cafd8b-95b7-40ce-a089-8cc8a65064c7",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "aylin@gmail.com",
@@ -690,9 +690,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "AYLIN@GMAIL.COM",
                             NormalizedName = "AYLINUZAR",
                             NormalizedUserName = "AYLIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFhfjDDvMiXN6WZknXIF1QSNTkaBzW500mFAWjqnUJhLpx/VZdvo/3NNG5ka39Ex7A==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECAJI6uRH0M2slidfzrvLgxLWJjnqN7J6+O0DIB+y5IOfWNr6UDWN/ayUr4A9GbjEQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "ce91bb11-91e5-4408-b9c2-9865e09a28f4",
+                            SecurityStamp = "4b555222-5b9b-420d-a83c-284121489096",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "aylin"
@@ -701,7 +701,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "b342e19c-42af-4f25-b820-7a07dc9mbf13",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "43cbc987-0b81-434c-b5d1-92ebd923d9d2",
+                            ConcurrencyStamp = "80e93343-3b59-4bf1-bd2e-30525430052f",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "ali@gmail.com",
@@ -713,9 +713,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "ALI@GMAIL.COM",
                             NormalizedName = "ALIYILMAZ",
                             NormalizedUserName = "ALI",
-                            PasswordHash = "AQAAAAIAAYagAAAAEEByoPqdCmHFSYdNiSNaxid0CFTBW4g/KWFo53vkiULIY5/9BsNw1/Xh3RvRz8AkGw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEA5oFEnB4sx6bI/W1PeUZ8cxlSjY/VmDYs2fcwiBxa0uwnoSapWDnsTo1NdYBKPucA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6bc7ead8-eca2-4521-8d66-52b547c466de",
+                            SecurityStamp = "66d627a0-6598-4bc5-a882-b53c2cd55c91",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "ali"
@@ -724,7 +724,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "b35f20c1-836f-49c1-b46f-2399e12pvc85",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "53bce95e-db0d-4ba2-b3f8-4da8a48d985b",
+                            ConcurrencyStamp = "cfaa2644-bfe6-4487-888f-eaaafcc90163",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "cem@gmail.com",
@@ -736,9 +736,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "CEM@GMAIL.COM",
                             NormalizedName = "CEMKAR",
                             NormalizedUserName = "CEM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGqVRmueVaczccxQucsPX2YustpaDeyc7t+ghHg7Ihe44ISKioS9otUAsW1bg1clww==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEFWx8o6hMhmc0+MPWk/I2zWXvYSHXb91RChIsTqdggTt7WlPW7KkRz6Q7jV0lUr7cA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "dd08ac3b-e08a-4c2f-85ef-8545e3e2e3c4",
+                            SecurityStamp = "585a722e-1dab-44b5-8417-ffa6c6ec1fa8",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "cem"
@@ -747,7 +747,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "9e8f345d-141f-4ef2-99c7-8a9476llh93",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "113849ec-393d-46ae-913d-1bdd9b24491b",
+                            ConcurrencyStamp = "a84510b4-8d9c-4762-a9ca-8398eb3da588",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "ahmet@gmail.com",
@@ -759,9 +759,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "AHMET@GMAIL.COM",
                             NormalizedName = "AHMETOVALI",
                             NormalizedUserName = "AHMET",
-                            PasswordHash = "AQAAAAIAAYagAAAAEITqlrOCBucFq2jHyhBKlcenNApWyIFrYVSsVD8X+lblkb2qHPL3OTc4SAYzyo9W7Q==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEC6KsqSKYaat7+EMJxmiz4XhMloWcynsjBJha0lpp5yQPrwomNlcimEu67oveDgQzg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "df0b1e33-abb6-46aa-9819-c00761260d8b",
+                            SecurityStamp = "a8f25f2b-0080-4d7a-a5bb-314eb4f0c49d",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "ahmet"
@@ -770,7 +770,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "b342e25a-42af-4f25-b820-7a07dc9mbf13",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "ed7fc176-1616-4a4d-b7ae-90fc931ef5ff",
+                            ConcurrencyStamp = "f6e6ecd5-f96e-4d22-a303-2482dc9d4c64",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "emre@gmail.com",
@@ -782,9 +782,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "EMRE@GMAIL.COM",
                             NormalizedName = "EMREATES",
                             NormalizedUserName = "EMRE",
-                            PasswordHash = "AQAAAAIAAYagAAAAEMzn/QG4QVPbqDsw80yDglSBBf1TwcuLHMNwaCl3j3QynrQ3UuxvcQWAVBSCthlcPA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEHQ6nfnnvamZNBTYSQczoYuNWsf4uowR5dVQxuoIobo6FPiBkvD/MOOko5oQ5ZHfmw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e293c42b-32ed-41c4-b2c4-16969e820f92",
+                            SecurityStamp = "a3ab9675-b3e6-4266-b8e7-37cdcb3811ff",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "emre"
@@ -793,7 +793,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "613d0080-7b72-480d-9126-97ed7c297a36",
+                            ConcurrencyStamp = "07a974e0-2cd9-404d-b5c4-d1d2d26edf6d",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "baris@gmail.com",
@@ -805,9 +805,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "BARIS@GMAIL.COM",
                             NormalizedName = "BARISDURMUS",
                             NormalizedUserName = "BARIS",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGhT0zD9akPBPUTPEznDyz/Fe3saFL+z02u4GJTKD2qWq4zSO+agpLe4JpghfG00dA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKOr6Yu1+Zl5BFOEUb3w59LDY/owsO8uOL/xgW+aZ0kd97cckofFkZ7nNAfHdT5Ouw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "43c6c621-a01a-4a47-9219-5c316eb496b5",
+                            SecurityStamp = "3e955906-de9a-4d73-8961-3c36dccd1608",
                             TwoFactorEnabled = false,
                             Type = 1,
                             UserName = "barıs"
@@ -816,7 +816,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "eabb7e42-6e53-4696-b350-da56Or2c79fa",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "4a3b3817-94b6-4ba4-9f96-b8f8cac5df02",
+                            ConcurrencyStamp = "8177f916-2f8c-4c59-9254-04e8912e378c",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "canan@gmail.com",
@@ -828,9 +828,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "CANAN@GMAIL.COM",
                             NormalizedName = "CANANUMAC",
                             NormalizedUserName = "CANAN",
-                            PasswordHash = "AQAAAAIAAYagAAAAELEq0/emOH9Gx9++3Jl2/+Wppo6mN9eBn0JN/xl6GMa1sXiYLJQ+IpNlpPtnVF0tVg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEPgHewNyTWAW90VVmvp/u5RSWifjHjtfTCw6zKLy/SXExhRJIfd3RpNmYM3JH/gw8w==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "a376849e-cd69-4e8e-b604-ffd88cd58d16",
+                            SecurityStamp = "a4e3c715-989d-4714-9e23-4d000c121656",
                             TwoFactorEnabled = false,
                             Type = 2,
                             UserName = "canan"
@@ -839,7 +839,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "eabb7e42-6e53-4696-b350-da64de2c79fa",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "a5072e91-9d92-40b7-85d2-a9322f51f1d9",
+                            ConcurrencyStamp = "8b72156c-0d2c-4bc6-90ce-8c19a5c8e041",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "omer@gmail.com",
@@ -851,9 +851,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "OMER@GMAIL.COM",
                             NormalizedName = "OMERAKYUZ",
                             NormalizedUserName = "OMER",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPWSV9VfMUf0rMZHLgepn2vqCORiu27oh/pz7vQGlL3TG0xFT4VOaHU8lFFFmMenTw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMGaYKMqO6W9HgQGpO1qy4DvqAz2j3ERqpl7OIJ5jvEQlOuPin+qYnqHlwnbl3xS4Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "2499a8eb-80f1-4c6e-9791-cf24cf2dae56",
+                            SecurityStamp = "b9972f3f-2eed-4e84-a3f1-6c647eaac8fc",
                             TwoFactorEnabled = false,
                             Type = 2,
                             UserName = "ömer"
@@ -862,7 +862,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c98858f3-c3c5-4f79-96d9-e98c84b6ffd0",
+                            ConcurrencyStamp = "9b807d88-3f22-4b04-bba5-e5b4ddee971d",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "mehmet@gmail.com",
@@ -874,9 +874,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "MEHMET@GMAIL.COM",
                             NormalizedName = "MEHMETTATLI",
                             NormalizedUserName = "MEHMET",
-                            PasswordHash = "AQAAAAIAAYagAAAAEIHg4wMgrB0Kqk0WUarTAW8DzJY53Lxw0iyMceT/jbwnpWbnQX4qhHXr6yVLK3ksbw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEKHsuElEgi943F/lS9gjU0lDPGa3uKi+7XcQtp0D3sxnNGvNg8Q7Ot53cs4gTj4tkA==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "371bfc4d-f36d-40bc-aad8-282d5c83b998",
+                            SecurityStamp = "4a69d1ab-aa06-4c7d-922f-f9409283a75b",
                             TwoFactorEnabled = false,
                             Type = 2,
                             UserName = "-mehmet"
@@ -885,7 +885,7 @@ namespace ConsultancyApp.Data.Migrations
                         {
                             Id = "kema7e42-6e53-4696-b350-ke56Or2c79fa",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "27ebcf0d-3c82-4937-9497-17a8bd189b17",
+                            ConcurrencyStamp = "2af385e0-4aa9-47e5-bcf4-fd55f3320b5d",
                             CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateOfBirth = new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Email = "semanur@gmail.com",
@@ -897,9 +897,9 @@ namespace ConsultancyApp.Data.Migrations
                             NormalizedEmail = "SEMANUR@GMAIL.COM",
                             NormalizedName = "SEMANURYILDIRIM",
                             NormalizedUserName = "SEMANUR",
-                            PasswordHash = "AQAAAAIAAYagAAAAENsAS3zbPCekHP7lOKrhwZhweyjiPDMzfwW6RwGIdI8+tpoo2ZezEXGystVrOfbjKA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELbXG4eBh5NMWKa/o1a8SPETwAd+xHGjsRlUuh64ZsZbZk8PLVB2MSToi2kN/lYw2g==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "8972da19-a482-401c-8962-373e587f2192",
+                            SecurityStamp = "890f77c9-0f6c-4d3a-bb60-e9b6bc543168",
                             TwoFactorEnabled = false,
                             Type = 0,
                             UserName = "semanur"
@@ -940,90 +940,90 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4779),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(190),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4785),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(196),
                             PsychologistId = 1,
                             Url = "k-1.jpg"
                         },
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4788),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(198),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4789),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(199),
                             PsychologistId = 2,
                             Url = "k-2.jpg"
                         },
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4790),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(200),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4791),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(201),
                             PsychologistId = 3,
                             Url = "k-3.jpg"
                         },
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4793),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(203),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4793),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(203),
                             PsychologistId = 4,
                             Url = "k-4.jpg"
                         },
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4794),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(205),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4795),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(205),
                             PsychologistId = 5,
                             Url = "k-5.jpg"
                         },
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4796),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(207),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4797),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(207),
                             PsychologistId = 6,
                             Url = "e-1.jpg"
                         },
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4798),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(208),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4799),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(209),
                             PsychologistId = 7,
                             Url = "e-2.jpg"
                         },
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4800),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(210),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4801),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(211),
                             PsychologistId = 8,
                             Url = "e-3.jpg"
                         },
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4802),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(212),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4802),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(213),
                             PsychologistId = 9,
                             Url = "e-4.jpg"
                         },
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4804),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(214),
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 56, 949, DateTimeKind.Local).AddTicks(4804),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(215),
                             PsychologistId = 10,
                             Url = "e-5.jpg"
                         });
@@ -1140,10 +1140,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7912),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(80),
                             Gender = "Kadın",
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7916),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(81),
                             Name = "Selvi Kartal",
                             Price = 450m,
                             Url = "Selvi-kartal",
@@ -1152,10 +1152,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 2,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7944),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(89),
                             Gender = "Kadın",
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7945),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(90),
                             Name = "Zeynep Öztürk",
                             Price = 350m,
                             Url = "zeynep-ozturk",
@@ -1164,10 +1164,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 3,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7950),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(94),
                             Gender = "Kadın",
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7951),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(95),
                             Name = "Merve Kara",
                             Price = 400m,
                             Url = "merve-kara",
@@ -1176,10 +1176,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 4,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7955),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(98),
                             Gender = "Kadın",
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7957),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(98),
                             Name = "Aslı Yaman",
                             Price = 450m,
                             Url = "asli-yaman",
@@ -1188,10 +1188,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 5,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7961),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(101),
                             Gender = "Kadın",
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7962),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(102),
                             Name = "Aylin Uzar",
                             Price = 350m,
                             Url = "aylin-uzar",
@@ -1200,10 +1200,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 6,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7969),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(106),
                             Gender = "Erkek",
                             IsApproved = false,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7970),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(107),
                             Name = "Ali Yılmaz",
                             Price = 500m,
                             Url = "ali-yilmaz",
@@ -1212,10 +1212,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 7,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7974),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(110),
                             Gender = "Erkek",
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7975),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(111),
                             Name = "Cem Kar",
                             Price = 400m,
                             Url = "cem-kar",
@@ -1224,10 +1224,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 8,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7979),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(114),
                             Gender = "Erkek",
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7980),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(114),
                             Name = "Ahmet Ovali",
                             Price = 350m,
                             Url = "ahmet-ovali",
@@ -1236,10 +1236,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 9,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7984),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(117),
                             Gender = "Erkek",
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7985),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(118),
                             Name = "Emre Ateş",
                             Price = 350m,
                             Url = "emre-ates",
@@ -1248,10 +1248,10 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             Id = 10,
-                            CreatedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7990),
+                            CreatedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(122),
                             Gender = "Erkek",
                             IsApproved = true,
-                            ModifiedDate = new DateTime(2023, 5, 7, 16, 33, 55, 261, DateTimeKind.Local).AddTicks(7991),
+                            ModifiedDate = new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(123),
                             Name = "Barış Durmuş",
                             Price = 350m,
                             Url = "barıs-durmus",
@@ -1671,72 +1671,72 @@ namespace ConsultancyApp.Data.Migrations
                         new
                         {
                             UserId = "8da007be-c50b-4973-aa45-224b7358hkn15",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "s8e3a9e7-5K05-4487-9945-43d2ff1kgd34",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "n6R1a9e5-5d05-4487-9945-43d2ff1L5gd34",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "b342e19c-42af-4f25-b820-7a07dc9mbf13",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "b35f20c1-836f-49c1-b46f-2399e12pvc85",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "9e8f345d-141f-4ef2-99c7-8a9476llh93",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "b342e25a-42af-4f25-b820-7a07dc9mbf13",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21",
-                            RoleId = "63e7f56d-a0b2-4485-8f98-f5ac2e3a0bc0"
+                            RoleId = "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60"
                         },
                         new
                         {
                             UserId = "eabb7e42-6e53-4696-b350-da56Or2c79fa",
-                            RoleId = "b4995b4c-f6e4-40e0-8b6f-1a41b1545501"
+                            RoleId = "7a356e53-4ea9-4e6b-960b-7063d9da3a0d"
                         },
                         new
                         {
                             UserId = "eabb7e42-6e53-4696-b350-da64de2c79fa",
-                            RoleId = "b4995b4c-f6e4-40e0-8b6f-1a41b1545501"
+                            RoleId = "7a356e53-4ea9-4e6b-960b-7063d9da3a0d"
                         },
                         new
                         {
                             UserId = "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f",
-                            RoleId = "b4995b4c-f6e4-40e0-8b6f-1a41b1545501"
+                            RoleId = "7a356e53-4ea9-4e6b-960b-7063d9da3a0d"
                         },
                         new
                         {
                             UserId = "kema7e42-6e53-4696-b350-ke56Or2c79fa",
-                            RoleId = "bbaf0bcf-05d6-4de3-9d3b-2e71669977aa"
+                            RoleId = "53960165-702f-4eac-bcd3-dfd858391c88"
                         });
                 });
 

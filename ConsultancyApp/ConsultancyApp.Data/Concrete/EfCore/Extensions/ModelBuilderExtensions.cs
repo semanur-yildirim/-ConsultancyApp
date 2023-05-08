@@ -18,7 +18,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             List<Role> roles = new List<Role>
             {
                 new Role{Name="Admin", Description="Yöneticiler", NormalizedName="ADMIN"},
-                new Role{Name="Customer", Description="Kullanıcılar", NormalizedName="CUSTOMER"},
+                new Role{Name="Customer", Description="Kullanıcılar", NormalizedName="Customer"},
                 new Role{Name="Psychologist", Description="Psikologlar", NormalizedName="PSYCHOLOGIST"},
             };
             modelBuilder.Entity<Role>().HasData(roles);

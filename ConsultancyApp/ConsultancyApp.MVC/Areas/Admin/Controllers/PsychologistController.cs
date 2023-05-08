@@ -90,9 +90,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     LastName = psychologistAddViewModel.User.LastName,
                     UserName = psychologistAddViewModel.User.UserName,
                     Email = psychologistAddViewModel.User.Email,
-                    Type = psychologistAddViewModel.Type,
-                    NormalizedName = (psychologistAddViewModel.User.FirstName + psychologistAddViewModel.User.LastName).ToUpper()
-
+                    Type = psychologistAddViewModel.Type
                 };
                 Image image = new Image();
                 image.CreatedDate = DateTime.Now;
