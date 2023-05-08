@@ -30,6 +30,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
 
         [DisplayName("Roller")]
         public EnumType Type { get; set; }
+
         [DisplayName("Parola")]
         [Required(ErrorMessage = "Parola alanı boş bırakılmamalıdır")]
         [DataType(DataType.Password)]

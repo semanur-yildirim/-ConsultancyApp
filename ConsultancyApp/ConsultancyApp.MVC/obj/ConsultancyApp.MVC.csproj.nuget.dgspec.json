@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj": {}
+    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
+    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj",
+        "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj",
         "projectName": "ConsultancyApp.Business",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\obj\\",
+        "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj",
+        "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,8 +32,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj"
+              "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj": {
+                "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj"
               }
             }
           }
@@ -63,24 +63,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj": {
+    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj",
+        "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj",
         "projectName": "ConsultancyApp.Core",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\obj\\",
+        "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj",
+        "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -132,24 +132,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj": {
+    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
+        "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
         "projectName": "ConsultancyApp.Data",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\obj\\",
+        "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\ConsultancyApp.Data.csproj",
+        "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -164,8 +164,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj"
+              "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
+                "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj"
               }
             }
           }
@@ -215,24 +215,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
+    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj",
+        "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj",
         "projectName": "ConsultancyApp.Entity",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\obj\\",
+        "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\ConsultancyApp.Entity.csproj",
+        "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Entity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -280,24 +280,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj": {
+    "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
+        "projectUniqueName": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
         "projectName": "ConsultancyApp.MVC",
-        "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\obj\\",
+        "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\ConsultancyApp.MVC.csproj",
+        "packagesPath": "C:\\Users\\seman\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.MVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\seman\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -312,11 +312,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj"
+              "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj": {
+                "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Business\\ConsultancyApp.Business.csproj"
               },
-              "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj": {
-                "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj"
+              "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj": {
+                "projectPath": "C:\\Users\\seman\\OneDrive\\Masaüstü\\-ConsultancyApp\\-ConsultancyApp\\ConsultancyApp\\ConsultancyApp.Core\\ConsultancyApp.Core.csproj"
               }
             }
           }
@@ -375,7 +375,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
