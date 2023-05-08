@@ -11,7 +11,11 @@
                 <form asp-area="Admin"
                       asp-controller="Psychologist"
                       asp-action="Edit"
-                      method="post">
+                      method="post"
+                      enctype="multipart/form-data">
+                    <input type="hidden" class="form-control" asp-for="Name" />
+                    <input type="hidden" class="form-control" asp-for="User.Id" />
+
                     <div class="card mb-4">
                         <h5 class="card-header">Profil Detay</h5>
                         <!-- Account -->
@@ -26,7 +30,6 @@
                                              width="170"
                                              id="uploadedAvatar" />
                                         <div class="button-wrapper">
-
                                             <input type="file"
                                                    asp-for="File"
                                                    class="form-control"
@@ -96,6 +99,11 @@
                                     <span class="text-danger" asp-validation-for="User.UserName"></span>
                                 </div>
                                 <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="User.Password"></label>
+                                    <input class="form-control" asp-for="User.Password" />
+                                    <span class="text-danger" asp-validation-for="User.Password"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
                                     <label class="form-label" asp-for="User.Email"></label>
                                     <input class="form-control" asp-for="User.Email" />
                                     <span class="text-danger" asp-validation-for="User.Email"></span>
@@ -128,34 +136,34 @@
                         </div>
                 </form>
 
-                    <!-- /Account -->
-                </div>
-                <div class="card">
-                    <h5 class="card-header">Sil</h5>
-                    <div class="card-body">
-                        <div class="mb-3 col-12 mb-0">
-                            <div class="alert alert-warning">
-                                <h6 class="alert-heading fw-bold mb-1">Silmek istedğinizden emin misiniz?</h6>
-                            </div>
+                <!-- /Account -->
+            </div>
+            <div class="card">
+                <h5 class="card-header">Sil</h5>
+                <div class="card-body">
+                    <div class="mb-3 col-12 mb-0">
+                        <div class="alert alert-warning">
+                            <h6 class="alert-heading fw-bold mb-1">Silmek istedğinizden emin misiniz?</h6>
                         </div>
-                        <form id="formAccountDeactivation" onsubmit="return false">
-                            <div class="form-check mb-3">
-                                <input class="form-check-input"
-                                       type="checkbox"
-                                       name="accountActivation"
-                                       id="accountActivation" />
-                                <label class="form-check-label" for="accountActivation">I confirm my account deactivation</label>
-                            </div>
-                            <button type="submit" class="btn btn-danger deactivate-account">Deactivate Account</button>
-                        </form>
                     </div>
+                    <form id="formAccountDeactivation" onsubmit="return false">
+                        <div class="form-check mb-3">
+                            <input class="form-check-input"
+                                   type="checkbox"
+                                   name="accountActivation"
+                                   id="accountActivation" />
+                            <label class="form-check-label" for="accountActivation">I confirm my account deactivation</label>
+                        </div>
+                        <button type="submit" class="btn btn-danger deactivate-account">Deactivate Account</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-    <!-- / Content -->
+</div>
+<!-- / Content -->
 
-    <div class="content-backdrop fade"></div>
+<div class="content-backdrop fade"></div>
 </div>
 <!-- Content wrapper -->
 @section Styles{

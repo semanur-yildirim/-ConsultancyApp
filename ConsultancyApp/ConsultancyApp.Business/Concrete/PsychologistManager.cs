@@ -76,9 +76,9 @@ namespace ConsultancyApp.Business.Concrete
             _psychologistRepository.Update(psychologist);
         }
 
-        public async Task UpdatePsychologist(Psychologist psychologist, int[] SelectedCategories, PsychologistDescription psychologistDescription, int[] psychologistCustomers)
+        public async Task UpdatePsychologist(Psychologist psychologist, int[] SelectedCategories, PsychologistDescription psychologistDescription)
         {
-            await _psychologistRepository.UpdatePsychologist(psychologist, SelectedCategories, psychologistDescription, psychologistCustomers);
+            await _psychologistRepository.UpdatePsychologist(psychologist, SelectedCategories, psychologistDescription);
         }
     }
 }

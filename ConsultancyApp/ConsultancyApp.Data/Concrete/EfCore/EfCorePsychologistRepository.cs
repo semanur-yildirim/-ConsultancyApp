@@ -60,10 +60,10 @@ namespace ConsultancyApp.Data.Concrete.EfCore
                 .Where(c => c.PsychologistCustomer.Any(x => x.CustomerId == customerId)).ToListAsync();
             return psychologist;
         }
-        public async Task UpdatePsychologist(Psychologist psychologist, int[] SelectedCategories, PsychologistDescription psychologistDescription,int[] psychologistCustomers)
+        public async Task UpdatePsychologist(Psychologist psychologist, int[] SelectedCategories, PsychologistDescription psychologistDescription )
         {
-            Psychologist updatePsychologist = await AppContext.Psychologist.Include(P => P.PsychologistCategory).Include(p => p.PsychologistDescription).FirstOrDefaultAsync(b => b.Id == psychologist.Id);
-                //.Include(p => p.PsychologistCustomer)
+            Psychologist updatePsychologist = await AppContext.Psychologist.Include(p=>p.Image).Include(P => P.PsychologistCategory).Include(p => p.PsychologistDescription).FirstOrDefaultAsync(b => b.Id == psychologist.Id);
+
             #region Psychologist atamları.
             updatePsychologist.Name = psychologist.Name;
             updatePsychologist.CreatedDate = psychologist.CreatedDate;
@@ -74,26 +74,24 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             updatePsychologist.Gender = psychologist.Gender;
             updatePsychologist.Name = psychologist.Name;
             updatePsychologist.Image = psychologist.Image;
+            updatePsychologist.PsychologistDescription = psychologist.PsychologistDescription;
             #endregion
             #region PsychologistDescription atamaları
-            updatePsychologist.PsychologistDescription.Id = psychologistDescription.Id;
-            updatePsychologist.PsychologistDescription.GraduationYear = psychologistDescription.GraduationYear;
-            updatePsychologist.PsychologistDescription.Education = psychologistDescription.Education;
-            updatePsychologist.PsychologistDescription.Experience = psychologistDescription.Experience;
-            updatePsychologist.PsychologistDescription.About = psychologistDescription.About;
+            //updatePsychologist.PsychologistDescription.Id = psychologistDescription.Id;
+            //updatePsychologist.PsychologistDescription.GraduationYear = psychologistDescription.GraduationYear;
+            //updatePsychologist.PsychologistDescription.Education = psychologistDescription.Education;
+            //updatePsychologist.PsychologistDescription.Experience = psychologistDescription.Experience;
+            //updatePsychologist.PsychologistDescription.About = psychologistDescription.About;
             #endregion
 
-            #region Seçilen Kategory Ataması
+            #region Seçilen Kategori Ataması
             updatePsychologist.PsychologistCategory = SelectedCategories.Select(bc => new PsychologistCategory
             {
                 PsychologistId = updatePsychologist.Id,
                 CategoryId = bc,
             }).ToList();
             #endregion
-            #region PsychologistCustomer Düzenlenmesi
-            //MANTIĞINI KURAMADIM DAHA SONRA DÖNÜLECEK.
-            //updatePsychologist.PsychologistCustomer=psychologistCustomers.Where(pc=>pc==)
-            #endregion
+           
             AppContext.Update(updatePsychologist);  
             await AppContext.SaveChangesAsync();
         }

@@ -47,14 +47,14 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                         IsApproved = c.Category.IsApproved,
                         Url = c.Category.Url,
                     }).ToList(),
-                    Customers=p.PsychologistCustomer.Select(c=>new CustomerViewModel
+                    Customers = p.PsychologistCustomer.Select(c => new CustomerViewModel
                     {
-                        Id=c.CustomerId,
-                        Name=c.Customer.Name,
-                        Address=c.Customer.Address,
-                        IsApproved=c.Customer.IsApproved,
-                        Url=c.Customer.Url
-                        
+                        Id = c.CustomerId,
+                        Name = c.Customer.Name,
+                        Address = c.Customer.Address,
+                        IsApproved = c.Customer.IsApproved,
+                        Url = c.Customer.Url
+
                     }).ToList(),
                     Image = p.Image
                 });
@@ -133,7 +133,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
 
             User user = await _userManager.FindByIdAsync(psychologist.UserId);
             UserViewModel userViewModel = new UserViewModel();
-
+            userViewModel.Id = psychologist.UserId;
             userViewModel.FirstName = user.FirstName;
             userViewModel.LastName = user.LastName;
             userViewModel.Email = user.Email;
@@ -187,6 +187,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 User user = await _userManager.FindByIdAsync(psychologistUpdateViewModel.User.Id);
+                user.Id = psychologistUpdateViewModel.User.Id;
                 user.FirstName = psychologistUpdateViewModel.User.FirstName;
                 user.LastName = psychologistUpdateViewModel.User.LastName;
                 user.Email = psychologistUpdateViewModel.User.Email;
@@ -194,15 +195,34 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 user.Type = psychologistUpdateViewModel.User.Type;
                 user.UserName = psychologistUpdateViewModel.User.UserName;
                 var result = await _userManager.UpdateAsync(user);
+
                 if (!result.Succeeded) { return NotFound(); }
                 var userRoles = await _userManager.GetRolesAsync(user);
-
+                if (psychologistUpdateViewModel.User.Type == EnumType.Admin)
+                {
+                    await _userManager.AddToRoleAsync(user, "Admin");
+                    await _userManager.RemoveFromRoleAsync(user, "Customer");
+                    await _userManager.RemoveFromRoleAsync(user, "Psychologist");
+                }
+                else if (psychologistUpdateViewModel.User.Type == EnumType.Psychologist)
+                {
+                    await _userManager.AddToRoleAsync(user, "Psychologist");
+                    await _userManager.RemoveFromRoleAsync(user, "Customer");
+                    await _userManager.RemoveFromRoleAsync(user, "Admin");
+                }
+                else if (psychologistUpdateViewModel.User.Type == EnumType.Customer)
+                {
+                    await _userManager.AddToRoleAsync(user, "Customer");
+                    await _userManager.RemoveFromRoleAsync(user, "Psychologist");
+                    await _userManager.RemoveFromRoleAsync(user, "Admin");
+                }
 
                 Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(psychologistUpdateViewModel.Id);
                 psychologist.PsychologistDescription.About = psychologistUpdateViewModel.About;
                 psychologist.PsychologistDescription.Education = psychologistUpdateViewModel.Education;
                 psychologist.PsychologistDescription.Experience = psychologistUpdateViewModel.Experience;
                 psychologist.PsychologistDescription.GraduationYear = psychologistUpdateViewModel.GraduationYear;
+
                 psychologist.Url = psychologistUpdateViewModel.Url;
                 psychologist.Gender = psychologistUpdateViewModel.Gender;
                 psychologist.Price = psychologistUpdateViewModel.Price;
@@ -221,7 +241,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(id);
             User user = await _userManager.FindByIdAsync(psychologist.UserId);
 
-            if(user != null)
+            if (user != null)
             {
                 await _userManager.DeleteAsync(user);
             }

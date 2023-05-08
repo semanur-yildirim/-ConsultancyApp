@@ -25,8 +25,6 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
         [Required(ErrorMessage = "Cinsiyet alanı boş bırakılamaz")]
         public string Gender { get; set; }
         public List<SelectListItem> GenderSelectList { get; set; }
-        [DisplayName("  Profil Fotoğrafı")]
-        [Required(ErrorMessage = "Profil Fotoğrafı boş bırakılamaz")]
         public IFormFile File { get; set; }
         public Image Image { get; set; }
 
@@ -50,8 +48,6 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
 
         [Required(ErrorMessage = "En az bir kategori seçilmelidir")]
         public int[] SelectedCategories { get; set; }
-        [DisplayName(" Kategoriler ")]
-        [Required(ErrorMessage = "En az bir kategori seçilmelidir.")]
         public List<Category> Categories { get; set; }
         public List<CustomerViewModel> Customer { get; set; }
         public UserViewModel User { get; set; }
