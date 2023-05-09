@@ -70,6 +70,24 @@
                     </div>
                 </form>
 
+                <div class="card">
+                    <h5 class="card-header">Sil</h5>
+                    <div class="card-body">
+                        <div class="mb-3 col-12 mb-0">
+                            <div class="alert alert-warning">
+                                <h6 class="alert-heading fw-bold mb-1">Silmek istedğinizden emin misiniz?</h6>
+                            </div>
+                        </div>
+                        <form asp-area="Admin"
+                              asp-controller="Category"
+                              asp-action="Delete"
+                              method="post">
+                            <input type="hidden" asp-for="@Model.Id" />
+                            <button type="submit" class="btn btn-danger deactivate-account"> Sil</button>
+                        </form>
+                    </div>
+                </div>
+
                 <!-- /Account -->
             </div>
 

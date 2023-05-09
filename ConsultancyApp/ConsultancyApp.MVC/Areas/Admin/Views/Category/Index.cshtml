@@ -21,7 +21,11 @@
                 <tr class="text-center">
                     <td class="align-middle">@c.Id</td>
                     <td class="align-middle">@c.Name</td>
-                    <td class="align-middle">@c.Psychologists.Count()</td>
+                    <td>
+                        <a asp-area="Admin" asp-controller="Psychologist" asp-action="GetPsychologistByCustomer" asp-route-id="@c.Id">
+                            @c.Psychologists.Count()
+                        </a>
+                    </td>
 
                     <td>
                         <form id="form-is-home_@c.Id"

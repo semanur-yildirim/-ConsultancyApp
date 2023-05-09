@@ -24,7 +24,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             _userManager = userManager;
             _psychologistService = psychologistService;
         }
-
+        #region List
         public async Task<IActionResult> Index()
         {
             List<Customer> customerList = await _customerService.GetAllCustomerFullDataAsycn();
@@ -33,23 +33,24 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             {
                 customerViewModel.Add(new CustomerViewModel
                 {
-                    Id=p.Id,
+                    Id = p.Id,
                     Name = p.Name,
-                    Address=p.Address,
-                    IsApproved=p.IsApproved,
-                    Url=p.Url,
-                    Psychologists=p.PsychologistCustomer.Select(c=>new PsychologistViewModel
+                    Address = p.Address,
+                    IsApproved = p.IsApproved,
+                    Url = p.Url,
+                    Psychologists = p.PsychologistCustomer.Select(c => new PsychologistViewModel
                     {
-                        Id=c.PsychologistId,
-                        Name=c.Psychologist.Name,
-                        Url=c.Psychologist.Url,
-                        Image=c.Psychologist.Image,
-                        IsApproved=c.Psychologist.IsApproved
-                    }).ToList() 
+                        Id = c.PsychologistId,
+                        Name = c.Psychologist.Name,
+                        Url = c.Psychologist.Url,
+                        Image = c.Psychologist.Image,
+                        IsApproved = c.Psychologist.IsApproved
+                    }).ToList()
                 });
             }
             return View(customerViewModel);
         }
+        #endregion
         #region Create
         [HttpGet]
         public async Task<IActionResult> Create()
@@ -106,9 +107,94 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         }
         #endregion
         #region Edit
+        [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
-            return View();
+            var customer = await _customerService.GetCustomerFullDataAsync(id);
+            var user = await _userManager.FindByIdAsync(customer.userId);
+            UserViewModel userViewModel = new UserViewModel();
+            userViewModel.Id = customer.userId;
+            userViewModel.FirstName = user.FirstName;
+            userViewModel.LastName = user.LastName;
+            userViewModel.Email = user.Email;
+            userViewModel.UserName = user.UserName;
+            userViewModel.Type = user.Type;
+            userViewModel.Password = user.PasswordHash;
+
+            CustomerUpdateViewModel customerUpdateViewModel = new CustomerUpdateViewModel()
+            {
+                Id = customer.Id,
+                Name = customer.Name,
+                ModifiedDate = customer.ModifiedDate,
+                Url = customer.Url,
+                Address = customer.Address,
+                IsApproved = customer.IsApproved,
+                User = userViewModel
+            };
+            return View(customerUpdateViewModel);
+
+        }
+        [HttpPost]
+        public async Task<IActionResult> Edit(CustomerUpdateViewModel customerUpdateViewModel)
+        {
+            var customer = await _customerService.GetCustomerFullDataAsync(customerUpdateViewModel.Id);
+            if (ModelState.IsValid)
+            {
+                User user = await _userManager.FindByIdAsync(customerUpdateViewModel.User.Id);
+                user.Id = customerUpdateViewModel.User.Id;
+                user.FirstName = customerUpdateViewModel.User.FirstName;
+                user.LastName = customerUpdateViewModel.User.LastName;
+                user.Email = customerUpdateViewModel.User.Email;
+                user.EmailConfirmed = customerUpdateViewModel.User.EmailConfirmed;
+                user.Type = customerUpdateViewModel.User.Type;
+                user.UserName = customerUpdateViewModel.User.UserName;
+                var result = await _userManager.UpdateAsync(user);
+
+                if (!result.Succeeded) { return NotFound(); }
+                var userRoles = await _userManager.GetRolesAsync(user);
+                if (customerUpdateViewModel.User.Type == EnumType.Admin)
+                {
+                    await _userManager.AddToRoleAsync(user, "Admin");
+                    await _userManager.RemoveFromRoleAsync(user, "Customer");
+                    await _userManager.RemoveFromRoleAsync(user, "Psychologist");
+                    _customerService.Delete(customer);
+                }
+                else if (customerUpdateViewModel.User.Type == EnumType.Customer)
+                {
+                    await _userManager.AddToRoleAsync(user, "Customer");
+                    await _userManager.RemoveFromRoleAsync(user, "Psychologist");
+                    await _userManager.RemoveFromRoleAsync(user, "Admin");
+                    _customerService.Delete(customer);
+                    Customer newCustomer = new Customer();
+                    newCustomer.Name = customerUpdateViewModel.User.FirstName+customerUpdateViewModel.User.LastName;
+                    newCustomer.CreatedDate = DateTime.Now;
+                    newCustomer.Url = Jobs.GetUrl(customer.Name);
+                    newCustomer.userId = customerUpdateViewModel.User.Id;
+                    newCustomer.IsApproved = customerUpdateViewModel.IsApproved;
+                    await _customerService.CreateAsync(customer);
+                }
+                return RedirectToAction("Index");
+            }
+            return View(customerUpdateViewModel);
+
+        }
+        #endregion
+        #region Onaylı mı
+        public async Task<IActionResult> UpdateIsHome(int id, bool ApprovedStatus)
+        {
+
+            Customer customer = await _customerService.GetByIdAsync(id);
+            if (customer != null)
+            {
+                customer.IsApproved = !customer.IsApproved;
+                _customerService.Update(customer);
+            }
+            CustomerViewModel model = new CustomerViewModel
+            {
+                IsApproved = ApprovedStatus
+            };
+            return RedirectToAction("Index", model);
+
         }
         #endregion
 

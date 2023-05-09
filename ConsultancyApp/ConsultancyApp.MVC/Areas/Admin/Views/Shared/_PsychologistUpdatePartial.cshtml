@@ -9,7 +9,7 @@
         <div class="row">
             <div class="col-md-12">
                 <form asp-area="Admin"
-                      asp-controller="User"
+                      asp-controller="Psychologist"
                       asp-action="Edit"
                       method="post">
                     <div class="card mb-4">
@@ -19,7 +19,7 @@
                             <div class="row">
                                 <div class="col-4">
                                     <div class="d-flex flex-column gap-4">
-                                        <img src="~/image/psychologist/@Model.Image.Url"
+                                        <img src="~/image/@Model.Image.Url"
                                              alt="@Model.Name"
                                              class="d-block rounded ms-4"
                                              height="170"

@@ -1,3 +1,4 @@
+using AspNetCoreHero.ToastNotification;
 using ConsultancyApp.Business.Abstract;
 using ConsultancyApp.Business.Concrete;
 using ConsultancyApp.Data.Abstract;
@@ -33,6 +34,13 @@ builder.Services.AddScoped<ICustomerRepository, EfCoreCustomerRepository>();
 builder.Services.AddScoped<IPsychologistRepository, EfCorePsychologistRepository>();
 builder.Services.AddScoped<IPsychologistDescriptionRepository, EfCorePsychologistDescriptionRepository>();
 builder.Services.AddScoped<IImageRepository, EfCoreImageRepository>();
+
+builder.Services.AddNotyf(config =>
+{
+    config.DurationInSeconds = 5;
+    config.IsDismissable = true;
+    config.Position = NotyfPosition.TopRight;
+});
 
 var app = builder.Build();
 

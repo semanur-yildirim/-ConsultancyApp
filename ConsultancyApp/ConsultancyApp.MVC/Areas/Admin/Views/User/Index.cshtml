@@ -8,7 +8,7 @@
 
                 <th>Kullanıcı Adı</th>
                 <th >Rol</th>
-                <th>İşlemler</th>
+                <th>Sil</th>
             </tr>
         </thead>
         <tbody>
@@ -23,13 +23,6 @@
                     </td>
 
                     <td class="d-flex justify-content-around">
-                        <a class="btn-warning py-1 pe-3 ps-3"
-                       asp-area="Admin"
-                       asp-controller="User"
-                       asp-action="Edit"
-                       asp-route-id="@item.Id">
-                            Düzenle
-                        </a>
                         <a class="btn-danger py-1 pe-3 ps-3"
                        asp-area="Admin"
                        asp-controller="User"

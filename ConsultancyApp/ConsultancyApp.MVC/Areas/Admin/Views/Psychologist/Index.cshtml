@@ -23,12 +23,12 @@
                     <td class="align-middle">@psychologist.Id</td>
                     <td class="align-middle">@psychologist.Name</td>
                     <td>
-                        <a asp-area="Admin" asp-controller="Category" asp-action="GetCategoryByPsychologist" class="text-primary">
+                        <a asp-area="Admin" asp-controller="Category" asp-action="GetCategoryByPsychologist" asp-route-id="@psychologist.Id" class="text-primary">
                             @psychologist.Categories.Count()
                         </a>
                     </td>
                     <td>
-                        <a asp-area="Admin" asp-controller="customer" asp-action="GetCustomerByPsychologist">
+                        <a asp-area="Admin" asp-controller="customer" asp-action="GetCustomerByPsychologist" asp-route-id="@psychologist.Id">
                            @psychologist.Customers.Count()
                         </a>
                     </td>

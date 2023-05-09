@@ -48,7 +48,6 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             return View(categoryViewModel);
         }
         #endregion
-
         #region Create
         [HttpGet]
 
@@ -146,5 +145,48 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             return RedirectToAction("Index");
         }
         #endregion
+        #region Onaylı mı
+        public async Task<IActionResult> UpdateIsHome(int id, bool ApprovedStatus)
+        {
+
+            Category category = await _categoryService.GetByIdAsync(id);
+            if (category != null)
+            {
+                category.IsApproved = !category.IsApproved;
+                _categoryService.Update(category);
+            }
+            CategoryViewModel model = new CategoryViewModel
+            {
+                IsApproved = ApprovedStatus
+            };
+            return RedirectToAction("Index", model);
+
+        }
+        #endregion
+        public async Task<IActionResult> GetCategoryByPsychologist(int id)
+        {
+            List<Category> categories = await _categoryService.GetCategoriesByPsyhologist(id);
+            List<CategoryViewModel> categoryViews = new List<CategoryViewModel>();
+            foreach(var c in categories)
+            {
+                categoryViews.Add(new CategoryViewModel
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    IsApproved = c.IsApproved,
+                    Url = c.Url,
+                    Psychologists = c.PsychologitstCategry.Select(p => new PsychologistViewModel
+                    {
+                        Id = p.PsychologistId,
+                        Name = p.Psychologist.Name,
+                        IsApproved = p.Psychologist.IsApproved,
+                        Url = p.Psychologist.Url,
+                        Image = p.Psychologist.Image
+                    }).ToList()
+
+                });
+            }
+            return View("Index", categoryViews);
+        }
     }
 }

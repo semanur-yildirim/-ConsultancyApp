@@ -1,0 +1,106 @@
+﻿@model CustomerUpdateViewModel
+@{
+    var userTypeList = Enum.GetValues(typeof(EnumType));
+}
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-area="Admin"
+                      asp-controller="Customer"
+                      asp-action="Edit"
+                      method="post"
+                      enctype="multipart/form-data">
+                    <input type="hidden" class="form-control" asp-for="Name" />
+                    <input type="hidden" class="form-control" asp-for="User.Id" />
+
+                    <div class="card mb-4">
+                        <h5 class="card-header">Profil Detay</h5>
+                        <!-- Account -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3">
+                                    <h2>Roller</h2>
+                                    @foreach (var item in userTypeList)
+                                    {
+                                        <div>
+                                            <input class="form-check-input" type="radio" asp-for="User.Type" value="@item" />
+                                            <label class="form-check-label" asp-for="User.Type">@item</label>
+                                        </div>
+                                    }
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr class="my-0" />
+                        <div class="card-body">
+                            <div class="row men-2">
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="User.FirstName"></label>
+                                    <input class="form-control" asp-for="User.FirstName" />
+                                    <span class="text-danger" asp-validation-for="User.FirstName"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="User.LastName"></label>
+                                    <input class="form-control" asp-for="User.LastName" />
+                                    <span class="text-danger" asp-validation-for="User.LastName"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="User.UserName"></label>
+                                    <input class="form-control" asp-for="User.UserName" />
+                                    <span class="text-danger" asp-validation-for="User.UserName"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="User.Email"></label>
+                                    <input class="form-control" asp-for="User.Email" />
+                                    <span class="text-danger" asp-validation-for="User.Email"></span>
+                                </div>
+
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="Address"></label>
+                                    <textarea class="form-control" asp-for="Address"></textarea>
+                                    <span class="text-danger" asp-validation-for="Address"></span>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <button type="submit" class="btn btn-primary me-2">Değişiklikleri Kaydet</button>
+                                <button type="reset" class="btn btn-outline-secondary">Vazgeç</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+                <!-- /Account -->
+            </div>
+            <div class="card">
+                <h5 class="card-header">Sil</h5>
+                <div class="card-body">
+                    <div class="mb-3 col-12 mb-0">
+                        <div class="alert alert-warning">
+                            <h6 class="alert-heading fw-bold mb-1">Silmek istedğinizden emin misiniz?</h6>
+                        </div>
+                    </div>
+                    <form 
+                    asp-area="Admin"
+                    asp-controller="Customer"
+                    asp-action="Delete"
+                    method="post"
+                    >
+                    <input type="hidden" asp-for="@Model.Id" />
+                        <button type="submit" class="btn btn-danger deactivate-account"> Sil</button>
+                    </form>
+                </div>
+            </div>                                                                                              
+        </div>
+    </div>
+</div>
+<!-- / Content -->
+
+<div class="content-backdrop fade"></div>
+<!-- Content wrapper -->
+@section Styles{
+    <script src="//cdn.ckeditor.com/4.21.0/full/ckeditor.js"></script>
+}
