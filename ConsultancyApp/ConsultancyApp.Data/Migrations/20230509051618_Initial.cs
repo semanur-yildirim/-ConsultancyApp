@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ConsultancyApp.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialDb : Migration
+    public partial class Initial : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -209,7 +209,7 @@ namespace ConsultancyApp.Data.Migrations
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>(type: "TEXT", maxLength: 100, nullable: false),
-                    Address = table.Column<string>(type: "TEXT", nullable: false),
+                    Address = table.Column<string>(type: "TEXT", nullable: true),
                     CreatedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     ModifiedDate = table.Column<DateTime>(type: "TEXT", nullable: false),
                     IsApproved = table.Column<bool>(type: "INTEGER", nullable: false),
@@ -458,9 +458,9 @@ namespace ConsultancyApp.Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Description", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "53960165-702f-4eac-bcd3-dfd858391c88", null, "Yöneticiler", "Admin", "ADMIN" },
-                    { "7a356e53-4ea9-4e6b-960b-7063d9da3a0d", null, "Kullanıcılar", "Customer", "Customer" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", null, "Psikologlar", "Psychologist", "PSYCHOLOGIST" }
+                    { "2e9e816d-0f79-462e-819c-10774cf7a842", null, "Yöneticiler", "Admin", "ADMIN" },
+                    { "77e273ba-d4ad-4a32-8485-96cf7d1fe343", null, "Kullanıcılar", "Customer", "CUSTOMER" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", null, "Psikologlar", "Psychologist", "PSYCHOLOGIST" }
                 });
 
             migrationBuilder.InsertData(
@@ -468,20 +468,20 @@ namespace ConsultancyApp.Data.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedDate", "DateOfBirth", "Email", "EmailConfirmed", "FirstName", "LastName", "LockoutEnabled", "LockoutEnd", "ModifiedDate", "NormalizedEmail", "NormalizedName", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "Type", "UserName" },
                 values: new object[,]
                 {
-                    { "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21", 0, "07a974e0-2cd9-404d-b5c4-d1d2d26edf6d", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "baris@gmail.com", true, "Barış", "Durmuş", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "BARIS@GMAIL.COM", "BARISDURMUS", "BARIS", "AQAAAAIAAYagAAAAEKOr6Yu1+Zl5BFOEUb3w59LDY/owsO8uOL/xgW+aZ0kd97cckofFkZ7nNAfHdT5Ouw==", null, false, "3e955906-de9a-4d73-8961-3c36dccd1608", false, 1, "barıs" },
-                    { "8da007be-c50b-4973-aa45-224b7358hkn15", 0, "d32ce5d5-d429-4161-9bcf-476725b4dc86", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "selvi@gmail.com", true, "Selvi", "Kartal", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "SELVI@GMAIL.COM", "SELVIKARTAL", "SELVI", "AQAAAAIAAYagAAAAEN2va83u/KiXOSOta0k2bgENelXunNMjk3hXSumH++1HpSs78FcC6sDDckvXaglGmg==", null, false, "f269dae7-3027-49b0-b5dc-8341ec277862", false, 1, "selvi" },
-                    { "9e8f345d-141f-4ef2-99c7-8a9476llh93", 0, "a84510b4-8d9c-4762-a9ca-8398eb3da588", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "ahmet@gmail.com", true, "Ahmet", "Ovalı", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "AHMET@GMAIL.COM", "AHMETOVALI", "AHMET", "AQAAAAIAAYagAAAAEC6KsqSKYaat7+EMJxmiz4XhMloWcynsjBJha0lpp5yQPrwomNlcimEu67oveDgQzg==", null, false, "a8f25f2b-0080-4d7a-a5bb-314eb4f0c49d", false, 1, "ahmet" },
-                    { "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f", 0, "9b807d88-3f22-4b04-bba5-e5b4ddee971d", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "mehmet@gmail.com", true, "Mehmet", "Tatlı", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "MEHMET@GMAIL.COM", "MEHMETTATLI", "MEHMET", "AQAAAAIAAYagAAAAEKHsuElEgi943F/lS9gjU0lDPGa3uKi+7XcQtp0D3sxnNGvNg8Q7Ot53cs4gTj4tkA==", null, false, "4a69d1ab-aa06-4c7d-922f-f9409283a75b", false, 2, "-mehmet" },
-                    { "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62", 0, "cf17288f-9399-4891-8015-d98b3fdb086c", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "zeynep@gmail.com", true, "Zeynep", "Öztürk", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ZEYNEP@GMAIL.COM", "ZEYNEPOZTURK", "ZEYNEP", "AQAAAAIAAYagAAAAEOzbUNKXIh3wO89lvMg2MjXytoSIrwB2WiD6ubigM+S73DjMe3Ze4CZrY715Oj5UCA==", null, false, "939fd004-f6b0-438d-98f0-d884f93717cb", false, 1, "zeynep" },
-                    { "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34", 0, "dabd7288-509f-4fc1-bd83-4655e7a40963", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "merve@gmail.com", true, "Merve", "Kara", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "MERVE@GMAIL.COM", "MERVEKARA", "MERVE", "AQAAAAIAAYagAAAAEGkBudNajF1cgmAwSwY628tF+fTSzkqTiGPPpLMN2XpOO3CBlN3hMMhW5uNUxOGUjg==", null, false, "a58a40b1-f8a3-419a-add2-c9da266966f7", false, 1, "merve" },
-                    { "b342e19c-42af-4f25-b820-7a07dc9mbf13", 0, "80e93343-3b59-4bf1-bd2e-30525430052f", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "ali@gmail.com", true, "Ali", "Yılmaz", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ALI@GMAIL.COM", "ALIYILMAZ", "ALI", "AQAAAAIAAYagAAAAEA5oFEnB4sx6bI/W1PeUZ8cxlSjY/VmDYs2fcwiBxa0uwnoSapWDnsTo1NdYBKPucA==", null, false, "66d627a0-6598-4bc5-a882-b53c2cd55c91", false, 1, "ali" },
-                    { "b342e25a-42af-4f25-b820-7a07dc9mbf13", 0, "f6e6ecd5-f96e-4d22-a303-2482dc9d4c64", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "emre@gmail.com", true, "Emre", "Ateş", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "EMRE@GMAIL.COM", "EMREATES", "EMRE", "AQAAAAIAAYagAAAAEHQ6nfnnvamZNBTYSQczoYuNWsf4uowR5dVQxuoIobo6FPiBkvD/MOOko5oQ5ZHfmw==", null, false, "a3ab9675-b3e6-4266-b8e7-37cdcb3811ff", false, 1, "emre" },
-                    { "b35f20c1-836f-49c1-b46f-2399e12pvc85", 0, "cfaa2644-bfe6-4487-888f-eaaafcc90163", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "cem@gmail.com", true, "Cem", "Kar", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "CEM@GMAIL.COM", "CEMKAR", "CEM", "AQAAAAIAAYagAAAAEFWx8o6hMhmc0+MPWk/I2zWXvYSHXb91RChIsTqdggTt7WlPW7KkRz6Q7jV0lUr7cA==", null, false, "585a722e-1dab-44b5-8417-ffa6c6ec1fa8", false, 1, "cem" },
-                    { "eabb7e42-6e53-4696-b350-da56Or2c79fa", 0, "8177f916-2f8c-4c59-9254-04e8912e378c", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "canan@gmail.com", true, "Canan", "Umaç", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "CANAN@GMAIL.COM", "CANANUMAC", "CANAN", "AQAAAAIAAYagAAAAEPgHewNyTWAW90VVmvp/u5RSWifjHjtfTCw6zKLy/SXExhRJIfd3RpNmYM3JH/gw8w==", null, false, "a4e3c715-989d-4714-9e23-4d000c121656", false, 2, "canan" },
-                    { "eabb7e42-6e53-4696-b350-da64de2c79fa", 0, "8b72156c-0d2c-4bc6-90ce-8c19a5c8e041", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "omer@gmail.com", true, "Ömer", "Akyüz", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "OMER@GMAIL.COM", "OMERAKYUZ", "OMER", "AQAAAAIAAYagAAAAEMGaYKMqO6W9HgQGpO1qy4DvqAz2j3ERqpl7OIJ5jvEQlOuPin+qYnqHlwnbl3xS4Q==", null, false, "b9972f3f-2eed-4e84-a3f1-6c647eaac8fc", false, 2, "ömer" },
-                    { "kema7e42-6e53-4696-b350-ke56Or2c79fa", 0, "2af385e0-4aa9-47e5-bcf4-fd55f3320b5d", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "semanur@gmail.com", true, "Semanur", "Yıldırım", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "SEMANUR@GMAIL.COM", "SEMANURYILDIRIM", "SEMANUR", "AQAAAAIAAYagAAAAELbXG4eBh5NMWKa/o1a8SPETwAd+xHGjsRlUuh64ZsZbZk8PLVB2MSToi2kN/lYw2g==", null, false, "890f77c9-0f6c-4d3a-bb60-e9b6bc543168", false, 0, "semanur" },
-                    { "n6R1a9e5-5d05-4487-9945-43d2ff1L5gd34", 0, "48cafd8b-95b7-40ce-a089-8cc8a65064c7", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "aylin@gmail.com", true, "Aylin", "Uzar", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "AYLIN@GMAIL.COM", "AYLINUZAR", "AYLIN", "AQAAAAIAAYagAAAAECAJI6uRH0M2slidfzrvLgxLWJjnqN7J6+O0DIB+y5IOfWNr6UDWN/ayUr4A9GbjEQ==", null, false, "4b555222-5b9b-420d-a83c-284121489096", false, 1, "aylin" },
-                    { "s8e3a9e7-5K05-4487-9945-43d2ff1kgd34", 0, "a79ea6e5-5bcd-41c2-b954-c2fd0fa67860", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "aslı@gmail.com", true, "Aslı", "Yaman", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ASLI@GMAIL.COM", "ASLIYAMAN", "ASLI", "AQAAAAIAAYagAAAAEAh6o7qv4zHlmwYsHYm+5GPQ6XRKbr3BvgQg0OF9NSXVCn40+Q8ZjhoyXa4rco2jDw==", null, false, "c355f190-b935-4c8e-a2d2-3fe02eb198c2", false, 1, "aslı" }
+                    { "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21", 0, "fb2f7b4e-03f7-4009-93eb-3e595595743b", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "baris@gmail.com", true, "Barış", "Durmuş", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "BARIS@GMAIL.COM", "BARISDURMUS", "BARIS", "AQAAAAIAAYagAAAAEPWNdAxkIhJs5Wf74gNy3v2/401Vxl0OGP1lWBvepZoEvM7hYdYJTjQbiWOsNxKJKA==", null, false, "1208439a-ee49-44bd-bdad-faa71128ad01", false, 1, "barıs" },
+                    { "8da007be-c50b-4973-aa45-224b7358hkn15", 0, "5daa965e-9762-4f69-a341-725f576da6f1", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "selvi@gmail.com", true, "Selvi", "Kartal", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "SELVI@GMAIL.COM", "SELVIKARTAL", "SELVI", "AQAAAAIAAYagAAAAELiKrnzWR+ODAbgbxG8O+zJcdKhrf48N+jfmjhWP/JJKO24dNudpSc44kFeFZcf3GA==", null, false, "fbba37b0-b48f-4122-b1cf-b592094f9ff9", false, 1, "selvi" },
+                    { "9e8f345d-141f-4ef2-99c7-8a9476llh93", 0, "8df3a925-ca65-46fb-a031-be214e3fe066", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "ahmet@gmail.com", true, "Ahmet", "Ovalı", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "AHMET@GMAIL.COM", "AHMETOVALI", "AHMET", "AQAAAAIAAYagAAAAEAhGYNYfrmeFHKdgOvwXZjNRtzPfkSZoN2V2bf1mAnGEgx6CfOtV4GdDS4p62dlfQg==", null, false, "2535e542-6ba7-4e78-916a-a0192aa88b59", false, 1, "ahmet" },
+                    { "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f", 0, "da1745e2-92d9-4842-8d71-d96ca562405d", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "mehmet@gmail.com", true, "Mehmet", "Tatlı", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "MEHMET@GMAIL.COM", "MEHMETTATLI", "MEHMET", "AQAAAAIAAYagAAAAEFlNTDysOpZY36b31fLAvB0bA7/+THfgOQzzvf6hc9N3WuDp7vhD+GyWOa+aXJjh6A==", null, false, "d81de709-c4dd-47c0-ac3f-9334112bf44f", false, 2, "-mehmet" },
+                    { "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62", 0, "56dbc632-0899-4492-ad32-132b5d651481", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "zeynep@gmail.com", true, "Zeynep", "Öztürk", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ZEYNEP@GMAIL.COM", "ZEYNEPOZTURK", "ZEYNEP", "AQAAAAIAAYagAAAAEJz0XSQLukvEiVVK6x4U2y7r9G6QlfafmhpUm3JkaK50vGInmndlg5XuQdLHhL9CtQ==", null, false, "e5700cc5-5432-417b-9160-789e89f19631", false, 1, "zeynep" },
+                    { "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34", 0, "3973a521-8691-403e-8528-27865127f3d8", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "merve@gmail.com", true, "Merve", "Kara", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "MERVE@GMAIL.COM", "MERVEKARA", "MERVE", "AQAAAAIAAYagAAAAEHafaCE9QwcYIsmn6vqph6RRemQgNBJeo1YExuYNFvrcOopbMd4fGq3vHzIbAZ64vw==", null, false, "b87a265a-1620-4c79-9295-104e4786629d", false, 1, "merve" },
+                    { "b342e19c-42af-4f25-b820-7a07dc9mbf13", 0, "21f97b65-0764-4d04-90e8-e79b0c0e6c64", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "ali@gmail.com", true, "Ali", "Yılmaz", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ALI@GMAIL.COM", "ALIYILMAZ", "ALI", "AQAAAAIAAYagAAAAEOBxi+yO/lXb56b7p6QTx7eB7ZrFZqX73bSrsWPg+qzdwZ/kmPQBpOiw4KZgSq+9Eg==", null, false, "b89c716c-1730-48ff-b1df-fd15aa98316c", false, 1, "ali" },
+                    { "b342e25a-42af-4f25-b820-7a07dc9mbf13", 0, "ebef50a5-bc27-4c5a-80cd-6831ba517be8", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "emre@gmail.com", true, "Emre", "Ateş", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "EMRE@GMAIL.COM", "EMREATES", "EMRE", "AQAAAAIAAYagAAAAEKaEhZTukK7MwSRcEv9iC9pOLsv6Vn617fDdFssyBxtUteMwWpf+Bu0bJeI48cK1yg==", null, false, "0b118cac-8dc0-41c1-a593-49b8bc6c13fb", false, 1, "emre" },
+                    { "b35f20c1-836f-49c1-b46f-2399e12pvc85", 0, "aa8b8ce2-f74e-4cc8-bc58-9165bfd23fd9", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "cem@gmail.com", true, "Cem", "Kar", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "CEM@GMAIL.COM", "CEMKAR", "CEM", "AQAAAAIAAYagAAAAEKcmquIhnfbYmTAGrAgPWuhexai6Br6vT7LLP4YR7DF3/WJpuFXnOZMRre0jFXWeJw==", null, false, "e9efad9f-75a0-4095-b812-b63600a58adf", false, 1, "cem" },
+                    { "eabb7e42-6e53-4696-b350-da56Or2c79fa", 0, "a21ff388-4555-4b29-a26b-5bcd40e28c1e", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "canan@gmail.com", true, "Canan", "Umaç", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "CANAN@GMAIL.COM", "CANANUMAC", "CANAN", "AQAAAAIAAYagAAAAEJYrli2Jv81rDJJBxFK+arK0ZSUllgWiwq9kI7tnjMELPpGYWIEjQX8TutHvqEosiw==", null, false, "df58d0e1-415f-4048-8de9-fde076cbfb67", false, 2, "canan" },
+                    { "eabb7e42-6e53-4696-b350-da64de2c79fa", 0, "943e6606-b7c1-440b-81b2-1e1aee9d04a6", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "omer@gmail.com", true, "Ömer", "Akyüz", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "OMER@GMAIL.COM", "OMERAKYUZ", "OMER", "AQAAAAIAAYagAAAAEGkgH4CD2OLn+j2Q6i+o4YZPPLDoeJxOf9b/qZ98aWyanuBGhM+HM1FCCBF/USJbqQ==", null, false, "2c4a217b-d24e-4b00-a579-784ee77e4c6d", false, 2, "ömer" },
+                    { "kema7e42-6e53-4696-b350-ke56Or2c79fa", 0, "b82b24c2-1a7c-44eb-8bec-57f62c58ffb4", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "semanur@gmail.com", true, "Semanur", "Yıldırım", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "SEMANUR@GMAIL.COM", "SEMANURYILDIRIM", "SEMANUR", "AQAAAAIAAYagAAAAEB1fwELdJVShcKXKcM0En6Dr0XwjJN655zhkXAVYAdNQSEYqTFIKBhJAYP/4WLTXHg==", null, false, "63deaad3-589d-47d4-b8f5-2c63157c3906", false, 0, "semanur" },
+                    { "n6R1a9e5-5d05-4487-9945-43d2ff1L5gd34", 0, "6a3811b6-60b4-411f-8e93-a3b859db7b08", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "aylin@gmail.com", true, "Aylin", "Uzar", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "AYLIN@GMAIL.COM", "AYLINUZAR", "AYLIN", "AQAAAAIAAYagAAAAEEL+nUBg35uxJAQmrqeZzyZ3Ha923yWKbpj4Vbv4YcaoCvIEy16EBWVtp4j9nbIjzg==", null, false, "b0913517-8905-4849-85ce-aa48d068b2ca", false, 1, "aylin" },
+                    { "s8e3a9e7-5K05-4487-9945-43d2ff1kgd34", 0, "4247539a-da8a-4fdc-a93f-5f980d3f0c0f", new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(1978, 5, 2, 0, 0, 0, 0, DateTimeKind.Unspecified), "aslı@gmail.com", true, "Aslı", "Yaman", false, null, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), "ASLI@GMAIL.COM", "ASLIYAMAN", "ASLI", "AQAAAAIAAYagAAAAEKofWEDxNSQ10G1Qbcp03Iu8RPQl1uCFOa6omfUhs6RXaYna1dU4vsTZtgBfL0UheQ==", null, false, "83bc1b16-3b13-4dec-8fee-7d7816da4a15", false, 1, "aslı" }
                 });
 
             migrationBuilder.InsertData(
@@ -489,14 +489,14 @@ namespace ConsultancyApp.Data.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsApproved", "ModifiedDate", "Name", "Url" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5079), true, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5084), "Bireysel Terapi", "bireysel-terapi" },
-                    { 2, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5087), true, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5087), "İlişki Terapisi", "iliski-terapisi" },
-                    { 3, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5089), true, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5089), "Aile Terapisi", "aile-terapisi" },
-                    { 4, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5094), false, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5094), "Çocuk Terapisi", "cocuk-terapisi" },
-                    { 5, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5096), true, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5096), "Ergen Terapisi", "ergen-terapisi" },
-                    { 6, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5098), true, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5098), "Oyun Terapisi", "oyun-terapisi" },
-                    { 7, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5100), false, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5100), "Sanat Danışmanlık", "sanat-danismanlik" },
-                    { 8, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5102), true, new DateTime(2023, 5, 2, 14, 20, 55, 192, DateTimeKind.Local).AddTicks(5102), "Cinsel Yönetimi", "cinsel-terapi" }
+                    { 1, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2712), true, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2717), "Bireysel Terapi", "bireysel-terapi" },
+                    { 2, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2720), true, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2720), "İlişki Terapisi", "iliski-terapisi" },
+                    { 3, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2722), true, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2723), "Aile Terapisi", "aile-terapisi" },
+                    { 4, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2724), false, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2725), "Çocuk Terapisi", "cocuk-terapisi" },
+                    { 5, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2726), true, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2727), "Ergen Terapisi", "ergen-terapisi" },
+                    { 6, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2728), true, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2729), "Oyun Terapisi", "oyun-terapisi" },
+                    { 7, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2730), false, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2731), "Sanat Danışmanlık", "sanat-danismanlik" },
+                    { 8, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2733), true, new DateTime(2023, 5, 9, 8, 16, 17, 885, DateTimeKind.Local).AddTicks(2734), "Cinsel Yönetimi", "cinsel-terapi" }
                 });
 
             migrationBuilder.InsertData(
@@ -504,20 +504,20 @@ namespace ConsultancyApp.Data.Migrations
                 columns: new[] { "RoleId", "UserId" },
                 values: new object[,]
                 {
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "8da007be-c50b-4973-aa45-224b7358hkn15" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "9e8f345d-141f-4ef2-99c7-8a9476llh93" },
-                    { "7a356e53-4ea9-4e6b-960b-7063d9da3a0d", "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "b342e19c-42af-4f25-b820-7a07dc9mbf13" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "b342e25a-42af-4f25-b820-7a07dc9mbf13" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "b35f20c1-836f-49c1-b46f-2399e12pvc85" },
-                    { "7a356e53-4ea9-4e6b-960b-7063d9da3a0d", "eabb7e42-6e53-4696-b350-da56Or2c79fa" },
-                    { "7a356e53-4ea9-4e6b-960b-7063d9da3a0d", "eabb7e42-6e53-4696-b350-da64de2c79fa" },
-                    { "53960165-702f-4eac-bcd3-dfd858391c88", "kema7e42-6e53-4696-b350-ke56Or2c79fa" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "n6R1a9e5-5d05-4487-9945-43d2ff1L5gd34" },
-                    { "da1c56c6-3772-41a0-8bc6-db7bb9a8ba60", "s8e3a9e7-5K05-4487-9945-43d2ff1kgd34" }
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "8da007be-c50b-4973-aa45-224b7358hkn15" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "9e8f345d-141f-4ef2-99c7-8a9476llh93" },
+                    { "77e273ba-d4ad-4a32-8485-96cf7d1fe343", "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "b342e19c-42af-4f25-b820-7a07dc9mbf13" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "b342e25a-42af-4f25-b820-7a07dc9mbf13" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "b35f20c1-836f-49c1-b46f-2399e12pvc85" },
+                    { "77e273ba-d4ad-4a32-8485-96cf7d1fe343", "eabb7e42-6e53-4696-b350-da56Or2c79fa" },
+                    { "77e273ba-d4ad-4a32-8485-96cf7d1fe343", "eabb7e42-6e53-4696-b350-da64de2c79fa" },
+                    { "2e9e816d-0f79-462e-819c-10774cf7a842", "kema7e42-6e53-4696-b350-ke56Or2c79fa" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "n6R1a9e5-5d05-4487-9945-43d2ff1L5gd34" },
+                    { "a8f95b03-1f7a-4fdc-bc90-603ec4b5d6ef", "s8e3a9e7-5K05-4487-9945-43d2ff1kgd34" }
                 });
 
             migrationBuilder.InsertData(
@@ -561,9 +561,9 @@ namespace ConsultancyApp.Data.Migrations
                 columns: new[] { "Id", "Address", "CreatedDate", "IsApproved", "ModifiedDate", "Name", "Url", "userId" },
                 values: new object[,]
                 {
-                    { 1, "Armağan evler mahallesi 23 Nisan Caddesi no:37 Daire:4", new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local), true, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(12), "Canan Umaç", "ahmet-umac", "eabb7e42-6e53-4696-b350-da56Or2c79fa" },
-                    { 2, "Güzelbahçe mahallesi Kumsal sokak no:13", new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(22), true, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(22), "Ömer Akyüz", "omer-akyuz", "eabb7e42-6e53-4696-b350-da64de2c79fa" },
-                    { 3, "Karşıyaka mahallesi Yalı Caddesi no:27 Daire:5", new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(31), true, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(32), "Mehmet Tatlı", "mehmet-tatli", "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f" }
+                    { 1, "Armağan evler mahallesi 23 Nisan Caddesi no:37 Daire:4", new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7129), true, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7146), "Canan Umaç", "ahmet-umac", "eabb7e42-6e53-4696-b350-da56Or2c79fa" },
+                    { 2, "Güzelbahçe mahallesi Kumsal sokak no:13", new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7155), true, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7156), "Ömer Akyüz", "omer-akyuz", "eabb7e42-6e53-4696-b350-da64de2c79fa" },
+                    { 3, "Karşıyaka mahallesi Yalı Caddesi no:27 Daire:5", new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7172), true, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7173), "Mehmet Tatlı", "mehmet-tatli", "a1f6faa1-645c-4ce9-98ce-939a4d1e1b7f" }
                 });
 
             migrationBuilder.InsertData(
@@ -571,16 +571,16 @@ namespace ConsultancyApp.Data.Migrations
                 columns: new[] { "Id", "CreatedDate", "Gender", "IsApproved", "ModifiedDate", "Name", "Price", "Url", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(80), "Kadın", false, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(81), "Selvi Kartal", 450m, "Selvi-kartal", "8da007be-c50b-4973-aa45-224b7358hkn15" },
-                    { 2, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(89), "Kadın", false, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(90), "Zeynep Öztürk", 350m, "zeynep-ozturk", "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62" },
-                    { 3, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(94), "Kadın", false, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(95), "Merve Kara", 400m, "merve-kara", "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34" },
-                    { 4, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(98), "Kadın", false, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(98), "Aslı Yaman", 450m, "asli-yaman", "s8e3a9e7-5K05-4487-9945-43d2ff1kgd34" },
-                    { 5, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(101), "Kadın", false, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(102), "Aylin Uzar", 350m, "aylin-uzar", "n6R1a9e5-5d05-4487-9945-43d2ff1L5gd34" },
-                    { 6, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(106), "Erkek", false, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(107), "Ali Yılmaz", 500m, "ali-yilmaz", "b342e19c-42af-4f25-b820-7a07dc9mbf13" },
-                    { 7, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(110), "Erkek", true, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(111), "Cem Kar", 400m, "cem-kar", "b35f20c1-836f-49c1-b46f-2399e12pvc85" },
-                    { 8, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(114), "Erkek", true, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(114), "Ahmet Ovali", 350m, "ahmet-ovali", "9e8f345d-141f-4ef2-99c7-8a9476llh93" },
-                    { 9, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(117), "Erkek", true, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(118), "Emre Ateş", 350m, "emre-ates", "b342e25a-42af-4f25-b820-7a07dc9mbf13" },
-                    { 10, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(122), "Erkek", true, new DateTime(2023, 5, 2, 14, 20, 52, 962, DateTimeKind.Local).AddTicks(123), "Barış Durmuş", 350m, "barıs-durmus", "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21" }
+                    { 1, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7242), "Kadın", false, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7243), "Selvi Kartal", 450m, "Selvi-kartal", "8da007be-c50b-4973-aa45-224b7358hkn15" },
+                    { 2, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7252), "Kadın", false, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7253), "Zeynep Öztürk", 350m, "zeynep-ozturk", "a20b74f2-9d2c-47ee-bf20-13a75c6tpr62" },
+                    { 3, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7256), "Kadın", false, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7257), "Merve Kara", 400m, "merve-kara", "a5e1a9e5-5d05-4487-9945-43d2ff1kgd34" },
+                    { 4, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7259), "Kadın", false, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7260), "Aslı Yaman", 450m, "asli-yaman", "s8e3a9e7-5K05-4487-9945-43d2ff1kgd34" },
+                    { 5, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7263), "Kadın", false, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7264), "Aylin Uzar", 350m, "aylin-uzar", "n6R1a9e5-5d05-4487-9945-43d2ff1L5gd34" },
+                    { 6, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7269), "Erkek", false, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7270), "Ali Yılmaz", 500m, "ali-yilmaz", "b342e19c-42af-4f25-b820-7a07dc9mbf13" },
+                    { 7, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7273), "Erkek", true, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7273), "Cem Kar", 400m, "cem-kar", "b35f20c1-836f-49c1-b46f-2399e12pvc85" },
+                    { 8, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7276), "Erkek", true, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7277), "Ahmet Ovali", 350m, "ahmet-ovali", "9e8f345d-141f-4ef2-99c7-8a9476llh93" },
+                    { 9, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7280), "Erkek", true, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7281), "Emre Ateş", 350m, "emre-ates", "b342e25a-42af-4f25-b820-7a07dc9mbf13" },
+                    { 10, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7285), "Erkek", true, new DateTime(2023, 5, 9, 8, 16, 16, 44, DateTimeKind.Local).AddTicks(7286), "Barış Durmuş", 350m, "barıs-durmus", "5bcf4a7a-4b4d-4c9a-a582-6230f635mnb21" }
                 });
 
             migrationBuilder.InsertData(
@@ -588,16 +588,16 @@ namespace ConsultancyApp.Data.Migrations
                 columns: new[] { "Id", "CreatedDate", "IsApproved", "ModifiedDate", "PsychologistId", "Url" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(190), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(196), 1, "k-1.jpg" },
-                    { 2, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(198), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(199), 2, "k-2.jpg" },
-                    { 3, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(200), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(201), 3, "k-3.jpg" },
-                    { 4, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(203), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(203), 4, "k-4.jpg" },
-                    { 5, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(205), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(205), 5, "k-5.jpg" },
-                    { 6, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(207), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(207), 6, "e-1.jpg" },
-                    { 7, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(208), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(209), 7, "e-2.jpg" },
-                    { 8, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(210), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(211), 8, "e-3.jpg" },
-                    { 9, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(212), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(213), 9, "e-4.jpg" },
-                    { 10, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(214), true, new DateTime(2023, 5, 2, 14, 20, 55, 194, DateTimeKind.Local).AddTicks(215), 10, "e-5.jpg" }
+                    { 1, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9390), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9394), 1, "k-1.jpg" },
+                    { 2, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9397), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9398), 2, "k-2.jpg" },
+                    { 3, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9400), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9401), 3, "k-3.jpg" },
+                    { 4, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9402), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9403), 4, "k-4.jpg" },
+                    { 5, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9404), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9405), 5, "k-5.jpg" },
+                    { 6, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9407), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9407), 6, "e-1.jpg" },
+                    { 7, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9409), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9409), 7, "e-2.jpg" },
+                    { 8, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9411), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9411), 8, "e-3.jpg" },
+                    { 9, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9413), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9414), 9, "e-4.jpg" },
+                    { 10, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9415), true, new DateTime(2023, 5, 9, 8, 16, 17, 886, DateTimeKind.Local).AddTicks(9416), 10, "e-5.jpg" }
                 });
 
             migrationBuilder.InsertData(

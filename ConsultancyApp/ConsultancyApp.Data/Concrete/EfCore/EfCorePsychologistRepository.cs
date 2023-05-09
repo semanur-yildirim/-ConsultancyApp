@@ -74,14 +74,13 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             updatePsychologist.Gender = psychologist.Gender;
             updatePsychologist.Name = psychologist.Name;
             updatePsychologist.Image = psychologist.Image;
-            updatePsychologist.PsychologistDescription = psychologist.PsychologistDescription;
             #endregion
             #region PsychologistDescription atamaları
-            //updatePsychologist.PsychologistDescription.Id = psychologistDescription.Id;
-            //updatePsychologist.PsychologistDescription.GraduationYear = psychologistDescription.GraduationYear;
-            //updatePsychologist.PsychologistDescription.Education = psychologistDescription.Education;
-            //updatePsychologist.PsychologistDescription.Experience = psychologistDescription.Experience;
-            //updatePsychologist.PsychologistDescription.About = psychologistDescription.About;
+            updatePsychologist.PsychologistDescription.Id = psychologistDescription.Id;
+            updatePsychologist.PsychologistDescription.GraduationYear = psychologistDescription.GraduationYear;
+            updatePsychologist.PsychologistDescription.Education = psychologistDescription.Education;
+            updatePsychologist.PsychologistDescription.Experience = psychologistDescription.Experience;
+            updatePsychologist.PsychologistDescription.About = psychologistDescription.About;
             #endregion
 
             #region Seçilen Kategori Ataması

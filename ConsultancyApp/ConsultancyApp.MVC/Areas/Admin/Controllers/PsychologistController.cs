@@ -8,6 +8,7 @@ using ConsultancyApp.MVC.Models.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using NuGet.DependencyResolver;
 
 namespace ConsultancyApp.MVC.Areas.Admin.Controllers
 {
@@ -15,17 +16,22 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
     public class PsychologistController : Controller
     {
         private readonly IPsychologistService _psychologistService;
+        private readonly IPsychologistDescriptionService _psychologistDescriptionService;
+
         private ICustomerService _customerService;
         private readonly UserManager<User> _userManager;
         private readonly ICategoryService _categoryService;
         private readonly RoleManager<Role> _roleManager;
-        public PsychologistController(IPsychologistService psychologistService, UserManager<User> userManager, ICategoryService categoryService, RoleManager<Role> roleManager, ICustomerService customerService)
+        private readonly IImageService _imageService;
+        public PsychologistController(IPsychologistService psychologistService, UserManager<User> userManager, ICategoryService categoryService, RoleManager<Role> roleManager, ICustomerService customerService, IImageService imageService, IPsychologistDescriptionService psychologistDescriptionService)
         {
             _psychologistService = psychologistService;
             _userManager = userManager;
             _categoryService = categoryService;
             _roleManager = roleManager;
             _customerService = customerService;
+            _imageService = imageService;
+            _psychologistDescriptionService = psychologistDescriptionService;
         }
         #region List
         public async Task<IActionResult> Index()
@@ -139,6 +145,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             userViewModel.Email = user.Email;
             userViewModel.UserName = user.UserName;
             userViewModel.Type = user.Type;
+            userViewModel.Password = user.PasswordHash;
 
             PsychologistUpdateViewModel psychologistUpdateViewModel = new PsychologistUpdateViewModel()
             {
@@ -184,6 +191,8 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(PsychologistUpdateViewModel psychologistUpdateViewModel)
         {
+            var psychologistDescription = await _psychologistDescriptionService.GetPsychologistDescriptionByPsychologistAsync(psychologistUpdateViewModel.Id);
+            var psy = await _psychologistService.GetPsychologistFullDataByUserId(psychologistUpdateViewModel.User.Id);
             if (ModelState.IsValid)
             {
                 User user = await _userManager.FindByIdAsync(psychologistUpdateViewModel.User.Id);
@@ -203,33 +212,55 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     await _userManager.AddToRoleAsync(user, "Admin");
                     await _userManager.RemoveFromRoleAsync(user, "Customer");
                     await _userManager.RemoveFromRoleAsync(user, "Psychologist");
-                }
-                else if (psychologistUpdateViewModel.User.Type == EnumType.Psychologist)
-                {
-                    await _userManager.AddToRoleAsync(user, "Psychologist");
-                    await _userManager.RemoveFromRoleAsync(user, "Customer");
-                    await _userManager.RemoveFromRoleAsync(user, "Admin");
+                    _psychologistService.Delete(psy);
                 }
                 else if (psychologistUpdateViewModel.User.Type == EnumType.Customer)
                 {
                     await _userManager.AddToRoleAsync(user, "Customer");
                     await _userManager.RemoveFromRoleAsync(user, "Psychologist");
                     await _userManager.RemoveFromRoleAsync(user, "Admin");
+                    _psychologistService.Delete(psy);
+                    Customer customer = new Customer();
+                    customer.Name = psychologistUpdateViewModel.Name;
+                    customer.CreatedDate = DateTime.Now;
+                    customer.Url = Jobs.GetUrl(customer.Name);
+                    customer.userId = user.Id;
+                   await _customerService.CreateAsync(customer);
                 }
+                else if(psychologistUpdateViewModel.User.Type == EnumType.Psychologist)
+                {
+                    await _userManager.AddToRoleAsync(user, "Psychologist");
+                    await _userManager.RemoveFromRoleAsync(user, "Customer");
+                    await _userManager.RemoveFromRoleAsync(user, "Admin");
 
-                Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(psychologistUpdateViewModel.Id);
-                psychologist.PsychologistDescription.About = psychologistUpdateViewModel.About;
-                psychologist.PsychologistDescription.Education = psychologistUpdateViewModel.Education;
-                psychologist.PsychologistDescription.Experience = psychologistUpdateViewModel.Experience;
-                psychologist.PsychologistDescription.GraduationYear = psychologistUpdateViewModel.GraduationYear;
+                    psychologistDescription.About= psychologistUpdateViewModel.About;
+                    psychologistDescription.Education = psychologistUpdateViewModel.Education;
+                    psychologistDescription.Experience = psychologistUpdateViewModel.Experience;
+                    psychologistDescription.GraduationYear = psychologistUpdateViewModel.GraduationYear;
 
-                psychologist.Url = psychologistUpdateViewModel.Url;
-                psychologist.Gender = psychologistUpdateViewModel.Gender;
-                psychologist.Price = psychologistUpdateViewModel.Price;
-                psychologist.ModifiedDate = DateTime.Now;
-                psychologist.Name = psychologistUpdateViewModel.Name;
+                    Psychologist psychologist = await _psychologistService.GetPsychologistFullDataAsync(psychologistUpdateViewModel.Id);
+                    psychologist.Url = psychologistUpdateViewModel.Url;
+                    psychologist.Gender = psychologistUpdateViewModel.Gender;
+                    psychologist.Price = psychologistUpdateViewModel.Price;
+                    psychologist.ModifiedDate = DateTime.Now;
+                    psychologist.Name = psychologistUpdateViewModel.Name;
+
+
+
+                    if (psychologistUpdateViewModel.File != null)
+                    {
+                        psychologist.Image = new Image
+                        {
+                            CreatedDate = DateTime.Now,
+                            ModifiedDate = DateTime.Now,
+                            IsApproved = true,
+                            Url = Jobs.UploadImage(psychologistUpdateViewModel.File)
+                        };
+                        await _imageService.CreateAsync(psychologist.Image);
+                    }
+                    await _psychologistService.UpdatePsychologist(psychologist, psychologistUpdateViewModel.SelectedCategories,psychologistDescription);
+                }
                 return RedirectToAction("Index");
-
             }
             return View(psychologistUpdateViewModel);
         }

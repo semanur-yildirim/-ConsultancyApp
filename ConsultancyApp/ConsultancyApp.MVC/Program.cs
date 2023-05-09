@@ -24,7 +24,7 @@ builder.Services.AddScoped<ICategoryDescriptionService, CategoryDescriptionManag
 builder.Services.AddScoped<ICustomerService, CustomerManager>();
 builder.Services.AddScoped<IPsychologistDescriptionService, PsychologistDescriptionManager>();
 builder.Services.AddScoped<IPsychologistService, PsychologistManager>();
-
+builder.Services.AddScoped<IImageService, ImageManager>();
 
 
 builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
@@ -32,6 +32,7 @@ builder.Services.AddScoped<ICategoryDescriptionRepository, EfCoreCategoryDescrip
 builder.Services.AddScoped<ICustomerRepository, EfCoreCustomerRepository>();
 builder.Services.AddScoped<IPsychologistRepository, EfCorePsychologistRepository>();
 builder.Services.AddScoped<IPsychologistDescriptionRepository, EfCorePsychologistDescriptionRepository>();
+builder.Services.AddScoped<IImageRepository, EfCoreImageRepository>();
 
 var app = builder.Build();
 
