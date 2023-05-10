@@ -28,7 +28,7 @@ builder.Services.AddScoped<IPsychologistService, PsychologistManager>();
 builder.Services.AddScoped<IImageService, ImageManager>();
 builder.Services.AddScoped<ICartService, CartManager>();
 builder.Services.AddScoped<ICartItemService, CartItemManager>();
-builder.Services.AddScoped<IOrderService, OrderManager>();
+builder.Services.AddScoped<IOrderService, OrderManager>(); builder.Services.AddScoped<IRequestService, RequestManager>();
 
 
 
@@ -41,6 +41,8 @@ builder.Services.AddScoped<IImageRepository, EfCoreImageRepository>();
 builder.Services.AddScoped<ICartRepository, EfCoreCartRepository>();
 builder.Services.AddScoped<ICartItemRepository, EfCoreCartItemRepository>();
 builder.Services.AddScoped<IOrderRepository, EfCoreOrderRepository>();
+builder.Services.AddScoped<IRequestRepository, EfCoreRequestRepository>();
+
 
 builder.Services.AddNotyf(config =>
 {

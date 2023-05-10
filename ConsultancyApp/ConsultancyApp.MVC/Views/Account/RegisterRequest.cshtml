@@ -1,0 +1,151 @@
+﻿@model RequestRegisterModel
+sakdıoksjzfı
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-area=""
+                      asp-controller="Account"
+                      asp-action="RegisterRequest"
+                      method="post"
+                      enctype="multipart/form-data">
+                    <input type="hidden" asp-for="IsApproved" />
+                    <div class="card mb-4">
+                        <h5 class="card-header">Yeni Kayıt</h5>
+                        <!-- Account -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="d-flex flex-column gap-4">
+
+                                        <div class="button-wrapper">
+
+                                            <input type="file"
+                                                   asp-for="Image"
+                                                   class="form-control"
+                                                   accept="image/"
+                                                   style="width:250px" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-8">
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h2>Kategori</h2>
+                                            @foreach (var category in Model.Categories)
+                                            {
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="SelectedCategories" value="@category.Id" @if (Model.SelectedCategories != null)
+                                                       {
+                                                       @(Model.SelectedCategories.Any(sc => sc == category.Id) ? "checked" : "")
+                                                       } />
+                                                    <label class="form-check-label">@category.Name</label>
+                                                </div>
+                                            }
+                                        </div>
+                                        <div class="col-3">
+                                            <h2>Cinsiyet</h2>
+                                            <div class="mb-3">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" asp-for="Gender" value="Kadın" checked>
+                                                    <label class="form-check-label" for="female">
+                                                        Kadın
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" asp-for="Gender" value="Erkek">
+                                                    <label class="form-check-label" for="male" value="Erkek">
+                                                        Erkek
+                                                    </label>
+                                                </div>
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="radio" asp-for="Gender" value="Diger" checked>
+                                                    <label class="form-check-label" for="other">
+                                                        Kadın
+                                                    </label>
+                                                </div>
+                                                <span class="text-danger" asp-validation-for="Gender"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr class="my-0" />
+                        <div class="card-body">
+                            <div class="row men-2">
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="FirstName"></label>
+                                    <input class="form-control" asp-for="FirstName" />
+                                    <span class="text-danger" asp-validation-for="FirstName"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="LastName"></label>
+                                    <input class="form-control" asp-for="LastName" />
+                                    <span class="text-danger" asp-validation-for="LastName"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="UserName"></label>
+                                    <input class="form-control" asp-for="UserName" />
+                                    <span class="text-danger" asp-validation-for="UserName"></span>
+                                </div>
+                                <div class=" mb-0">
+                                    <input class="form-control" asp-for="Password">
+                                    <label class="form-label" asp-for="Password"></label>
+                                    <span class="text-danger" asp-validation-for="Password"></span>
+                                </div>
+                                <div class=" mb-3 col-lg-6">
+                                    <label class="form-label" asp-for="DateOfBirth"></label>
+                                    <input class="form-control" asp-for="DateOfBirth">
+                                    <span class="text-danger" asp-validation-for="DateOfBirth"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="Email"></label>
+                                    <input class="form-control" asp-for="Email" />
+                                    <span class="text-danger" asp-validation-for="Email"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="Price"></label>
+                                    <input class="form-control" asp-for="Price" value="@($"{Model.Price:N0}")" />
+                                    <span class="text-danger" asp-validation-for="Price"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="Education"></label>
+                                    <input class="form-control" asp-for="Education" />
+                                    <span class="text-danger" asp-validation-for="Education"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="GraduationYear"></label>
+                                    <input class="form-control" asp-for="GraduationYear" />
+                                    <span class="text-danger" asp-validation-for="GraduationYear"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="About"></label>
+                                    <textarea class="form-control" asp-for="About" id="editor"></textarea>
+                                    <span class="text-danger" asp-validation-for="About"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="Experience"></label>
+                                    <textarea class="form-control" asp-for="Experience" id="editor2"></textarea>
+                                    <span class="text-danger" asp-validation-for="Experience"></span>
+                                </div>
+                                <div class="mb-3 ">
+                                    <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                                    <button type="reset" class="btn btn-outline-secondary">Vazgeç</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </form>
+
+                <!-- /Account -->
+            </div>
+
+        </div>
+    </div>
+</div>

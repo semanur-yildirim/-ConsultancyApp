@@ -50,6 +50,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     Id = p.Id,
                     Name = p.Name,
                     IsApproved = p.IsApproved,
+                    
                     Categories = p.PsychologistCategory.Select(c => new Category
                     {
                         Id = c.CategoryId,

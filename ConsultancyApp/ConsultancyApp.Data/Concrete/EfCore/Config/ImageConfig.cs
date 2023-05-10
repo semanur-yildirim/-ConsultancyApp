@@ -1,11 +1,6 @@
 ﻿using ConsultancyApp.Entity.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsultancyApp.Data.Concrete.EfCore.Config
 {
@@ -20,9 +15,10 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Config
             builder.Property(x => x.ModifiedDate).IsRequired();
 
             builder.Property(x => x.Url).IsRequired().HasMaxLength(500);
-            builder.HasOne(p=>p.Psychologist).WithOne(p=>p.Image).HasForeignKey<Image>(t=>t.PsychologistId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(p => p.Psychologist).WithOne(p => p.Image).HasForeignKey<Image>(t => t.PsychologistId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(p => p.Request).WithOne(p => p.Image).HasForeignKey<Image>(t => t.RequestId).OnDelete(DeleteBehavior.Cascade);
             builder.HasData(
-
+               new Image { Id = 11, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Url = "r-1.jpg", RequestId = 1 },
                 new Image { Id = 1, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Url = "k-1.jpg", PsychologistId = 1 },
                 new Image { Id = 2, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Url = "k-2.jpg", PsychologistId = 2 },
                  new Image { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Url = "k-3.jpg", PsychologistId = 3 },

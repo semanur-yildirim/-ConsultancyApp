@@ -1,15 +1,3 @@
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\bin\Debug\net7.0\ConsultancyApp.Core.deps.json
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\bin\Debug\net7.0\ConsultancyApp.Core.dll
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\bin\Debug\net7.0\ConsultancyApp.Core.pdb
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\ConsultancyApp.Core.csproj.AssemblyReference.cache
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\ConsultancyApp.Core.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\ConsultancyApp.Core.AssemblyInfoInputs.cache
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\ConsultancyApp.Core.AssemblyInfo.cs
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\ConsultancyApp.Core.csproj.CoreCompileInputs.cache
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\ConsultancyApp.Core.dll
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\refint\ConsultancyApp.Core.dll
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\ConsultancyApp.Core.pdb
-C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\obj\Debug\net7.0\ref\ConsultancyApp.Core.dll
 C:\Users\seman\OneDrive\Masaüstü\-ConsultancyApp\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\bin\Debug\net7.0\ConsultancyApp.Core.deps.json
 C:\Users\seman\OneDrive\Masaüstü\-ConsultancyApp\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\bin\Debug\net7.0\ConsultancyApp.Core.dll
 C:\Users\seman\OneDrive\Masaüstü\-ConsultancyApp\-ConsultancyApp\ConsultancyApp\ConsultancyApp.Core\bin\Debug\net7.0\ConsultancyApp.Core.pdb

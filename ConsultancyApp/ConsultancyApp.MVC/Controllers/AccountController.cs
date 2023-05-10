@@ -1,4 +1,5 @@
-﻿using ConsultancyApp.Business.Abstract;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using ConsultancyApp.Business.Abstract;
 using ConsultancyApp.Core;
 using ConsultancyApp.Entity.Concrete;
 using ConsultancyApp.Entity.Concrete.Identity;
@@ -17,12 +18,18 @@ namespace ConsultancyApp.MVC.Controllers
         private readonly SignInManager<User> _signInManager;
         private readonly IPsychologistService _psychologistService;
         private readonly ICustomerService _customerService;
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IPsychologistService psychologistService, ICustomerService customerService)
+        private readonly ICategoryService _categoryService;
+        private readonly IRequestService _requestService;
+        private readonly INotyfService _notyfService;
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IPsychologistService psychologistService, ICustomerService customerService, ICategoryService categoryService, IRequestService requestService, INotyfService notyfService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _psychologistService = psychologistService;
             _customerService = customerService;
+            _categoryService = categoryService;
+            _requestService = requestService;
+            _notyfService = notyfService;
         }
         #region Login
         [HttpGet]
@@ -159,5 +166,47 @@ namespace ConsultancyApp.MVC.Controllers
             return View(customerViewModel);
         }
         #endregion
+        [HttpGet]
+        public async Task<IActionResult> RegisterRequest()
+        {
+            RequestRegisterModel requestRegisterModel = new RequestRegisterModel()
+            {
+                Categories = await _categoryService.GetAllCategoriesAsync()
+            };
+            return View(requestRegisterModel);
+        }
+        [HttpPost]
+        public async Task<IActionResult> RegisterRequest(RequestRegisterModel requestRegisterModel)
+        {
+            Image image = new Image();
+            image.CreatedDate = DateTime.Now;
+            image.ModifiedDate = DateTime.Now;
+            image.IsApproved = true;
+            image.Url = Jobs.UploadImage(requestRegisterModel.Image);
+            Request request = new Request()
+            {
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now,
+                IsApproved = requestRegisterModel.IsApproved,
+                FirstName = requestRegisterModel.FirstName,
+                LastName = requestRegisterModel.LastName,
+                UserName = requestRegisterModel.UserName,
+                Email = requestRegisterModel.Email,
+                About = requestRegisterModel.About,
+                DateOfBirth = requestRegisterModel.DateOfBirth,
+                Education = requestRegisterModel.Education,
+                Experience = requestRegisterModel.Experience,
+                Gender = requestRegisterModel.Gender,
+                GraduationYear = requestRegisterModel.GraduationYear,
+                Name = requestRegisterModel.FirstName +" "+ requestRegisterModel.LastName,
+                Password=requestRegisterModel.Password,
+                Price=requestRegisterModel.Price,
+                Url = Jobs.GetUrl(requestRegisterModel.FirstName + requestRegisterModel.LastName),
+                Image=image
+            };
+            await _requestService.CreateRequest(request, requestRegisterModel.SelectedCategories, image);
+            _notyfService.Success("Talebiniz oluşturuldu.");
+            return RedirectToAction("Index","Home");
+        }
     }
 }

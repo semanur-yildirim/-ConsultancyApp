@@ -14,7 +14,9 @@ namespace ConsultancyApp.Entity.Concrete
         public DateTime ModifiedDate { get ; set ; }
         public bool IsApproved { get ; set ; }
         public string Url { get; set; }
-        public Psychologist Psychologist { get; set; }
-        public int PsychologistId { get; set; }
+        public Psychologist? Psychologist { get; set; }
+        public int? PsychologistId { get; set; }
+        public Request? Request { get; set; }
+        public int? RequestId { get; set; }
     }
 }

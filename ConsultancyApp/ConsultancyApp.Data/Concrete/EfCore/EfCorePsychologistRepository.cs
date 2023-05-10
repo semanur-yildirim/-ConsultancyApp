@@ -112,6 +112,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore
 
             image.PsychologistId = psychologist.Id;
             await AppContext.Images.AddAsync(image);
+            await AppContext.SaveChangesAsync();
             psychologistDescription.PsychologistId=psychologist.Id;
 
             await AppContext.PsychologistDescription.AddAsync(psychologistDescription);

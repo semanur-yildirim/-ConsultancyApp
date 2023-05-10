@@ -26,6 +26,9 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Context
         public DbSet<PsychologistCustomer> PsychologistCustomer { get; set; }
         public DbSet<PsychologistDescription> PsychologistDescription { get; set; }
         public DbSet<Image> Images { get; set; }
+        public DbSet<Request> Request { get; set; }
+        public DbSet<RequestCategory> RequestCategory { get; set; }
+
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartItem> CartItems { get; set; }
         public DbSet<Order> Orders { get; set; }
