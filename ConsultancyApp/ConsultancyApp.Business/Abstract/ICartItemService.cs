@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsultancyApp.Entity.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,9 @@ namespace ConsultancyApp.Business.Abstract
 {
     public interface ICartItemService
     {
+        Task ChangeQuantityAsync(int cartItemId, int quantity);
+        Task<CartItem> GetByIdAsync(int id);
+        void Delete(CartItem cartItem);
+        void ClearCart(int cartId);
     }
 }

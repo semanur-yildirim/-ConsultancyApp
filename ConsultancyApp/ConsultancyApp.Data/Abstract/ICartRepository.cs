@@ -9,7 +9,7 @@ namespace ConsultancyApp.Data.Abstract
 {
     public interface ICartRepository:IGenericRepository<Cart>
     {
-        Task AddToCart(string userId, int psychologistId);
-        Task<Cart> GetCartByUserId(int id);
+        Task AddToCart(string userId, int psychologistId, int quantity);
+        Task<Cart> GetCartByUserId(string id);
     }
 }

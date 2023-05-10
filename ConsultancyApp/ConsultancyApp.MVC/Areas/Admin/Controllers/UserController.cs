@@ -40,85 +40,6 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             }).ToListAsync();
             return View(users);
         }
-        //[HttpGet]
-        //public async Task<IActionResult> Edit(string id)
-        //{
-        //    if (String.IsNullOrEmpty(id)) { return NotFound(); }
-        //    User user=await _userManager.FindByIdAsync(id);
-        //    if (user == null) { return NotFound(); }
-        //    UserViewModel userViewModel = new UserViewModel
-        //    {
-        //        Id = user.Id,
-        //        FirstName = user.FirstName,
-        //        LastName = user.LastName,
-        //        Email = user.Email,
-        //        EmailConfirmed = user.EmailConfirmed,
-        //        Type = user.Type,
-        //        UserName=user.UserName
-        //    };
-        //    #region Psikolog Bilgileri Dolduruluyor.
-        //    if (user.Type == EnumType.Psychologist)
-        //    {
-        //        Psychologist psychologist = await _psychologistService.GetPsychologistFullDataByUserId(id);
-        //        PsychologistUpdateViewModel psychologistUpdateViewModel = new PsychologistUpdateViewModel();
-
-        //        psychologistUpdateViewModel.Id = psychologist.Id;
-        //        psychologistUpdateViewModel.Name = psychologist.Name;
-        //        psychologistUpdateViewModel.ModifiedDate = psychologist.ModifiedDate;
-        //        psychologistUpdateViewModel.IsApproved = psychologist.IsApproved;
-        //        psychologistUpdateViewModel.Url = psychologist.Url;
-        //        psychologistUpdateViewModel.Price = psychologist.Price;
-        //        psychologistUpdateViewModel.Gender = psychologist.Gender;
-        //        psychologistUpdateViewModel.Image = psychologist.Image;
-        //        psychologistUpdateViewModel.GraduationYear = psychologist.PsychologistDescription.GraduationYear;
-        //        psychologistUpdateViewModel.Experience = psychologist.PsychologistDescription.Experience;
-        //        psychologistUpdateViewModel.Education = psychologist.PsychologistDescription.Education;
-        //        psychologistUpdateViewModel.About = psychologist.PsychologistDescription.About;
-        //        psychologistUpdateViewModel.SelectedCategories = psychologist.PsychologistCategory.Select(c => c.CategoryId).ToArray();
-        //        psychologistUpdateViewModel.Categories = await _categoryService.GetAllCategoriesAsync(true);
-        //        #region Cinsiyet Bilgileri
-        //        List<SelectListItem> genderList = new List<SelectListItem>();
-        //        genderList.Add(new SelectListItem
-        //        {
-        //            Text = "Kadın",
-        //            Value = "Kadın",
-        //            Selected = psychologistUpdateViewModel.Gender == "Kadın" ? true : false
-        //        });
-        //        genderList.Add(new SelectListItem
-        //        {
-        //            Text = "Erkek",
-        //            Value = "Erkek",
-        //            Selected = psychologistUpdateViewModel.Gender == "Erkek" ? true : false
-        //        });
-        //        genderList.Add(new SelectListItem
-        //        {
-        //            Text = "Diğer",
-        //            Value = "Diger",
-        //            Selected = psychologistUpdateViewModel.Gender == "Diğer" ? true : false
-        //        });
-        //        psychologistUpdateViewModel.GenderSelectList = genderList;
-        //        #endregion
-        //        psychologistUpdateViewModel.User = userViewModel;
-
-        //        userViewModel.Psychlogist = psychologistUpdateViewModel;
-
-        //    }
-        //    #endregion
-        //    #region Danışan Bilgileri Dolduruluyor.
-        //    if(user.Type==EnumType.Customer)
-        //    {
-
-        //    }
-        //    #endregion
-        //    return View(userViewModel);
-        //}
-
-        public async Task<IActionResult> Edit(int id)
-        {
-
-
-            return View();
-        }
         public async Task<IActionResult> Delete(string id)
         {
             User user = await _userManager.FindByIdAsync(id);
@@ -127,6 +48,14 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             {
                 await _userManager.DeleteAsync(user);
             }
+            return RedirectToAction("Index");
+        }
+        public async Task<IActionResult> ConfirmEmail(string id)
+        {
+            User user = await _userManager.FindByIdAsync(id);
+            if (user == null) return NotFound();
+            user.EmailConfirmed = !user.EmailConfirmed;
+            await _userManager.UpdateAsync(user);
             return RedirectToAction("Index");
         }
     }

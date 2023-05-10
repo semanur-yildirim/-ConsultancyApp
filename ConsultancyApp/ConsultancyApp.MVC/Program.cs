@@ -26,6 +26,10 @@ builder.Services.AddScoped<ICustomerService, CustomerManager>();
 builder.Services.AddScoped<IPsychologistDescriptionService, PsychologistDescriptionManager>();
 builder.Services.AddScoped<IPsychologistService, PsychologistManager>();
 builder.Services.AddScoped<IImageService, ImageManager>();
+builder.Services.AddScoped<ICartService, CartManager>();
+builder.Services.AddScoped<ICartItemService, CartItemManager>();
+builder.Services.AddScoped<IOrderService, OrderManager>();
+
 
 
 builder.Services.AddScoped<ICategoryRepository, EfCoreCategoryRepository>();
@@ -34,6 +38,9 @@ builder.Services.AddScoped<ICustomerRepository, EfCoreCustomerRepository>();
 builder.Services.AddScoped<IPsychologistRepository, EfCorePsychologistRepository>();
 builder.Services.AddScoped<IPsychologistDescriptionRepository, EfCorePsychologistDescriptionRepository>();
 builder.Services.AddScoped<IImageRepository, EfCoreImageRepository>();
+builder.Services.AddScoped<ICartRepository, EfCoreCartRepository>();
+builder.Services.AddScoped<ICartItemRepository, EfCoreCartItemRepository>();
+builder.Services.AddScoped<IOrderRepository, EfCoreOrderRepository>();
 
 builder.Services.AddNotyf(config =>
 {

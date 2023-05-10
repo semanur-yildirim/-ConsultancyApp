@@ -14,9 +14,10 @@ namespace ConsultancyApp.Entity.Concrete
         public int PsychologistId { get; set; }
         public int CartId { get; set; }
         public Cart Cart { get; set; }
+        public int Quantity { get; set; }
 
 
     }
 
-    
+
 }

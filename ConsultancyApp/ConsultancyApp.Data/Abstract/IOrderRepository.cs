@@ -9,6 +9,7 @@ namespace ConsultancyApp.Data.Abstract
 {
     public interface IOrderRepository :IGenericRepository<Order>
     {
-        Task<List<Order>> GetAllOrdersAsync(string userId=null);
+        Task<List<Order>> GetAllOrdersAsync(string userId=null, bool dateSort = false);
+        Task<List<Order>> SearchOrderByUser(string keyword, bool dateSort = false);
     }
 }

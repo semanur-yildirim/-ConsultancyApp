@@ -10,5 +10,6 @@ namespace ConsultancyApp.Data.Abstract
     public interface ICartItemRepository : IGenericRepository<CartItem>
     {
         void CleanCart(int cartId);
+        Task ChangeQuantityAsync(CartItem cartItem, int quantity);
     }
 }

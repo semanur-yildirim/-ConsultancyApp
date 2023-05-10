@@ -1,0 +1,82 @@
+﻿@model CustomerRegisterModel
+    <div class="margintop">
+        <div class=" w-50 m-auto  ">
+            <div class="content-wrapper">
+                <!-- Content -->
+                <div class="container-xxl flex-grow-1 container-p-y">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form asp-area=""
+                              asp-controller="Account"
+                              asp-action="CustomerRegister"
+                                  method="post"
+                                  enctype="multipart/form-data">
+                                  <input type="hidden" asp-for="Name" />
+                                <div class="card mb-6">
+                                    <h5 class="card-header text-center fw-bold">Kayıt Ol</h5>
+                                    <hr class="my-0" />
+                                    <div class="card-body">
+                                        <div class="row men-2">
+                                            <div class="mb-3 col-lg-6">
+                                                <label class="form-label" asp-for="User.FirstName"></label>
+                                                <input class="form-control" asp-for="User.FirstName" />
+                                                <span class="text-danger" asp-validation-for="User.FirstName"></span>
+                                            </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label class="form-label" asp-for="User.LastName"></label>
+                                                <input class="form-control" asp-for="User.LastName" />
+                                                <span class="text-danger" asp-validation-for="User.LastName"></span>
+                                            </div>
+                                        <div class="mb-3 col-lg-12">
+                                            <label class="form-label" asp-for="User.Email"></label>
+                                            <input class="form-control" asp-for="User.Email" />
+                                            <span class="text-danger" asp-validation-for="User.Email"></span>
+                                        </div>
+                                            <div class="mb-3 col-lg-6">
+                                                <label class="form-label" asp-for="User.UserName"></label>
+                                                <input class="form-control" asp-for="User.UserName" />
+                                                <span class="text-danger" asp-validation-for="User.UserName"></span>
+                                            </div>
+                                        <div class=" mb-3 col-lg-6">
+                                            <label class="form-label" asp-for="User.DateOfBirth"></label>
+                                            <input class="form-control" asp-for="User.DateOfBirth">
+                                            <span class="text-danger" asp-validation-for="User.DateOfBirth"></span>
+                                        </div>
+                                     
+                                            <div class=" mb-3 col-lg-6">
+                                                <label class="form-label" asp-for="User.Password"></label>
+                                                <input class="form-control" asp-for="User.Password">
+                                                <span class="text-danger" asp-validation-for="User.Password"></span>
+                                            </div>
+
+                                            <div class=" mb-3 col-lg-6">
+                                                <label class="form-label" asp-for="User.RePassword"></label>
+
+                                                <input class="form-control" asp-for="User.RePassword">
+                                                <span class="text-danger" asp-validation-for="User.RePassword"></span>
+                                            </div>
+
+                                            <div class="mb-3 col-lg-12">
+                                                <label class="form-label" asp-for="Address"></label>
+                                                <input class="form-control" asp-for="Address" />
+                                                <span class="text-danger" asp-validation-for="Address"></span>
+                                            </div>
+                                            <div class="mb-3 text-center ">
+                                                <button type="submit" class="btn btn-primary me-2">Kaydet</button>
+                                                <a asp-area="" asp-controller="Home" asp-action="Index" type="reset" class="btn btn-secondary">Vazgeç</a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                            <!-- /Account -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+

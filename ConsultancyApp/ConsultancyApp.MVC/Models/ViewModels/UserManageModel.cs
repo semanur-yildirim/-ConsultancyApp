@@ -17,10 +17,6 @@ namespace ConsultancyApp.MVC.Models.ViewModels
         [Required(ErrorMessage = "Soyadı alanı boş bırakılamaz")]
         public string LastName { get; set; }
 
-        //[DisplayName("Cinsiyet")]
-
-        //public EnumType Type { get; set; }
-
         [DisplayName("Doğum Tarihi")]
         [DataType(DataType.Date)]
         public DateTime? DateOfBirth { get; set; }

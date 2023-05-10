@@ -20,19 +20,29 @@
                     asp-controller="Psychologist"
                     asp-action="Index"
                 >Psikologlarımız</a></li>
-                <li><a href="contact.html">İletişim</a></li>
+
                 @if(User.Identity.IsAuthenticated)
                 {
                     if(User.IsInRole("Admin"))
                     {
                         <li><a asp-area="Admin" asp-controller="Home" asp-action="Index"> Admin Paneli</a></li>
                     }
-                    <li><a asp-area="" asp-controller="Account" asp-action="Manage" asp-route-username="@User.Identity.Name">Profilim</a></li>
+                    <li><a asp-area="" asp-controller="Account" asp-action="Manage" asp-route-username="@User.Identity.Name">Hesabım</a></li>
+                    <li><a asp-area="" asp-controller="Cart" asp-action="Index">Sepetim</a></li>
                     <li><a asp-area="" asp-controller="Account" asp-action="Logout">Çıkış Yap</a></li>
                 }
                 else
                 {
-                    <li><a href="">Kayıt Ol</a></li>
+
+                    
+                    <div class="dropdown ms-4">
+                         <li><a href="">Kayıt Ol </a></li>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" asp-area="" asp-controller="Account" asp-action="CustomerRegister">Danışan Olarak Kayıt Ol</a></li>
+                            <li><a class="dropdown-item" >Danışman Olarak Kayıt Ol</a></li>
+                        </ul>
+                    </div>
+                   
                     <li><a asp-area="" asp-controller="Account" asp-action="Login">Giriş Yap</a></li>
                 } 
             </ul>

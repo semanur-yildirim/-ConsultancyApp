@@ -63,6 +63,10 @@
                                     <textarea class="form-control" asp-for="Address"></textarea>
                                     <span class="text-danger" asp-validation-for="Address"></span>
                                 </div>
+                                <div class="mb-3 form-check ms-3">
+                                    <input type="checkbox" class="form-check-input" asp-for="User.EmailConfirmed">
+                                    <label class="form-check-label" asp-for="User.EmailConfirmed"></label>
+                                </div>
                             </div>
                             <div class="mt-2">
                                 <button type="submit" class="btn btn-primary me-2">Değişiklikleri Kaydet</button>
@@ -83,17 +87,15 @@
                             <h6 class="alert-heading fw-bold mb-1">Silmek istedğinizden emin misiniz?</h6>
                         </div>
                     </div>
-                    <form 
-                    asp-area="Admin"
-                    asp-controller="Customer"
-                    asp-action="Delete"
-                    method="post"
-                    >
-                    <input type="hidden" asp-for="@Model.Id" />
+                    <form asp-area="Admin"
+                          asp-controller="Customer"
+                          asp-action="Delete"
+                          method="post">
+                        <input type="hidden" asp-for="@Model.Id" />
                         <button type="submit" class="btn btn-danger deactivate-account"> Sil</button>
                     </form>
                 </div>
-            </div>                                                                                              
+            </div>
         </div>
     </div>
 </div>
