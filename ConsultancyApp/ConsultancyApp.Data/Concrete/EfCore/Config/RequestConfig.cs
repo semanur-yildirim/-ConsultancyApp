@@ -16,26 +16,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Config
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
-            builder.HasData(
-                    new Request {Id=1,
-                        FirstName = "Sevil",
-                        LastName = "Kara",
-                        UserName = "sevil",
-                        Email = "sevil@gmail.com", 
-                        DateOfBirth = new DateTime(1978, 5, 2), CreatedDate = DateTime.Now,
-                        ModifiedDate = DateTime.Now,
-                        IsApproved = false,
-                        Name = "Seil Kara",
-                        Price = 450,
-                        Url = "Sevil-Kara",
-                        Gender = "Kadın",
-                        GraduationYear = new DateTime(2000, 12, 5),
-                        Education = "İstanbul Üniversitesi Psikoloji",
-                        Experience = "Online ve Yüz yüze Terapi",
-                        About = "Sosyal Terapist, Bağımlılık Terapisti, Psikodrama Yöneticisi, Organizasyon Geliştirici İzmir Üniversitesi bölümünü tamamlayıp, ardından Almanya’da Sağlık Managment Yüksek Lisans Master egitimini  Magdeburg-Stendal Yüksekokulunda tamamlamıştır. Almanya’da psikososyal alanda 1982 yılından itibaren mesleki calışmasına paralel, 2013 tarihine kadar Sosyalterapi, Bagimlilik terapisti, Psikodrama Grup Yöneticisi, Organizasyon Geliştirici ve Choac  eğitimlerini aldı.",
-                        Password="Qwe123."
-                    }
-                );
+            builder.HasOne(p => p.User).WithOne(p => p.Request).HasForeignKey<Request>(p => p.UserId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

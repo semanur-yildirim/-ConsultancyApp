@@ -36,6 +36,8 @@ namespace ConsultancyApp.Data.Concrete.EfCore
                 AppContext.RequestCategory.AddRange(requestCategory);
 
             }
+            await AppContext.SaveChangesAsync();
+
             image.RequestId = request.Id;
             await AppContext.Images.AddAsync(image);
 
@@ -43,12 +45,12 @@ namespace ConsultancyApp.Data.Concrete.EfCore
 
         public async Task<List<Request>> GetAllRequestFullDataAsync()
         {
-            var request = await AppContext.Request.Where(r => r.IsApproved==false).Include(c=>c.RequestCategories).ThenInclude(c=>c.Category).Include(i=>i.Image). ToListAsync();
+            var request = await AppContext.Request.Where(r => r.IsApproved==false).Include(c=>c.RequestCategories).ThenInclude(c=>c.Category).Include(i=>i.Image).Include(u=>u.User).ToListAsync();
             return request;
         }
         public async Task<Request> GetRequestFullDataAsync(int id)
         {
-            var request = await AppContext.Request.Where(r => r.Id == id).Include(r => r.RequestCategories).ThenInclude(c => c.Category).Include(i => i.Image).FirstOrDefaultAsync();
+            var request = await AppContext.Request.Where(r => r.Id == id).Include(r => r.RequestCategories).ThenInclude(c => c.Category).Include(i => i.Image).Include(i=>i.User).FirstOrDefaultAsync();
             return request;
         }
     }

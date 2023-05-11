@@ -37,7 +37,6 @@ namespace ConsultancyApp.MVC.Models.ViewModels
         [DataType(DataType.Password)]
         [Compare("Password", ErrorMessage = "İki parola aynı olmalıdır!")]
         public string RePassword { get; set; }
-
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime ModifiedDate { get; set; }=DateTime.Now;
     }

@@ -1,0 +1,153 @@
+﻿@model PsychologistUpdateViewModel
+<!-- Content wrapper -->
+<div class="content-wrapper">
+    <!-- Content -->
+    <div class="container-xxl flex-grow-1 container-p-y">
+        <div class="row">
+            <div class="col-md-12">
+                <form asp-area="Admin"
+                      asp-controller="Request"
+                      asp-action="Manage"
+                      method="post"
+                enctype="multipart/form-data">
+                    <input type="hidden" class="form-control" asp-for="Name" />
+                    <input type="hidden" class="form-control" asp-for="User.Id" />
+                    <input type="hidden" class="form-control" asp-for="User.Password" />
+                    <input type="hidden" class="form-control" asp-for="Image" />
+                    <input type="hidden" class="form-control" asp-for="Gender" />
+                    <input type="hidden" class="form-control" asp-for="Image.Url" />
+                    <input type="hidden" class="form-control" asp-for="Image.Id" />
+
+                    <div class="card mb-4">
+                        <h5 class="card-header">Profil Detay</h5>
+                        <!-- Account -->
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="d-flex flex-column gap-4">
+                                        <img src="~/image/@Model.Image.Url"
+                                             alt="@Model.Name"
+                                             class="d-block rounded ms-4"
+                                             height="170"
+                                             width="170"
+                                             id="uploadedAvatar" />
+
+                                    </div>
+                                </div>
+                                <div class="col-8">
+
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h2>Kategori</h2>
+                                            @foreach (var category in Model.Categories)
+                                            {
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" name="SelectedCategories" value="@category.Id" @if (Model.SelectedCategories != null)
+                                                    {
+                                                        @(Model.SelectedCategories.Any(sc => sc == category.Id) ? "checked" : "")
+                                                    } />
+                                                    <label class="form-check-label">@category.Name</label>
+                                                </div>
+                                            }
+                                        </div>
+                                        <div class="col-3">
+                                            <h2>Cinsiyet</h2>
+                                            <label>@Model.Gender</label>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <hr class="my-0" />
+                        <div class="card-body container">
+                            <div class="row men-2">
+                                <div class="mb-3 col-md-4">
+                                    <label class="form-label" asp-for="User.FirstName"></label>
+                                    <input class="form-control" asp-for="User.FirstName" />
+                                    <span class="text-danger" asp-validation-for="User.FirstName"></span>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label class="form-label" asp-for="User.LastName"></label>
+                                    <input class="form-control" asp-for="User.LastName" />
+                                    <span class="text-danger" asp-validation-for="User.LastName"></span>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label class="form-label" asp-for="GraduationYear"></label>
+                                    <input class="form-control" asp-for="GraduationYear" />
+                                    <span class="text-danger" asp-validation-for="GraduationYear"></span>
+                                </div>
+
+                                <div class="mb-3 col-md-4">
+                                    <label class="form-label" asp-for="User.UserName"></label>
+                                    <input class="form-control" asp-for="User.UserName" />
+                                    <span class="text-danger" asp-validation-for="User.UserName"></span>
+                                </div>
+                                <div class="mb-3 col-md-4   ">
+                                    <label class="form-label" asp-for="Price"></label>
+                                    <input class="form-control" asp-for="Price" value="@($"{Model.Price:N0}")" />
+                                    <span class="text-danger" asp-validation-for="Price"></span>
+                                </div>
+                                <div class="mb-3 col-md-4">
+                                    <label class="form-label" asp-for="Education"></label>
+                                    <input class="form-control" asp-for="Education" />
+                                    <span class="text-danger" asp-validation-for="Education"></span>
+                                </div>
+                                <div class="mb-3 col-md-12">
+                                    <label class="form-label" asp-for="User.Email"></label>
+                                    <input class="form-control" asp-for="User.Email" />
+                                    <span class="text-danger" asp-validation-for="User.Email"></span>
+                                </div>
+
+                                
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="About"></label>
+                                    <textarea class="form-control" asp-for="About" id="editor"></textarea>
+                                    <span class="text-danger" asp-validation-for="About"></span>
+                                </div>
+                                <div class="mb-3 col-12">
+                                    <label class="form-label" asp-for="Experience"></label>
+                                    <textarea class="form-control" asp-for="Experience"></textarea>
+                                    <span class="text-danger" asp-validation-for="Experience"></span>
+                                </div>
+                                <div class="mb-3 form-check ms-3">
+                                    <input type="checkbox" class="form-check-input" asp-for="IsApproved">
+                                    <label class="form-check-label" asp-for="IsApproved"></label>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <button type="submit" class="btn btn-primary me-2" >Onayla</button>
+                                <a type="reset" class="btn btn-outline-secondary" asp-area="Admin" asp-controller="Request" asp-action="Index">Vazgeç</a>
+                            </div>
+                        </div>
+                </form>
+
+                <!-- /Account -->
+            </div>
+            <div class="card">
+                <h5 class="card-header">Sil</h5>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3 col-12 mb-0">
+                            <div class="alert alert-warning">
+                                <h6 class="alert-heading fw-bold mb-1">Silmek istedğinizden emin misiniz?</h6>
+                            </div>
+                        </div>
+                        <form asp-area="Admin"
+                              asp-controller="Request"
+                              asp-action="Delete"   
+                              method="post">
+                            <input type="hidden" asp-for="@Model.Id" />
+                            <a type="submit" class="btn btn-danger deactivate-account" asp-area="Admin" asp-controller="Request" asp-action="Delete"> Sil</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / Content -->
+
+<div class="content-backdrop fade"></div>
+<!-- Content wrapper -->

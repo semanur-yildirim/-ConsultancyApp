@@ -1,12 +1,16 @@
-﻿@using ConsultancyApp.Entity.Concrete;
-@model List<Request>
-
+﻿@model List<RequestViewModel>
 <div class="mt-5 ms-5 me-5">
+    <div class="d-flex justify-content-between">
+        <h4>Psikolog Listesi</h4>     
+    </div>
     <table id="myDataTable" class="table table-bordered table-sm">
         <thead class="bg-label-success">
             <tr>
                 <th width="50">Id</th>
                 <th>Psikolog Adı</th>
+                <th>Kategoriler</th>
+
+                <th width="130">Onaylı?</th>
                 <th width="180">İşlemler</th>
             </tr>
         </thead>
@@ -15,12 +19,17 @@
             {
                 <tr class="text-center">
                     <td class="align-middle">@psychologist.Id</td>
-                    <td class="align-middle">@psychologist.Name</td>
+                  <td class="align-middle">@psychologist.Name</td>
+                    <td>
+                        <a asp-area="Admin" asp-controller="Category" asp-action="GetCategoryByPsychologist" asp-route-id="@psychologist.Id" class="text-primary">
+                            @psychologist.Categories.Count()
+                        </a>
+                    </td>
                     <td>
                         <form id="form-is-home_@psychologist.Id"
                           asp-area="Admin"
-                          asp-controller="Psychologist"
-                          asp-action="UpdateIsHome"
+                          asp-controller="Request"
+                          asp-action="AprovedStatus"
                           asp-route-id="@psychologist.Id">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" asp-for=@psychologist.IsApproved onchange="document.getElementById('form-is-home_@psychologist.Id').submit();">
@@ -30,10 +39,10 @@
                     <td class="d-flex justify-content-around">
                         <a class="btn-warning py-1 pe-3 ps-3"
                        asp-area="Admin"
-                       asp-controller="Psychologist"
-                       asp-action="Edit"
+                       asp-controller="Request"
+                       asp-action="Manage"
                        asp-route-id="@psychologist.Id">
-                            Görüntüle
+                            İncele
                         </a>
 
                         <!-- Button trigger modal -->
@@ -45,7 +54,7 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Sİl</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
@@ -61,7 +70,7 @@
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
                                         <a class="btn-danger py-1 pe-3 ps-3"
                                        asp-area="Admin"
-                                       asp-controller="Psychologist"
+                                       asp-controller="Request"
                                        asp-action="Delete"
                                        asp-route-id="@psychologist.Id">
                                             Sil

@@ -20,6 +20,8 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
                 new Role{Name="Admin", Description="Yöneticiler", NormalizedName="ADMIN"},
                 new Role{Name="Customer", Description="Kullanıcılar", NormalizedName="CUSTOMER"},
                 new Role{Name="Psychologist", Description="Psikologlar", NormalizedName="PSYCHOLOGIST"},
+                new Role{Name="Request", Description="Danışman Talepleri", NormalizedName="REQUEST"}
+
             };
             modelBuilder.Entity<Role>().HasData(roles);
 
@@ -27,7 +29,10 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             #region Kullanıcı Bilgileri
             List<User> users = new List<User>
             {
+
+
                 #region Psychologist
+                
                     new User{Id="8da007be-c50b-4973-aa45-224b7358hkn15",FirstName="Selvi", LastName="Kartal", UserName="selvi", NormalizedUserName="SELVI", Email="selvi@gmail.com", NormalizedEmail="SELVI@GMAIL.COM", DateOfBirth=new DateTime(1978,5,2), EmailConfirmed=true,NormalizedName="SELVIKARTAL" ,Type=(EnumType)1},
 
                  new User{Id="a20b74f2-9d2c-47ee-bf20-13a75c6tpr62",FirstName="Zeynep", LastName="Öztürk", UserName="zeynep", NormalizedUserName="ZEYNEP", Email="zeynep@gmail.com", NormalizedEmail="ZEYNEP@GMAIL.COM", DateOfBirth=new DateTime(1978,5,2), EmailConfirmed=true,NormalizedName="ZEYNEPOZTURK" ,Type=(EnumType)1},
@@ -60,6 +65,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
                 #region Admin
                  new User{Id="kema7e42-6e53-4696-b350-ke56Or2c79fa",FirstName="Semanur", LastName="Yıldırım", UserName="semanur", NormalizedUserName="SEMANUR", Email="semanur@gmail.com", NormalizedEmail="SEMANUR@GMAIL.COM", DateOfBirth=new DateTime(1978,5,2), EmailConfirmed=true,NormalizedName="SEMANURYILDIRIM" ,Type=0},
             	#endregion
+                                  new User{Id="8da007be-c50b-4973-aa45-224b73",FirstName="Sevil", LastName="Sevil", UserName="sevil", NormalizedUserName="SEVIL", Email="sevil@gmail.com", NormalizedEmail="SEVIL@GMAIL.COM", DateOfBirth=new DateTime(1978,5,2), EmailConfirmed=true,NormalizedName="SEVILKARTAL" ,Type=(EnumType)3},
             };
             modelBuilder.Entity<User>().HasData(users);
             #endregion
@@ -73,8 +79,24 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
                 new Customer { Id = 3, CreatedDate = DateTime.Now, ModifiedDate = DateTime.Now, IsApproved = true, Name = "Mehmet Tatlı", Url = "mehmet-tatli", userId = users[12].Id, Address = "Karşıyaka mahallesi Yalı Caddesi no:27 Daire:5"}
             };
             modelBuilder.Entity<Customer>().HasData(customers);
-
             #endregion
+            List<Request> request = new List<Request>
+            {
+                new Request
+                {
+                    Id = 1,
+                    IsApproved = false,
+                    Price = 450,
+                    Url = "Sevil-Kara",
+                    Gender = "Kadın",
+                    GraduationYear = new DateTime(2000, 12, 5),
+                    Education = "İstanbul Üniversitesi Psikoloji",
+                    Experience = "Online ve Yüz yüze Terapi",
+                    About = "Sosyal Terapist, Bağımlılık Terapisti, Psikodrama Yöneticisi, Organizasyon Geliştirici İzmir Üniversitesi bölümünü tamamlayıp, ardından Almanya’da Sağlık Managment Yüksek Lisans Master egitimini  Magdeburg-Stendal Yüksekokulunda tamamlamıştır. Almanya’da psikososyal alanda 1982 yılından itibaren mesleki calışmasına paralel, 2013 tarihine kadar Sosyalterapi, Bagimlilik terapisti, Psikodrama Grup Yöneticisi, Organizasyon Geliştirici ve Choac  eğitimlerini aldı." ,
+                    UserId="8da007be-c50b-4973-aa45-224b73"
+                 }
+            };
+            modelBuilder.Entity<Request>().HasData(request);
             #region Psychologist
             List<Psychologist> psychologists = new List<Psychologist>
             {
@@ -114,6 +136,8 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
             users[11].PasswordHash = passwordHasher.HashPassword(users[0], "Qwe123.");
             users[12].PasswordHash = passwordHasher.HashPassword(users[0], "Qwe123.");
             users[13].PasswordHash = passwordHasher.HashPassword(users[0], "Qwe123.");
+            users[14].PasswordHash = passwordHasher.HashPassword(users[0], "Qwe123.");
+
             #endregion
             #region Rol Atama İşlemleri
             List<IdentityUserRole<string>> userRoles = new List<IdentityUserRole<string>>
@@ -132,8 +156,9 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
                 new IdentityUserRole<string>{ UserId=users[10].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Customer").Id},
                 new IdentityUserRole<string>{ UserId=users[11].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Customer").Id},
                 new IdentityUserRole<string>{ UserId=users[12].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Customer").Id},
+                new IdentityUserRole<string>{ UserId=users[13].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Admin").Id},
+                new IdentityUserRole<string>{ UserId=users[14].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Customer").Id},
 
-                new IdentityUserRole<string>{ UserId=users[13].Id, RoleId=roles.FirstOrDefault(r=>r.Name=="Admin").Id}
             };
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(userRoles);
             #endregion
@@ -154,7 +179,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Extensions
                 new Cart{Id=11, UserId=users[10].Id},
                 new Cart{Id=12, UserId=users[11].Id},
                 new Cart{Id=13, UserId=users[12].Id},
-                new Cart{Id=14, UserId=users[13].Id}
+
             };
             modelBuilder.Entity<Cart>().HasData(carts);
             #endregion

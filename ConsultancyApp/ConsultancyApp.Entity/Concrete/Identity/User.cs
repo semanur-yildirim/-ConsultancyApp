@@ -20,6 +20,7 @@ namespace ConsultancyApp.Entity.Concrete.Identity
         public EnumType Type { get; set; }
         public Psychologist? Psychologist { get; set; }
         public Customer? Customer { get; set; }
+        public Request? Request { get; set; }
         public Cart Cart { get; set; }
         public Order? Order { get; set; }
     }
@@ -27,6 +28,7 @@ namespace ConsultancyApp.Entity.Concrete.Identity
     {
         Admin = 0,
         Psychologist = 1,
-        Customer = 2
+        Customer = 2,
+        Request=3
     }
 }

@@ -178,6 +178,21 @@ namespace ConsultancyApp.MVC.Controllers
         [HttpPost]
         public async Task<IActionResult> RegisterRequest(RequestRegisterModel requestRegisterModel)
         {
+            User user = new User()
+            {
+                CreatedDate = DateTime.Now,
+                ModifiedDate = DateTime.Now,
+
+                FirstName = requestRegisterModel.User.FirstName,
+                LastName = requestRegisterModel.User.LastName,
+                UserName = requestRegisterModel.User.UserName,
+                NormalizedName = (requestRegisterModel.User.LastName + requestRegisterModel.User.UserName).ToUpper(),
+                Email = requestRegisterModel.User.Email,
+                NormalizedEmail = (requestRegisterModel.User.Email).ToUpper(),
+                PasswordHash=requestRegisterModel.User.Password,
+                Type = EnumType.Request,
+                DateOfBirth=requestRegisterModel.User.DateOfBirth
+            };
             Image image = new Image();
             image.CreatedDate = DateTime.Now;
             image.ModifiedDate = DateTime.Now;
@@ -188,22 +203,23 @@ namespace ConsultancyApp.MVC.Controllers
                 CreatedDate = DateTime.Now,
                 ModifiedDate = DateTime.Now,
                 IsApproved = requestRegisterModel.IsApproved,
-                FirstName = requestRegisterModel.FirstName,
-                LastName = requestRegisterModel.LastName,
-                UserName = requestRegisterModel.UserName,
-                Email = requestRegisterModel.Email,
                 About = requestRegisterModel.About,
-                DateOfBirth = requestRegisterModel.DateOfBirth,
                 Education = requestRegisterModel.Education,
                 Experience = requestRegisterModel.Experience,
                 Gender = requestRegisterModel.Gender,
                 GraduationYear = requestRegisterModel.GraduationYear,
-                Name = requestRegisterModel.FirstName +" "+ requestRegisterModel.LastName,
-                Password=requestRegisterModel.Password,
                 Price=requestRegisterModel.Price,
-                Url = Jobs.GetUrl(requestRegisterModel.FirstName + requestRegisterModel.LastName),
+                Url = Jobs.GetUrl(requestRegisterModel.User.FirstName + requestRegisterModel.User.LastName),
                 Image=image
             };
+            var result = await _userManager.CreateAsync(user, requestRegisterModel.User.Password);
+            request.User = user;
+
+            if (result.Succeeded)
+            {
+                await _userManager.AddToRoleAsync(user, "Request");
+            }
+
             await _requestService.CreateRequest(request, requestRegisterModel.SelectedCategories, image);
             _notyfService.Success("Talebiniz oluşturuldu.");
             return RedirectToAction("Index","Home");
