@@ -35,6 +35,19 @@
                     <label>@categories.Name</label>
                     }              
                 </div>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <form asp-area=""
+                      asp-controller="Cart"
+                      asp-action="AddToCart"
+                          method="post"
+                          class="d-inline">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" name="Quantity" value="1" />
+                        <button type="submit" class="btn btn-success btn-sm"> Randevu Al</button>
+
+                    </form>
+                }
             </div>
         </div>
 

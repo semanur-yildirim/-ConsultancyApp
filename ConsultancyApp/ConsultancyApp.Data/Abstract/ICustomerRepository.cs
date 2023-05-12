@@ -11,6 +11,7 @@ namespace ConsultancyApp.Data.Abstract
     {
         Task<List<Customer>> GetAllCustomerFullDataAsycn(bool IsApprovedStatus = false);
         Task<Customer> GetCustomerFullDataAsync(int id);
+        Task<Customer> GetCustomerFullDataByUserId(string userId);
         Task UpdateCustomer(Customer customer);
         Task<List<Customer>> GetCustomerByPsychologist(int psychologistId);
     }

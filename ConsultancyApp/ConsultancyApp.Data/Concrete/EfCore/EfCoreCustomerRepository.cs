@@ -43,6 +43,13 @@ namespace ConsultancyApp.Data.Concrete.EfCore
             return customer;
         }
 
+        public async Task<Customer> GetCustomerFullDataByUserId(string userId)
+        {
+            var customer = await AppContext.Customer.Where(c => c.userId == userId).FirstOrDefaultAsync();
+            return customer;
+
+        }
+
         public async Task UpdateCustomer(Customer customer)
         {
             var updateCustomer = await AppContext.Customer.Include(c => c.PsychologistCustomer).FirstOrDefaultAsync(c=>c.Id==customer.Id);

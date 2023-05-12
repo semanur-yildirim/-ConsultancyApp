@@ -25,8 +25,9 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         private readonly RoleManager<Role> _roleManager;
         private readonly IImageService _imageService;
         private readonly INotyfService _notyfService;
+        private readonly ICartService _cartService;
 
-        public PsychologistController(IPsychologistService psychologistService, UserManager<User> userManager, ICategoryService categoryService, RoleManager<Role> roleManager, ICustomerService customerService, IImageService imageService, IPsychologistDescriptionService psychologistDescriptionService, INotyfService notyfService)
+        public PsychologistController(IPsychologistService psychologistService, UserManager<User> userManager, ICategoryService categoryService, RoleManager<Role> roleManager, ICustomerService customerService, IImageService imageService, IPsychologistDescriptionService psychologistDescriptionService, INotyfService notyfService, ICartService cartService)
         {
             _psychologistService = psychologistService;
             _userManager = userManager;
@@ -36,6 +37,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             _imageService = imageService;
             _psychologistDescriptionService = psychologistDescriptionService;
             _notyfService = notyfService;
+            _cartService = cartService;
         }
         #region List
         public async Task<IActionResult> Index()
@@ -101,7 +103,9 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     LastName = psychologistAddViewModel.User.LastName,
                     UserName = psychologistAddViewModel.User.UserName,
                     Email = psychologistAddViewModel.User.Email,
-                    Type = psychologistAddViewModel.Type
+                    Type = psychologistAddViewModel.Type,
+                    DateOfBirth=psychologistAddViewModel.User.DateOfBirth
+
                 };
                 Image image = new Image();
                 image.CreatedDate = DateTime.Now;
@@ -127,9 +131,11 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Psychologist");
+                    await _cartService.InitializeCart(user.Id);
                 }
 
                 await _psychologistService.CreatePsychologist(psychologist, psychologistAddViewModel.SelectedCategories, image, psychologistDescription);
+                _notyfService.Success("Kayıt işlemi başarıyla oluşturuldu");
                 return RedirectToAction("Index");
 
             }
@@ -152,6 +158,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             userViewModel.UserName = user.UserName;
             userViewModel.Type = user.Type;
             userViewModel.Password = user.PasswordHash;
+            userViewModel.DateOfBirth = user.DateOfBirth;
 
             PsychologistUpdateViewModel psychologistUpdateViewModel = new PsychologistUpdateViewModel()
             {
@@ -216,6 +223,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 user.Type = psychologistUpdateViewModel.User.Type;
                 user.UserName = psychologistUpdateViewModel.User.UserName;
                 user.NormalizedName = (psychologistUpdateViewModel.User.FirstName + psychologistUpdateViewModel.User.FirstName).ToUpper();
+                user.DateOfBirth = psychologistUpdateViewModel.User.DateOfBirth;
                 var result = await _userManager.UpdateAsync(user);
 
                 if (!result.Succeeded) { return NotFound(); }

@@ -52,6 +52,12 @@ namespace ConsultancyApp.Business.Concrete
         {
             return await _customerRepository.GetCustomerFullDataAsync(id);
         }
+
+        public async Task<Customer> GetCustomerFullDataByUserId(string userId)
+        {
+            return await _customerRepository.GetCustomerFullDataByUserId(userId);
+        }
+
         public void Update(Customer customer)
         {
             _customerRepository.Update(customer);

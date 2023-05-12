@@ -21,7 +21,9 @@ namespace ConsultancyApp.MVC.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IRequestService _requestService;
         private readonly INotyfService _notyfService;
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IPsychologistService psychologistService, ICustomerService customerService, ICategoryService categoryService, IRequestService requestService, INotyfService notyfService)
+        private readonly ICartService _cartService;
+
+        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, IPsychologistService psychologistService, ICustomerService customerService, ICategoryService categoryService, IRequestService requestService, INotyfService notyfService, ICartService cartService)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -30,6 +32,7 @@ namespace ConsultancyApp.MVC.Controllers
             _categoryService = categoryService;
             _requestService = requestService;
             _notyfService = notyfService;
+            _cartService = cartService;
         }
         #region Login
         [HttpGet]
@@ -158,8 +161,11 @@ namespace ConsultancyApp.MVC.Controllers
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Customer");
+                    await _cartService.InitializeCart(user.Id);
+                    
                 }
                 await _customerService.CreateAsync(customer);
+                _notyfService.Success("Kaydınız başarıyla oluşturulmuştur.");
                 return RedirectToAction("Index","Home");
 
             }

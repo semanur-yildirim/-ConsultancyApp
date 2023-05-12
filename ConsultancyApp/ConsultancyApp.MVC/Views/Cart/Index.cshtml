@@ -1,6 +1,6 @@
 ﻿@model CartViewModel
 
-<div class="margintop">
+<div class="margintop container">
     <h6 class="display-6 text-center">Alışveriş Sepetim</h6>
     <hr />
     @if (Model.CartItems.Count == 0)
@@ -19,11 +19,10 @@
                     <thead>
                         <tr class="text-danger">
                             <th>Resim</th>
-                            <th>Ürün</th>
-                            <th>Fiyat</th>
-                            <th width="60">Adet</th>
+                            <th>Danışman</th>
+                            <th>Ücret</th>
+                            <th width="60" class="">Seans</th>
                             <th>Toplam</th>
-                            <th>KDV</th>
                             <th>Sil</th>
                         </tr>
                     </thead>
@@ -32,7 +31,7 @@
                         {
                             <tr>
                                 <td>
-                                    <img src="~/images/books/@cartItem.ImageUrl" width="50" />
+                                    <img src="~/image/@cartItem.ImageUrl" width="100" />
                                 </td>
                                 <td>@cartItem.PsychologistName</td>
                                 <td>@($"{cartItem.ItemPrice:C2}")</td>

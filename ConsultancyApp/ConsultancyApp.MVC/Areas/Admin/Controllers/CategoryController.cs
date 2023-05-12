@@ -51,7 +51,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         #region Create
         [HttpGet]
 
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
             return View();
         }

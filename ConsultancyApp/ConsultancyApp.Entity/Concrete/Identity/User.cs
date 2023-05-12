@@ -22,7 +22,7 @@ namespace ConsultancyApp.Entity.Concrete.Identity
         public Customer? Customer { get; set; }
         public Request? Request { get; set; }
         public Cart Cart { get; set; }
-        public Order? Order { get; set; }
+        public List<Order>? Orders { get; set; }
     }
     public enum EnumType
     {

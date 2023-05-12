@@ -1,4 +1,5 @@
-﻿using ConsultancyApp.Business.Abstract;
+﻿using AspNetCoreHero.ToastNotification.Abstractions;
+using ConsultancyApp.Business.Abstract;
 using ConsultancyApp.Core;
 using ConsultancyApp.Entity.Concrete;
 using ConsultancyApp.Entity.Concrete.Identity;
@@ -16,13 +17,17 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         private readonly RoleManager<Role> _roleManager;
         private readonly UserManager<User> _userManager;
         private readonly IPsychologistService _psychologistService;
+        private readonly ICartService _cartService;
+        private readonly INotyfService _notyfService;
 
-        public CustomerController(ICustomerService customerService, RoleManager<Role> roleManager, UserManager<User> userManager, IPsychologistService psychologistService)
+        public CustomerController(ICustomerService customerService, RoleManager<Role> roleManager, UserManager<User> userManager, IPsychologistService psychologistService, ICartService cartService, INotyfService notyfService)
         {
             _customerService = customerService;
             _roleManager = roleManager;
             _userManager = userManager;
             _psychologistService = psychologistService;
+            _cartService = cartService;
+            _notyfService = notyfService;
         }
         #region List
         public async Task<IActionResult> Index()
@@ -69,7 +74,8 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     UserName = customerAddViewModel.User.UserName,
                     Email = customerAddViewModel.User.Email,
                     Type = customerAddViewModel.Type,
-                    NormalizedName = (customerAddViewModel.User.FirstName + customerAddViewModel.User.LastName).ToUpper()
+                    NormalizedName = (customerAddViewModel.User.FirstName + customerAddViewModel.User.LastName).ToUpper(),
+                    DateOfBirth=customerAddViewModel.User.DateOfBirth,
                 };
                 Customer customer = new Customer()
                 {
@@ -86,8 +92,11 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Customer");
+                    await _cartService.InitializeCart(user.Id);
                 }
                 await _customerService.CreateAsync(customer);
+                _notyfService.Success("Kayıt başarıyla oluşturulmuştur.");
+
                 return RedirectToAction("Index");
 
             }
@@ -120,6 +129,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             userViewModel.UserName = user.UserName;
             userViewModel.Type = user.Type;
             userViewModel.Password = user.PasswordHash;
+            userViewModel.DateOfBirth = user.DateOfBirth;
 
             CustomerUpdateViewModel customerUpdateViewModel = new CustomerUpdateViewModel()
             {
@@ -148,6 +158,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 user.EmailConfirmed = customerUpdateViewModel.User.EmailConfirmed;
                 user.Type = customerUpdateViewModel.User.Type;
                 user.UserName = customerUpdateViewModel.User.UserName;
+                user.DateOfBirth = customerUpdateViewModel.User.DateOfBirth;
                 var result = await _userManager.UpdateAsync(user);
 
                 if (!result.Succeeded) { return NotFound(); }

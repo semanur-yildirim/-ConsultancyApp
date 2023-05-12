@@ -53,12 +53,17 @@
                                     <span class="text-danger" asp-validation-for="User.UserName"></span>
                                 </div>
                                 <div class="mb-3 col-md-6">
+                                    <label class="form-label" asp-for="User.DateOfBirth"></label>
+                                    <input class="form-control" asp-for="User.DateOfBirth" />
+                                    <span class="text-danger" asp-validation-for="User.DateOfBirth"></span>
+                                </div>
+                                <div class="mb-3 col-md-6">
                                     <label class="form-label" asp-for="User.Email"></label>
                                     <input class="form-control" asp-for="User.Email" />
                                     <span class="text-danger" asp-validation-for="User.Email"></span>
                                 </div>
 
-                                <div class="mb-3 col-12">
+                                <div class="mb-3 col-6">
                                     <label class="form-label" asp-for="Address"></label>
                                     <textarea class="form-control" asp-for="Address"></textarea>
                                     <span class="text-danger" asp-validation-for="Address"></span>

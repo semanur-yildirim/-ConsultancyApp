@@ -23,7 +23,8 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
         private readonly IImageService _imageService;
         private readonly INotyfService _notyfService;
         private readonly IRequestService _requestService;
-        public RequestController(IPsychologistService psychologistService, IPsychologistDescriptionService psychologistDescriptionService, ICustomerService customerService, UserManager<User> userManager, ICategoryService categoryService, RoleManager<Role> roleManager, IImageService imageService, INotyfService notyfService, IRequestService requestService)
+        private readonly ICartService _cartService;
+        public RequestController(IPsychologistService psychologistService, IPsychologistDescriptionService psychologistDescriptionService, ICustomerService customerService, UserManager<User> userManager, ICategoryService categoryService, RoleManager<Role> roleManager, IImageService imageService, INotyfService notyfService, IRequestService requestService, ICartService cartService)
         {
             _psychologistService = psychologistService;
             _psychologistDescriptionService = psychologistDescriptionService;
@@ -34,6 +35,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
             _imageService = imageService;
             _notyfService = notyfService;
             _requestService = requestService;
+            _cartService = cartService;
         }
         #region List
         public async Task<IActionResult> Index()
@@ -92,7 +94,8 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     UserName= user.UserName,
                     Email= user.Email,
                     EmailConfirmed= user.EmailConfirmed,
-                    Password=user.PasswordHash
+                    Password=user.PasswordHash,
+                    DateOfBirth=user.DateOfBirth
                 },
                  SelectedCategories = request.RequestCategories.Select(c => c.CategoryId).ToArray(),
 
@@ -124,6 +127,7 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                     UserName = psychologistUpdateViewModel.User.UserName,
                     Email = psychologistUpdateViewModel.User.Email,
                     Type = EnumType.Psychologist,
+                    DateOfBirth=psychologistUpdateViewModel.User.DateOfBirth
                 };
                 Image image = new Image();
                 image.CreatedDate = DateTime.Now;
@@ -148,12 +152,12 @@ namespace ConsultancyApp.MVC.Areas.Admin.Controllers
                 if (result.Succeeded)
                 {
                     await _userManager.AddToRoleAsync(user, "Psychologist");
+                   // await _cartService.InitializeCart(user.ıd);
                 }
 
                 await _psychologistService.CreatePsychologist(psychologist, psychologistUpdateViewModel.SelectedCategories, image, psychologistDescription);
+                _notyfService.Success("Onaylama işlemi başarıyla gerçekleştirilmiştir.");
                 return RedirectToAction("Index");
-
-
 
             }
             return View(psychologistUpdateViewModel);

@@ -38,6 +38,18 @@
           }
         }
       },
+      "Iyzipay/2.1.55": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.1/Iyzipay.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.1/Iyzipay.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/7.0.4": {
         "type": "package",
         "compile": {
@@ -3732,6 +3744,19 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
+      ]
+    },
+    "Iyzipay/2.1.55": {
+      "sha512": "w4UwGNahHAWBv12RK5qIwSiDcmV84bWzBsGJ7Gp2+T1OqFjF6ugQTWamMWIkfCogznd3xO1ftzST8aK9ou5Ypg==",
+      "type": "package",
+      "path": "iyzipay/2.1.55",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "iyzipay.2.1.55.nupkg.sha512",
+        "iyzipay.nuspec",
+        "lib/net45/Iyzipay.dll",
+        "lib/netstandard2.1/Iyzipay.dll"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/7.0.4": {
@@ -10411,6 +10436,7 @@
       "AspNetCoreHero.ToastNotification >= 1.1.0",
       "ConsultancyApp.Business >= 1.0.0",
       "ConsultancyApp.Core >= 1.0.0",
+      "Iyzipay >= 2.1.55",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 7.0.4",
@@ -10472,6 +10498,10 @@
           "AspNetCoreHero.ToastNotification": {
             "target": "Package",
             "version": "[1.1.0, )"
+          },
+          "Iyzipay": {
+            "target": "Package",
+            "version": "[2.1.55, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",

@@ -15,7 +15,7 @@ namespace ConsultancyApp.Data.Concrete.EfCore.Config
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
-            builder.HasOne(t => t.User).WithOne(t => t.Order).HasForeignKey<Order>(t => t.UserId).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(x => x.User).WithMany(x => x.Orders).HasForeignKey(x => x.UserId).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

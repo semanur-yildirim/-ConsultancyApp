@@ -37,9 +37,14 @@
                                     <span class="text-danger" asp-validation-for="User.UserName"></span>
                                 </div>
                                 <div class=" mb-0 col-md-6">
-                                    <input class="form-control" asp-for="User.Password">
                                     <label class="form-label" asp-for="User.Password"></label>
+                                    <input class="form-control" asp-for="User.Password">
                                     <span class="text-danger" asp-validation-for="User.Password"></span>
+                                </div>
+                                <div class=" mb-0 col-md-6">
+                                    <label class="form-label" asp-for="User.DateOfBirth"></label>
+                                    <input class="form-control" asp-for="User.DateOfBirth">
+                                    <span class="text-danger" asp-validation-for="User.DateOfBirth"></span>
                                 </div>
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label" asp-for="User.Email"></label>

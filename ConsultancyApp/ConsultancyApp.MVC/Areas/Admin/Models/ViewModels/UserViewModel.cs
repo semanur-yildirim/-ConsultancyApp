@@ -27,6 +27,10 @@ namespace ConsultancyApp.MVC.Areas.Admin.Models.ViewModels
 
         [DisplayName("Email Onayı")]
         public bool EmailConfirmed { get; set; }
+        [DisplayName("Doğum Tarihi Adı")]
+        [Required(ErrorMessage = "Doğum tarihi alanı zorunludur")]
+        [DataType(DataType.Date)]
+        public DateTime? DateOfBirth { get; set; }
 
         [DisplayName("Roller")]
         public EnumType Type { get; set; }
