@@ -49,7 +49,7 @@ h6 {
 # Sections & Section Header
 --------------------------------------------------------------*/
 section {
-    padding: 80px 0;
+    padding: 80px 0px 0px 0px;
     overflow: hidden;
 }
 
@@ -59,7 +59,6 @@ section {
 
 .section-header {
     text-align: center;
-    padding-bottom: 70px;
 }
 
     .section-header h2 {
@@ -801,24 +800,25 @@ section {
         border-color: var(--color-default);
     }
 
-/*.footer {
+.footer {
     color: #fff;
-    background: url("../img/footer-bg.jpg") top center no-repeat;
+    background: url("../img/footer-bg.jpg") bottom center no-repeat;
     background-size: cover;
     font-size: 14px;
-    padding: 80px 0 60px 0;
+    padding: 80px 0 10px 0;
     position: relative;
 }
 
     .footer:before {
         content: "";
         background: rgba(0, 0, 0, 0.8);
-       position: absolute;
+        position: absolute;
         inset: 0;
     }
 
     .footer .footer-content .footer-info {
         margin-bottom: 30px;
+
     }
 
         .footer .footer-content .footer-info h3 {
@@ -910,4 +910,4 @@ section {
 
         .footer .footer-legal .credits a {
             color: var(--color-primary);
-        }*/
+        }

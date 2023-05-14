@@ -1,0 +1,28 @@
+﻿@model List<CategoriesModel>
+@{
+    ViewData["Title"] = "Kategoriler";
+}
+ü<section id="services" class="services section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+            <h2>Terapiler</h2>
+            <p>
+                Voluptatem quibusdam ut ullam perferendis repellat non ut consequuntur est eveniet deleniti fignissimos eos
+                quam
+            </p>
+        </div>
+        @if (Model.Count() > 0)
+        {
+            <div class="row gy-4 text-centerx ">
+                @foreach (var category in Model)
+                {
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        @await Html.PartialAsync("_CategoryPartial",category)
+                    </div>
+                }
+            </div>
+        }
+
+    </div>
+</section><!-- End Services Section -->

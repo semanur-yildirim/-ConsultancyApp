@@ -1,54 +1,76 @@
 ﻿@model PsychologistModel
-<div class="margintop ms-5 ">
-    <div class="row">
-        @*Sol Taraf*@
-        <div class="col-3">
-            <div class="row">
-                <div class="col-12">
-                    <img src="~/image/@Model.Image.Url" style="width: 15rem;" />
-
-                </div>
-                <label class="col-12">
-                    @Model.Name
-                </label>
-            </div>
+<div class="margintop">
+    @*Resim*@
+    <div class="card" style="width: 14rem;">
+        <img src="~/image/@Model.Image.Url" style="width: 14rem;" />
+        <div class="card-body">
+            <h5 class="card-title fw-bold ">@Model.Name</h5>
+            <h6 class="">Seans Ücreti: @($"{Model.Price:C0}")</h6>
+           
         </div>
-        @*Sağ Taraf*@
-        <div class="col-7">
-            <div class="row g-4 ">
-                <div>
-                    <h4>Hakkında</h4>
-                    <label>@Model.PsychologistDescription.About</label>
-                </div>
-                 <div>
-                    <h4>Eğitim Bilgileri</h4>
-                    <label>@Model.PsychologistDescription.Education</label>
-                </div>
-                <div>
-                    <h4>Deneyim</h4>
-                    <label>@Model.PsychologistDescription.Experience</label>
-                </div>
-                 <div>
-                    <h4>Danışmanlık Verdiği Alanlar</h4>
-                    @foreach (var categories in Model.categories)
-                    {
-                    <label>@categories.Name</label>
-                    }              
-                </div>
-                @if (User.Identity.IsAuthenticated)
-                {
-                    <form asp-area=""
-                      asp-controller="Cart"
-                      asp-action="AddToCart"
-                          method="post"
-                          class="d-inline">
-                        <input type="hidden" asp-for="Id" />
-                        <input type="hidden" name="Quantity" value="1" />
-                        <button type="submit" class="btn btn-success btn-sm"> Randevu Al</button>
+    </div>
+    @*açıklama*@
+    <div>
+        <div>
+            <h4>Hakkında</h4>
+            <label>@Model.PsychologistDescription.About</label>
+        </div>
+        <div>
+            <h4>Eğitim Bilgileri</h4>
+            <label>@Model.PsychologistDescription.Education</label>
+        </div>
+        <div>
+            <h4>Deneyim</h4>
+            <label>@Model.PsychologistDescription.Experience</label>
+        </div>
+        <div>
+            <h4>Danışmanlık Verdiği Alanlar</h4>
+            @foreach (var categories in Model.categories)
+            {
+                <label>@categories.Name</label>
+            }
+        </div>
+    </div>
+    @*Randevu*@
+    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+        <div class="row border">
+            <label>Randevu istediğiniz tarihi seçiniz</label>
+            <input class="form-control" asp-for="PsychologistDescription.GraduationYear">
 
-                    </form>
-                }
+            <div class="col-12">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
             </div>
+            <div class="col-12">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
+            </div>
+            <div class="col-12">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
+            </div>
+            <div class="col-12">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
+            </div>
+            @*@{
+            var result = User.Identity.IsAuthenticated;
+            }*@
+            <form asp-area=""
+                  asp-controller="Cart"
+                  asp-action="AddToCart">
+                <input type="hidden" asp-for="Id" />
+                <input type="hidden" name="Quantity" value="1" />
+                <button type="submit" class="btn btn-success btn-sm mt-4"> Randevu Al</button>
+            </form>
         </div>
 
     </div>

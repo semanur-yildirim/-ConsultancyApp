@@ -593,3 +593,4 @@ C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MV
 C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MVC\obj\Debug\net7.0\ConsultancyApp.MVC.genruntimeconfig.cache
 C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MVC\obj\Debug\net7.0\ref\ConsultancyApp.MVC.dll
 C:\Users\Admin\Documents\GitHub\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MVC\bin\Debug\net7.0\Iyzipay.dll
+C:\Users\seman\OneDrive\Masaüstü\-ConsultancyApp\-ConsultancyApp\ConsultancyApp\ConsultancyApp.MVC\bin\Debug\net7.0\Iyzipay.dll

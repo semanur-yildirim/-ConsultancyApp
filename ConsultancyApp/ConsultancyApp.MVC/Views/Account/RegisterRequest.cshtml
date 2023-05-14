@@ -1,8 +1,8 @@
 ﻿@model RequestRegisterModel
 <!-- Content wrapper -->
-<div class="content-wrapper">
+<div class="content-wrapper margintop container">
     <!-- Content -->
-    <div class="container-xxl flex-grow-1 container-p-y">
+    <div class="container-xxl flex-grow-1 container-p-y  rounded">
         <div class="row">
             <div class="col-md-12">
                 <form asp-area=""
@@ -11,8 +11,8 @@
                       method="post"
                       enctype="multipart/form-data">
                     @* <input  type="hidden" asp-for="@EnumType.Psychologist"/>*@
-                    <div class="card mb-4">
-                        <h5 class="card-header">Yeni Kayıt</h5>
+                    <div class="card mb-4 bg-light">
+                        <h5 class="card-header fw-bold text-center fs-3">Yeni Kayıt</h5>
                         <!-- Account -->
                         <div class="card-body">
                             <div class="row">
@@ -26,6 +26,8 @@
                                                    class="form-control"
                                                    accept="image/"
                                                    style="width:250px" />
+                                            <span class="text-danger" asp-validation-for="Image"></span>
+
                                         </div>
                                     </div>
                                 </div>
@@ -33,7 +35,7 @@
 
                                     <div class="row">
                                         <div class="col-4">
-                                            <h2>Kategori</h2>
+                                            <h3>Kategori</h3>
                                             @foreach (var category in Model.Categories)
                                             {
                                                 <div class="form-check">
@@ -46,7 +48,7 @@
                                             }
                                         </div>
                                         <div class="col-3">
-                                            <h2>Cinsiyet</h2>
+                                            <h3>Cinsiyet</h3>
                                             <div class="mb-3">
                                                 <div class="form-check">
                                                     <input class="form-check-input" type="radio" asp-for="Gender" value="Kadın" checked>
@@ -87,11 +89,7 @@
                                     <input class="form-control" asp-for="User.LastName" />
                                     <span class="text-danger" asp-validation-for="User.LastName"></span>
                                 </div>
-                                <div class="mb-3 col-md-6">
-                                    <label class="form-label" asp-for="Name"></label>
-                                    <input class="form-control" asp-for="Name" />
-                                    <span class="text-danger" asp-validation-for="Name"></span>
-                                </div>
+
                                 <div class="mb-3 col-md-6">
                                     <label class="form-label" asp-for="User.UserName"></label>
                                     <input class="form-control" asp-for="User.UserName" />
@@ -142,9 +140,9 @@
                                     <textarea class="form-control" asp-for="Experience" id="editor2"></textarea>
                                     <span class="text-danger" asp-validation-for="Experience"></span>
                                 </div>
-                                <div class="mb-3 ">
-                                    <button type="submit" class="btn btn-primary me-2">Kaydet</button>
-                                    <button type="reset" class="btn btn-outline-secondary">Vazgeç</button>
+                                <div class="mb-3 text-center ">
+                                    <button type="submit" class="btn btn-success me-2 w-25">Kaydet</button>
+                                    <a asp-area="" asp-controller="Home" asp-action="Index" class="btn btn-secondary">Vazgeç</a>
                                 </div>
                             </div>
 

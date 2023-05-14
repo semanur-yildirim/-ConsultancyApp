@@ -16,10 +16,6 @@ namespace ConsultancyApp.MVC.Models.ViewModels
         [Required(ErrorMessage = "Ücret alanı boş bırakılamaz")]
         public decimal? Price { get; set; }
 
-        [DisplayName(" İsim")]
-        [Required(ErrorMessage = "İsim alanı boş bırakılamaz")]
-        public string Name { get; set; }
-
         [DisplayName(" Cinsiyet Alanı")]
         [Required(ErrorMessage = "Cinsiyet alanı boş bırakılamaz")]
         public string Gender { get; set; }

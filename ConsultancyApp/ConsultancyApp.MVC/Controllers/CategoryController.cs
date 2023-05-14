@@ -17,7 +17,24 @@ namespace ConsultancyApp.MVC.Controllers
             _categoryService = categoryService;
             _psychologistService = psychologistService;
         }
+        public async Task<IActionResult> Index()
+        {
+          var categories= await _categoryService.GetAllCategoriesAsync();
+            List<CategoriesModel> categoryList = new List<CategoriesModel>();
+            categoryList = categories.Select(c => new CategoriesModel
+            {
+                Id=c.Id,
+                Name=c.Name,
+                CreatedDate=c.CreatedDate,
+                ModifiedDate=c.ModifiedDate,
+                IsApproved=c.IsApproved,
+                Url=c.Url,
+                CategoryDescription=c.CategoryDescription,
+                Psychologist=c.PsychologitstCategry.Select(pc=>pc.Psychologist).ToList()
+            }).ToList();
 
+            return View(categoryList);
+        }
         public async Task<IActionResult> CategoryDetails(string categoryurl)
         {
            Category categories = await _categoryService.GetCategoryDetailsByUrlAsync(categoryurl);

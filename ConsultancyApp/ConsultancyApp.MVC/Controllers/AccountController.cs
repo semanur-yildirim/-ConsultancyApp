@@ -51,6 +51,11 @@ namespace ConsultancyApp.MVC.Controllers
                     ModelState.AddModelError("", "Kullanıcı bilgileri hatalı!");
                     return View(loginModel);
                 }
+                if(user.Type==EnumType.Request)
+                {
+                    _notyfService.Warning("Danışman olma talebiniz inceleme aşamasındadır.");
+                    return RedirectToAction("Index", "Home");
+                }
                 var result = await _signInManager.PasswordSignInAsync(user, loginModel.Password, isPersistent: true, lockoutOnFailure: true);
                 if (result.Succeeded)
                 {
