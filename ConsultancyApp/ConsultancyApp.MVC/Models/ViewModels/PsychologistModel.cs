@@ -16,8 +16,6 @@ namespace ConsultancyApp.MVC.Models.ViewModels
         [DisplayName("Seans Ücreti")]
         [Required(ErrorMessage = "Ücret alanı boş bırakılamaz")]
         public decimal? Price { get; set; }
-        [DisplayName(" Cinsiyet")]
-        [Required(ErrorMessage = "Cinsiyet alanı boş bırakılamaz")]
         public string Gender { get; set; }
         public string Name { get; set; }
         public List<Category> categories { get; set; }

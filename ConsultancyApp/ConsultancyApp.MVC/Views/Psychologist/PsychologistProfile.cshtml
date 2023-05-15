@@ -1,77 +1,94 @@
 ﻿@model PsychologistModel
-<div class="margintop">
-    @*Resim*@
-    <div class="card" style="width: 14rem;">
-        <img src="~/image/@Model.Image.Url" style="width: 14rem;" />
-        <div class="card-body">
-            <h5 class="card-title fw-bold ">@Model.Name</h5>
-            <h6 class="">Seans Ücreti: @($"{Model.Price:C0}")</h6>
-           
-        </div>
-    </div>
-    @*açıklama*@
-    <div>
-        <div>
-            <h4>Hakkında</h4>
-            <label>@Model.PsychologistDescription.About</label>
-        </div>
-        <div>
-            <h4>Eğitim Bilgileri</h4>
-            <label>@Model.PsychologistDescription.Education</label>
-        </div>
-        <div>
-            <h4>Deneyim</h4>
-            <label>@Model.PsychologistDescription.Experience</label>
-        </div>
-        <div>
-            <h4>Danışmanlık Verdiği Alanlar</h4>
-            @foreach (var categories in Model.categories)
-            {
-                <label>@categories.Name</label>
-            }
-        </div>
-    </div>
-    @*Randevu*@
-    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
-        <div class="row border">
-            <label>Randevu istediğiniz tarihi seçiniz</label>
-            <input class="form-control" asp-for="PsychologistDescription.GraduationYear">
+<div class="margintop container">
+    <div class="row justify-content-between align-items-center">
+        <div class="col-md-3 col-7 ">
+            @*Resim*@
+            <div class="card text-center ms-5 ms-md-0 mb-0 mb-5 mb-md-0" style="width: 14rem;">
+                <img src="~/image/@Model.Image.Url" style="width: 14rem;" />
+                <div class="card-body">
+                    <h5 class="card-title fw-bold ">@Model.Name</h5>
+                    <h6 class="">Seans Ücreti: @($"{Model.Price:C0}")</h6>
 
-            <div class="col-12">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
+                </div>
             </div>
-            <div class="col-12">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
-            </div>
-            <div class="col-12">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
-            </div>
-            <div class="col-12">
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
-                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-                <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
-            </div>
-            @*@{
-            var result = User.Identity.IsAuthenticated;
-            }*@
-            <form asp-area=""
-                  asp-controller="Cart"
-                  asp-action="AddToCart">
-                <input type="hidden" asp-for="Id" />
-                <input type="hidden" name="Quantity" value="1" />
-                <button type="submit" class="btn btn-success btn-sm mt-4"> Randevu Al</button>
-            </form>
         </div>
+        <div class="col-md-9 col-10">
+            @*açıklama*@
+            <div class="border rounded ms-md-5 ms-0 ps-3 pt-2">
+                <div class="mb-2">
+                    <h4>Hakkında</h4>
+                    <label>@Model.PsychologistDescription.About</label>
+                </div>
+                <div class="mb-2">
+                    <h4>Eğitim Bilgileri</h4>
+                    <label>@Model.PsychologistDescription.Education</label>
+                </div>
+                <div class="mb-2">
+                    <h4>Deneyim</h4>
+                    <label>@Model.PsychologistDescription.Experience</label>
+                </div>
+                <div>
+                    <h4>Danışmanlık Verdiği Alanlar</h4>
+                    <div class="mb-2">
+                         @foreach (var categories in Model.categories)
+                    {
+                        <label>@categories.Name</label>
+                    }
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+        @*Randevu*@
+        <div class="btn-group col-12 " role="group" aria-label="Basic radio toggle button group">
+            <div class="row border rounded justify-content-around align-items-center mt-4 ">
+                <div class="ps-3 pe-4 text-center ">
+                    <label class="fs-5">Randevu istediğiniz tarihi seçiniz</label>
+                    <input class="form-control mt-2 pe-2 mb-2" type="Date" />
+                </div>
+                    <div class="col-12 col-sm-3 text-center">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btnradio1">09:00-10:00</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btnradio2">11:00-12:00</label>
 
+                    </div>
+                    <div class="col-12 col-sm-3 text-center">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btnradio3">09:00-10:00</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btnradio4">11:00-12:00</label>
+                    </div>
+                    <div class="col-12 col-sm-3 text-center">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btnradio5">09:00-10:00</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btnradio6">11:00-12:00</label>
+                    </div>
+                    <div class="col-12 col-sm-3 text-center">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btnradio7">09:00-10:00</label>
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
+                        <label class="btn btn-outline-success" for="btnradio8">11:00-12:00</label>
+                    </div>
+                
+                @{
+                    var result = User.Identity.IsAuthenticated;
+                }
+                <div class="text-center">
+                    <form asp-area=""
+                          asp-controller="@(result? "Cart" : "Account")"
+                          asp-action="@(result? "AddToCart" : "Login")">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" name="Quantity" value="1" />
+                        <button type="submit" class="btn btn-success w-25 mt-4 mb-2 text-center"> Randevu Al</button>
+                    </form>
+                </div>
+               
+            </div>
+
+        </div>
     </div>
+
+
 </div>

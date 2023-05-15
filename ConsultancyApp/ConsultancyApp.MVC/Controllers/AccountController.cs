@@ -129,6 +129,11 @@ namespace ConsultancyApp.MVC.Controllers
             }
             return View(userManageViewModel);
         }
+        [HttpPost]
+        public async Task<IActionResult> Manage(UserManageModel userManageViewModel)
+        {
+            return View();
+        }
         #endregion
         #region Customer Register
         [HttpGet]
